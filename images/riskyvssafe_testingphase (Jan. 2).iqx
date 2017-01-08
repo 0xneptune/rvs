@@ -1,0 +1,1439 @@
+﻿****VALUES****
+*****************
+
+<values>
+/feedbackdur=3000
+/valuetaskcorr = 0
+
+/randomnum = "NA"
+/newtotalscore = 0
+
+/pointsthisturn=0
+
+/largegainvalue=5
+/smallgainvalue=2
+/smalllossvalue=-1
+/largelossvalue=-4
+
+/largegainpic="images/house.jpg"
+/smallgainpic="images/animal-silhouette-dog2nohead.jpg"
+/smalllosspic="images/face-03.jpg"
+/largelosspic="images/hammer.jpg"
+
+/risky1pic="images/star.jpg"
+/risky2pic="images/rectangle.jpg"
+/safe1pic="images/triangle.jpg"
+/safe2pic="images/circle.jpg"
+
+/largegainpic_category=""
+/smallgainpic_category=""
+/largelosspic_category=""
+/smalllosspic_category=""
+
+/leftoption="NA"
+/rightoption="NA"
+/leftpic="NA"
+/rightpic="NA"
+/selecteddirn="NA"
+/selectedoption="NA"
+/turnnum=0
+/choicert="NA"
+
+/complete=0
+</values>
+
+********************
+SETTINGS
+********************
+<defaults>
+/ screencolor = lightgray 
+/ txbgcolor = lightgray
+/ txcolor = black
+/ fontstyle = ("Arial", 5%)
+</defaults>
+
+**********************
+STIMULI
+*********************
+
+<picture largegain>
+/ items = ("<%values.largegainpic%>")
+/position = (50,50)
+/ size = (50%, 50%)
+</picture>
+
+
+<picture largeloss>
+/items = ("<%values.largelosspic%>")
+/position = (50,50)
+/ size = (50%, 50%)
+</picture>
+
+<picture smallgain>
+/position = (50,50)
+/items = ("<%values.smallgainpic%>")
+/ size = (50%, 50%)
+</picture>
+
+<picture smallloss>
+/items =("<%values.smalllosspic%>")
+/position = (50,50)
+/ size = (50%, 50%)
+</picture>
+
+*******************
+INSTRUCTIONS SCREEN --ie to learn the values
+****************
+
+<picture largegaininstructions>
+/position = (75, 70)
+/ items = ("<%values.largegainpic%>")
+/ size = (20%, 20%)
+</picture>
+
+<picture largelossinstructions>
+/items = ("<%values.largelosspic%>")
+/position = (25, 30)
+/ size = (20%, 20%)
+</picture>
+
+<picture smallgaininstructions>
+/position = (25, 70)
+/items = ("<%values.smallgainpic%>")
+/ size = (20%, 20%)
+</picture>
+
+<picture smalllossinstructions>
+/items =("<%values.smalllosspic%>")
+/position = (75, 30)
+/ size = (20%, 20%)
+</picture>
+
+
+********************************
+CHOICE IMAGES
+********************************
+
+
+<picture risky1right>
+/items = ("<%values.risky1pic%>")
+/position = (25,50)
+/ transparentcolor = white
+/ size = (25%, 25%)
+</picture>
+
+<picture risky1left>
+/items = ("<%values.risky1pic%>")
+/position = (75,50)
+/ size = (25%, 25%)
+</picture>
+
+<picture risky2right>
+/items = ("<%values.risky2pic%>")
+/position = (25,50)
+/ size = (25%, 25%)
+</picture>
+
+<picture risky2left>
+/items = ("<%values.risky2pic%>")
+/position = (75,50)
+/ size = (25%, 25%)
+</picture>
+
+<picture safe1right>
+/items = ("<%values.safe1pic%>")
+/position = (25,50)
+/ size = (25%, 25%)
+</picture>
+<picture safe1left>
+/items = ("<%values.safe1pic%>")
+/position = (75,50)
+/ size = (25%, 25%)
+</picture>
+
+<picture safe2right>
+/items = ("<%values.safe2pic%>")
+/position = (25,50)
+/ size = (25%, 25%)
+</picture>
+<picture safe2left>
+/items = ("<%values.safe2pic%>")
+/position = (75,50)
+/ size = (25%, 25%)
+</picture>
+
+*************
+CHOICE PIX IN CENTER FOR LEARNING TEST
+**************
+
+<picture risky1center>
+/items = ("<%values.risky1pic%>")
+/ size = (25%, 25%)
+</picture>
+
+<picture risky2center>
+/items = ("<%values.risky2pic%>")
+/ size = (25%, 25%)
+</picture>
+
+<picture safe1center>
+/items = ("<%values.safe1pic%>")
+/ size = (25%, 25%)
+</picture>
+
+<picture safe2center>
+/items = ("<%values.safe2pic%>")
+/ size = (25%, 25%)
+</picture>
+
+<text rest>
+/items = ("Y")
+</text>
+
+**************
+PICTURES FOR SECOND LEARNING PHASE
+****************
+
+<picture LGright>
+/position = (75, 50)
+/ items = ("<%values.largegainpic%>")
+/ size = (45%, 45%)
+</picture>
+
+
+<picture LGleft>
+/position = (25, 50)
+/ items = ("<%values.largegainpic%>")
+/ size = (40%, 40%)
+</picture>
+
+<picture LLright>
+/items = ("<%values.largelosspic%>")
+/position = (75,50)
+/ size = (40%, 40%)
+</picture>
+
+<picture LLleft>
+/items = ("<%values.largelosspic%>")
+/position = (25,50)
+/ size = (40%, 40%)
+</picture>
+
+<picture SGright>
+/position = (75,50)
+/ items = ("<%values.smallgainpic%>")
+/ size = (40%, 40%)
+</picture>
+
+<picture SGleft>
+/position = (25,50)
+/items = ("<%values.smallgainpic%>")
+/ size = (40%, 40%)
+</picture>
+
+<picture SLright>
+/items =("<%values.smalllosspic%>")
+/position = (75,50)
+/ size = (50%, 50%)
+</picture>
+
+<picture SLleft>
+/items =("<%values.smalllosspic%>")
+/position = (25,50)
+/ size = (50%, 50%)
+</picture>
+*************
+INSTRUCTION PAGES
+**************
+<picture instructionslides>
+/items =("images/Slide01.jpg","images/Slide02.jpg","images/Slide03.jpg","images/Slide04.jpg","images/slide05.jpg","images/slide05_b.jpg","images/slide06.jpg","images/slide07.jpg","images/slide11.jpg","images/slide13.jpg",)
+/ select = sequence
+/ size = (80%, 80%)
+</picture>
+
+<trial instructions_main>
+/ stimulusframes = [1=instructionslides]
+/ validresponse = (57)
+</trial>
+
+<picture instructionslides_selectright>
+/items =("images/slide09.jpg")
+/ size = (80%, 80%)
+</picture>
+<trial instructionslides_selectright>
+/ stimulusframes = [1=instructionslides_selectright]
+/ validresponse = ("j")
+</trial>
+
+<picture instructionslides_selectleft>
+/items =("images/slide10.jpg")
+/ size = (80%, 80%)
+</picture>
+<trial instructionslides_selectleft>
+/ stimulusframes = [1=instructionslides_selectleft]
+/ validresponse = ("f")
+</trial>
+
+
+<text instructions_dist_text>
+/items =(
+"Each machine can give you any of the 4 types of stamps.
+
+However, some of the machines are more likely to give you stamps with <%values.largegainpic_category%> (+<%values.largegainvalue%> points) and <%values.largelosspic_category%> (<%values.largelossvalue%> points) - for example, the purple machine shown here.
+
+Other machines are more likely to give you stamps with <%values.smallgainpic_category%> (+<%values.smallgainvalue%> points) and <%values.smalllosspic_category%> (<%values.smalllossvalue%> points) - for example, the orange machine shown here. 
+
+~n~n~n~n~n~n~n~n~n~n~n~n~nPress Spacebar to continue",
+
+"~n~nNote that, over the long run all the machines will give you the SAME amount of points. The only difference is in which types of stamps are more likely.
+
+While playing, you will have to figure out which machines are more likely to give you which types of stamps.
+~n~n~n~n~n~n~n~n~n~n~n~n~nPress Spacebar to continue")
+/ fontstyle = ("Arial Black", 3%, false, false, false, false, 5, 1)
+/ size = (70%, 80%)
+/ select = sequence
+/ valign = top
+/ halign = center
+/ position = (50%, 5%)
+/ hjustify = center
+</text>
+^^While playing, you will have to figure out which machines are more likely to give you which types of stamps.
+
+<picture instructions_dist_pix>
+/ items =("images/bothdists.jpg")
+/ position= (50%, 65%)
+/ size = (65%, 65%)
+</picture>
+<trial instructions_dists>
+/ stimulusframes = [1=instructions_dist_text, instructions_dist_pix]
+/ validresponse = (57)
+</trial>
+
+Each machine can give you any of the 4 types of stamps. However, some of the machines are more likely to give you stamps with houses (+5 points) and faces (-4 points) - for example, the purple machine shown here .Other machines are more likely to give you stamps with tools (+2 points) and houses (-1 point) – for example, the orange machine shown here. While playing, you will have to figure out which machines are more likely to give you which types of stamps. Note that, over the long run all the machines will give you the same amount of points. The only difference is in which types of stamps are more likely .
+
+<page preTrainingPhase1>
+^^^There are four different types of machines that can give you
+stamps. They can be identified by the colour and shape on each machine. 
+
+^^When you select a machine, it will give you a stamp. 
+^You will not know what stamp you'll get until you select a machine.
+</page>
+
+<page preTrainingPhase2>
+^^Each machine can give you any of the 4 types of stamps.
+
+^^However, some of the machines are more likely to give you stamps with <%values.largegainpic_category%> (<%values.largegainvalue%> points)
+and <%values.largelosspic_category%> (<%values.largelossvalue%> points).
+
+^Other machines are more likely to give you stamps with <%values.smallgainpic_category%> (<%values.smallgainvalue%> points)
+and <%values.smalllosspic_category%> (<%values.smalllossvalue%> points).
+
+^^While playing, you will have to figure out which machines are more likely to give you which types of stamps.
+</page>
+
+<page preTrainingPhase3>
+^^To play the game: on each turn, you will see 2 machines. 
+^You will have to choose which one you would like to receive a stamp from; 
+the machine on the left or the right side of the screen. 
+^After you select one, the stamp you received will appear. 
+</page>
+
+<page preTrainingPhase4>
+^^^Press the "F" key to select the left machine, and the "J" key to select the right machine.
+</page>
+
+<page preTrainingPhase5>
+^^^^Now you may begin playing. 
+</page>
+
+<page post>
+^^^^Thank you for participating in this study, we appreciate your time!
+</page>
+
+************
+INITIAL LEARNING PHASE FOR VALUES TO IMAGES
+************
+
+<text smallgainvaluetext>
+/ items = ("<%values.smallgainvalue%>")
+/ position = (25, 85) 
+/ size = (7%, 7%)
+</text>
+
+<text largegainvaluetext>
+/items = ("<%values.largegainvalue%>")
+/ position = (75, 85)
+/size = (7%, 7%)
+</text>
+
+<text smalllossvaluetext>
+/items = ("<%values.smalllossvalue%>")
+/ position = (75, 45) 
+/size = (7%, 7%)
+</text>
+
+<text largelossvaluetext>
+/items = ("<%values.largelossvalue%>")
+/ position = (25, 45)
+/size = (7%, 7%)
+</text>
+
+<text instructions>
+/ items = ("Please take your time to memorize the point values associated with each type of stamp.")
+/ txcolor = black
+/ fontstyle = ("Arial Black", 3.87%, true, false, false, false, 5, 1)
+/ valign = top
+/ halign = center
+/ size = (70%, 20%)
+/ position = (50%, 5%)
+</text>
+
+<text instructions2>
+/items = ("Press [SpaceBar] to continue")
+/ txcolor = black
+/ fontstyle = ("Arial Black", 3.87%, true, false, false, false, 5, 1)
+/ position = (50, 90)
+</text> 
+
+<trial values_screen>
+/ stimulusframes = [1=instructions, instructions2, smallgainvaluetext, largegainvaluetext, smalllossvaluetext, largelossvaluetext, 
+largegaininstructions, smallgaininstructions, smalllossinstructions, largelossinstructions]
+/ validresponse = (57)
+</trial>
+
+<text correctmessage>
+/items = ("correct")
+</text> 
+
+<text errormessage>
+/items = ("incorrect")
+</text> 
+
+
+
+<text whichone>
+/items= ("Which stamp is worth more?")
+/size = (40%, 10%)
+/position = (50%, 10%)
+</text>
+
+<text rightJ>
+/items = ("'J'")
+/size = (7%, 7%)
+/fontstyle = ("Arial", 3%)
+/position = (75%, 20%)
+</text>
+
+<text leftF>
+/items = ("'F'")
+/size = (7%, 7%)
+/fontstyle = ("Arial", 3%)
+/position = (25%,20%)
+</text>
+
+<openended smallgainlearning>
+/stimulusframes = [1=smallgain]
+/ position = (50,80)
+/correctresponse = (values.smallgainvalue)
+/correctmessage = true(correctmessage, 500)
+/errormessage = true(errormessage, 500)
+/ validresponse = (anyresponse)
+</openended>
+
+<openended smalllosslearning>
+/stimulusframes = [1=smallloss]
+/ position = (50,80)
+/correctresponse = (values.smalllossvalue)
+/correctmessage = true(correctmessage, 500)
+/errormessage = true(errormessage, 500)
+/ validresponse = (anyresponse)
+</openended>
+
+<openended largegainlearning>
+/stimulusframes = [1=largegain]
+/ position = (50,80)
+/correctresponse = (values.largegainvalue)
+/correctmessage = true(correctmessage, 500)
+/errormessage = true(errormessage, 500)
+/ validresponse = (anyresponse)
+</openended> 
+
+
+<openended largelosslearning>
+/stimulusframes = [1=largeloss]
+/ position = (50,80)
+/correctresponse = (values.largelossvalue)
+/correctmessage = true(correctmessage, 500)
+/errormessage = true(errormessage, 500)
+/ validresponse = (anyresponse)
+</openended> 
+instructions_dists
+<block initial_instructions>
+/ trials = [1-4=instructions_main]
+</block>
+
+
+<block learningvalues>
+/ trials = [1=values_screen; 2=instructions_memorytest_values; 3-6=noreplace(largelosslearning,smalllosslearning,smallgainlearning,largegainlearning)]
+/ branch = [if (block.learningvalues.correctcount!=4) block.learningvalues]
+</block>
+
+******
+SECOND LEARNING PHASE -ie select the higher values
+*******
+
+<text largegaintxleft>
+/items = ("<%values.largegainvalue%>")
+/ position = (25, 85)
+/size = (7%, 7%)
+</text>
+
+<text largegaintxright>
+/items = ("<%values.largegainvalue%>")
+/ position = (75, 85)
+/size = (7%, 7%)
+</text>
+
+<text largelosstxright>
+/items = ("<%values.largelossvalue%>")
+/ position = (75, 85)
+/size = (7%, 7%)
+</text>
+
+<text largelosstxleft>
+/items = ("<%values.largelossvalue%>")
+/ position = (25, 85)
+/size = (7%, 7%)
+</text>
+
+<text smalllosstxright>
+/items = ("<%values.smalllossvalue%>")
+/ position = (75, 85)
+/size = (7%, 7%)
+</text>
+
+<text smalllosstxleft>
+/items = ("<%values.smalllossvalue%>")
+/ position = (25, 85)
+/size = (7%, 7%)
+</text>
+
+<text smallgaintxright>
+/items = ("<%values.smallgainvalue%>")
+/ position = (75, 85)
+/size = (7%, 7%)
+</text>
+
+
+<text smallgaintxleft>
+/items = ("<%values.smallgainvalue%>")
+/ position = (25, 85)
+/size = (7%, 7%)
+</text>
+
+
+
+<text incorr_corr>
+/items = ("incorrect", "correct")
+/ select = values.valuetaskcorr
+</text> 
+ie selects item 1 if wrong, 2 if correct
+
+/feedbackdur=3000
+
+<Trial LG_LL>
+/stimulusframes = [1=LGleft, LLright,whichone, leftF, rightJ]
+/validresponse = (33, 36)
+/correctresponse =  (33)
+/ ontrialend = [values.valuetaskcorr= trial.LG_LL.correct + 1]
+/ branch = [trial.LG_LLfeedback]
+</trial>
+
+<Trial LG_LLfeedback>
+/stimulusframes = [1=LGleft, LLright, largegaintxleft, largelosstxright, incorr_corr]
+/ timeout = values.feedbackdur
+</trial>
+
+<Trial LG_SG>
+/stimulusframes = [1= LGleft, SGright,whichone, leftF, rightJ]
+/validresponse = (33, 36)
+/correctresponse =  (33)
+/ ontrialend = [values.valuetaskcorr= trial.LG_SG.correct + 1]
+/ branch = [trial.LG_SGfeedback]
+</trial>
+
+<Trial LG_SGfeedback>
+/stimulusframes = [1=LGleft, SGright, largegaintxleft, smallgaintxright, incorr_corr]
+/ timeout = values.feedbackdur
+</trial>
+
+
+<Trial LG_SL>
+/stimulusframes = [1= LGleft, SLright,whichone, leftF, rightJ]
+/validresponse = (33, 36)
+/correctresponse =  (33)
+/ ontrialend = [values.valuetaskcorr= trial.LG_SL.correct + 1]
+/ branch = [trial.LG_SLfeedback]
+</trial>
+
+<Trial LG_SLfeedback>
+/stimulusframes = [1=LGleft, SLright, largegaintxleft, smallgaintxright, incorr_corr]
+/ timeout = values.feedbackdur
+</trial>
+
+<Trial LL_LG>
+/stimulusframes = [1= LLleft, LGright]
+/validresponse = (33, 36)
+/correctresponse =  (36)
+/ ontrialend = [values.valuetaskcorr= trial.LL_LG.correct + 1]
+/ branch = [trial.LL_LGfeedback]
+</trial>
+
+<Trial LL_LGfeedback>
+/stimulusframes = [1=LLleft, LGright, largelosstxleft, largegaintxright, incorr_corr]
+/ timeout = values.feedbackdur
+</trial>
+
+
+<Trial LL_SG>
+/stimulusframes = [1= LLleft, SGright,whichone, leftF, rightJ]
+/validresponse = (33, 36)
+/correctresponse =  (36)
+/ ontrialend = [values.valuetaskcorr= trial.LL_SG.correct + 1]
+/ branch = [trial.LL_SGfeedback]
+</trial>
+
+<Trial LL_SGfeedback>
+/stimulusframes = [1=LLleft, SGright, largelosstxleft, smallgaintxright, incorr_corr]
+/ timeout = values.feedbackdur
+</trial>
+
+
+<Trial LL_SL>
+/stimulusframes = [1= LLleft, SLright,whichone, leftF, rightJ]
+/validresponse = (33, 36)
+/correctresponse =  (36)
+/ ontrialend = [values.valuetaskcorr= trial.LL_SL.correct + 1]
+/ branch = [trial.LL_SLfeedback]
+</trial>
+
+<Trial LL_SLfeedback>
+/stimulusframes = [1=LLleft, SLright, largelosstxleft, smalllosstxright, incorr_corr]
+/ timeout = values.feedbackdur
+</trial>
+
+
+<Trial SG_LG>
+/stimulusframes = [1= SGleft, LGright,whichone, leftF, rightJ]
+/validresponse = (33, 36)
+/correctresponse =  (36)
+/ ontrialend = [values.valuetaskcorr= trial.SG_LG.correct + 1]
+/ branch = [trial.SG_LGfeedback]
+</trial>
+
+<Trial SG_LGfeedback>
+/stimulusframes = [1=SGleft, LGright, smallgaintxleft, largegaintxright, incorr_corr]
+/ timeout = values.feedbackdur
+</trial>
+
+<Trial SG_LL>
+/stimulusframes = [1= SGleft, LLright,whichone, leftF, rightJ]
+/validresponse = (33, 36)
+/correctresponse =  (33)
+/ ontrialend = [values.valuetaskcorr= trial.SG_LL.correct + 1]
+/ branch = [trial.SG_LLfeedback]
+</trial>
+
+<Trial SG_LLfeedback>
+/stimulusframes = [1=SGleft, LLright, smallgaintxleft, largelosstxright, incorr_corr]
+/ timeout = values.feedbackdur
+</trial>
+
+<Trial SG_SL>
+/stimulusframes = [1= SGleft, SLright,whichone, leftF, rightJ]
+/validresponse = (33, 36)
+/correctresponse =  (33)
+/ ontrialend = [values.valuetaskcorr= trial.SG_SL.correct + 1]
+/ branch = [trial.SG_SLfeedback]
+</trial>
+
+<Trial SG_SLfeedback>
+/stimulusframes = [1=SGleft, SLright, smallgaintxleft, smalllosstxright, incorr_corr]
+/ timeout = values.feedbackdur
+</trial>
+
+<Trial SL_LG>
+/stimulusframes = [1= SLleft, LGright,whichone, leftF, rightJ]
+/validresponse = (33, 36)
+/correctresponse =  (36)
+/ ontrialend = [values.valuetaskcorr= trial.SL_LG.correct + 1]
+/ branch = [trial.SL_LGfeedback]
+</trial>
+
+<Trial SL_LGfeedback>
+/stimulusframes = [1=SLleft, LGright, smalllosstxleft, largegaintxright, incorr_corr]
+/ timeout = values.feedbackdur
+</trial>
+
+<Trial SL_LL>
+/stimulusframes = [1= SLleft, LLright,whichone, leftF, rightJ]
+/validresponse = (33, 36)
+/correctresponse =  (33)
+/ ontrialend = [values.valuetaskcorr= trial.SL_LL.correct + 1]
+/ branch = [trial.SL_LLfeedback]
+</trial>
+
+<Trial SL_LLfeedback>
+/stimulusframes = [1=SLleft, LLright, smalllosstxleft, largelosstxright, incorr_corr]
+/ timeout = values.feedbackdur
+</trial>
+
+<Trial SL_SG>
+/stimulusframes = [1= SLleft, SGright,whichone, leftF, rightJ]
+/validresponse = (33, 36)
+/correctresponse =  (36)
+/ ontrialend = [values.valuetaskcorr= trial.SL_SG.correct + 1]
+/ branch = [trial.SL_SGfeedback]
+</trial>
+
+<Trial SL_SGfeedback>
+/stimulusframes = [1=SLleft, SGright, smalllosstxleft, smallgaintxright, incorr_corr]
+/ timeout = values.feedbackdur
+</trial>
+
+<block learningphase2>
+/ trials = [1=instructions_main; 2-13 = noreplace(LG_LL, LG_SG, LG_SL, LL_LG, LL_SG, LL_SL, SG_LG, SG_LL, SG_SL, SL_LG, SL_LL, SL_SG)]
+</block>
+/ bgstim = (whichone, leftF, rightJ)
+*******************
+####for end of the task to see if they still remember it
+****************
+
+
+text instructions_memorytest>
+/items = ("Almost done! Few more questions...")
+/ txcolor =black
+/Position = (50, 35)
+</text> 
+
+<text instructions_memorytest_values_1>
+/items = ("Next, please enter the point values of each stamp, and press enter to go to the next screen.
+
+Please type a minus sign before the number if you lose that many points.
+
+If you get any wrong, you will be shown the values again and can try again.")
+/ txcolor =black
+/Position = (50, 30)
+/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
+</text> 
+
+
+<text instructions_memorytest_values_2>
+/items = ("Press [SpaceBar] to Continue")
+/ txcolor =black
+/Position = (50, 80)
+/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
+</text> 
+
+
+<trial instructions_memorytest_values>
+/ stimulusframes = [1=instructions_memorytest_values_1, instructions_memorytest_values_2]
+/ validresponse = (57)
+</trial>
+
+
+<block memorytest_values_end>
+/ trials = [1=instructions_memorytest_values; 2-5=noreplace(largelosslearning,smalllosslearning,smallgainlearning,largegainlearning)]
+</block>
+
+
+**************************
+FOR TEST OF WHAT DISTRIBUTIONS WERE LEARNED AT THE END
+**************************
+
+picture disrisky>
+/items = ("images/distrubtionrisky.jpg")
+/position = (75,50)
+/ transparentcolor = white
+/ size = (45%, 45%)
+</picture>
+
+picture dissafe>
+/items = ("images/distrubtionsafe.jpg")
+/position = (25,50)
+/ transparentcolor = white
+/ size = (45%, 45%)
+</picture>
+ 
+text instructions_distribution>
+/items = ("Please answer the next questions by typing '1' or '2'")
+/ txcolor =black
+/Position = (50, 90)
+/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
+</text>   
+
+<text instructions_distribution1>
+/items = ("You are almost done the task. 
+Now we would just like to ask you a few quick questions about the task.
+
+Press SPACEBAR to continue.")
+/ txcolor =black
+/Position = (50, 50)
+/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
+</text> 
+
+
+<text instructions_distribution2>
+/items = ("What type of machine did you think this was?
+
+Type '1' if you think this machine was more likely to give you stamps with <%values.largegainpic_category%> and <%values.largelosspic_category%>.
+Type '2' if you think this machine was more likely to give you stamps with <%values.smallgainpic_category%> and <%values.smalllosspic_category%>.")
+/ txcolor =black
+/Position = (50, 20)
+/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
+</text> 
+
+<trial instructions_distributiontest>
+/ stimulusframes = [1=instructions_distribution1]
+/ validresponse = (57)
+</trial>
+
+
+
+<openended risky1learning> 
+/stimulusframes = [1=risky1center, instructions_distribution2]
+/ position = (50,80)
+/ validresponse = (anyresponse)
+</openended>
+
+<openended risky2learning> 
+/stimulusframes = [1=risky2center, instructions_distribution2]
+/ position = (50,80)
+/ validresponse = (anyresponse)
+</openended>
+
+<openended safe1learning> 
+/stimulusframes = [1=safe1center,  instructions_distribution2]
+/ position = (50,80)
+/ validresponse = (anyresponse)
+</openended>
+
+<openended safe2learning> 
+/stimulusframes = [1=safe2center,  instructions_distribution2]
+/ position = (50,80)
+/ validresponse = (anyresponse)
+</openended>
+
+
+<block choice_distributions_learned>
+/ trials = [1=instructions_distributiontest;2-5=noreplace(risky1learning, risky2learning, safe1learning, safe2learning)]
+</block>
+
+
+
+
+************
+TRIALS
+************
+not actually used now...
+<trial rest> 
+/stimulusframes = [1=rest]
+/trialduration = 3000
+</trial>
+
+
+<trial smallgain>
+/ stimulusframes = [1=smallgain]
+/ ontrialend = [values.newtotalscore +=values.smallgainvalue;values.pointsthisturn=values.smallgainvalue;]
+/ timeout = values.feedbackdur
+</trial>
+
+<trial largegain>
+/ stimulusframes = [1=largegain]
+/ ontrialend = [values.newtotalscore +=values.largegainvalue; values.pointsthisturn=values.largegainvalue;]
+/ timeout = values.feedbackdur
+</trial>
+
+<trial smallloss>
+/ stimulusframes = [1=smallloss]
+/ ontrialend = [values.newtotalscore +=values.smalllossvalue; values.pointsthisturn=values.smalllossvalue;]
+/ timeout = values.feedbackdur
+</trial>
+
+<trial largeloss>
+/ stimulusframes = [1=largeloss]
+/ ontrialend = [values.newtotalscore +=values.largelossvalue; values.pointsthisturn=values.largelossvalue;]
+/ timeout = values.feedbackdur
+</trial>
+
+
+***************************
+LIST OF OUTCOME TRIALS ---currently I made 400 trials. set as long as task just in case.
+***************************
+
+<list risky1outcometrials>
+/items = (trial.largegain, trial.largeloss, trial.largegain, trial.smallloss, trial.largegain, trial.largeloss, trial.largegain, trial.largegain, trial.smallloss, trial.largeloss, trial.smallgain, trial.largegain, trial.largegain, trial.largeloss, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.largeloss, trial.smallgain, trial.largeloss, trial.smallloss, trial.largeloss, trial.largegain, trial.largegain, trial.largeloss, trial.smallgain, trial.smallloss, trial.smallgain, trial.largeloss, trial.smallgain, trial.largeloss, trial.largegain, trial.smallloss, trial.smallloss, trial.largegain, trial.largeloss, trial.largeloss, trial.smallloss, trial.smallgain, trial.largegain, trial.largegain, trial.largegain, trial.smallloss, trial.largegain, trial.largegain, trial.largegain, trial.largegain, trial.largegain, trial.smallgain, trial.smallgain, trial.largegain, trial.smallloss, trial.largegain, trial.largegain, trial.smallloss, trial.largeloss, trial.smallloss, trial.largegain, trial.largegain, trial.largegain, trial.largegain, trial.largeloss, trial.largegain, trial.smallloss, trial.largeloss, trial.largeloss, trial.smallgain, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.largegain, trial.largeloss, trial.largegain, trial.smallgain, trial.largegain, trial.smallgain, trial.largegain, trial.largegain, trial.largegain, trial.largegain, trial.smallgain, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.largegain, trial.smallgain, trial.smallloss, trial.largegain, trial.smallloss, trial.largeloss, trial.largeloss, trial.smallgain, trial.smallloss, trial.largeloss, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.smallgain, trial.largegain, trial.smallgain, trial.largegain, trial.smallloss, trial.largegain, trial.largegain, trial.smallgain, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallloss, trial.smallloss, trial.smallloss, trial.largeloss, trial.largegain, trial.largeloss, trial.largeloss, trial.smallgain, trial.largeloss, trial.largegain, trial.largeloss, trial.largeloss, trial.smallgain, trial.smallloss, trial.largegain, trial.smallgain, trial.largegain, trial.largeloss, trial.largegain, trial.largegain, trial.largegain, trial.largegain, trial.smallloss, trial.smallloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.smallgain, trial.smallloss, trial.largegain, trial.largegain, trial.smallgain, trial.largegain, trial.largeloss, trial.largegain, trial.smallgain, trial.largeloss, trial.largegain, trial.largegain, trial.largeloss, trial.largegain, trial.smallgain, trial.smallloss, trial.smallgain, trial.smallloss, trial.largeloss, trial.smallgain, trial.largegain, trial.largeloss, trial.largeloss, trial.largeloss, trial.smallgain, trial.largegain, trial.smallloss, trial.largegain, trial.largegain, trial.largegain, trial.smallloss, trial.largegain, trial.smallloss, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.largegain, trial.largeloss, trial.largeloss, trial.smallloss, trial.largeloss, trial.smallgain, trial.largeloss, trial.largegain, trial.largegain, trial.largeloss, trial.largeloss, trial.largeloss, trial.smallgain, trial.largeloss, trial.largeloss, trial.largegain, trial.largegain, trial.smallgain, trial.smallloss, trial.largeloss, trial.largeloss, trial.largegain, trial.largegain, trial.largeloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.largegain, trial.smallgain, trial.largegain, trial.largegain, trial.smallgain, trial.largegain, trial.largeloss, trial.smallloss, trial.largegain, trial.smallloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.smallgain, trial.smallloss, trial.largeloss, trial.smallgain, trial.largeloss, trial.largegain, trial.largegain, trial.largeloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.smallloss, trial.largeloss, trial.smallloss, trial.largegain, trial.largeloss, trial.largeloss, trial.smallloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.largegain, trial.smallgain, trial.smallloss, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallgain, trial.largegain, trial.smallgain, trial.largegain, trial.largeloss, trial.largegain, trial.largegain, trial.smallloss, trial.largegain, trial.smallgain, trial.largeloss, trial.smallgain, trial.smallloss, trial.largeloss, trial.largegain, trial.largegain, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.smallgain, trial.smallgain, trial.largeloss, trial.largegain, trial.largeloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.smallloss, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.largeloss, trial.largeloss, trial.largeloss, trial.smallgain, trial.smallloss, trial.largegain, trial.largegain, trial.smallgain, trial.largeloss, trial.largeloss, trial.smallloss, trial.largeloss, trial.smallgain, trial.largeloss, trial.largegain, trial.largegain, trial.smallgain, trial.largegain, trial.largegain, trial.largeloss, trial.largegain, trial.smallgain, trial.largegain, trial.largeloss, trial.largegain, trial.smallloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.largeloss, trial.smallloss, trial.largeloss, trial.smallgain, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.largeloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.smallloss, trial.largegain, trial.largeloss, trial.largegain, trial.largegain, trial.smallloss, trial.largeloss, trial.smallgain, trial.largeloss, trial.largegain, trial.largeloss, trial.largeloss, trial.smallloss, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.smallgain, trial.smallloss, trial.largegain, trial.largegain, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.smallgain, trial.largeloss, trial.smallgain, trial.largeloss, trial.largeloss, trial.smallloss, trial.largeloss, trial.largegain, trial.smallloss, trial.largeloss, trial.largegain, trial.smallgain, trial.largegain, trial.largeloss, trial.largeloss, trial.largegain, trial.largeloss, trial.smallgain, trial.largegain, trial.largegain, trial.largeloss, trial.smallloss, trial.smallloss, trial.largegain, trial.smallgain, trial.smallgain, trial.largegain, trial.smallloss, trial.largeloss, trial.largegain, trial.largegain, trial.smallloss, trial.smallgain, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.largegain, trial.smallgain, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.largeloss, trial.smallloss, trial.smallloss, trial.largegain, trial.smallgain, trial.largeloss, trial.largeloss)
+/ selectionmode = sequence
+/ selectionrate = always
+</list>
+
+<list risky2outcometrials>
+/items = (trial.largeloss, trial.largegain, trial.smallloss, trial.largegain, trial.largeloss, trial.largegain,  trial.smallloss, trial.smallgain,  trial.largeloss, trial.smallgain,  trial.largegain, trial.largeloss, trial.largegain, trial.largegain, trial.smallloss, trial.largeloss, trial.largeloss, trial.smallloss, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.smallgain, trial.largeloss, trial.largegain, trial.largegain, trial.largeloss, trial.largegain, trial.largegain, trial.smallgain, trial.largeloss, trial.largegain, trial.largegain, trial.largegain, trial.smallloss, trial.smallloss, trial.largeloss, trial.smallgain, trial.smallloss, trial.largegain, trial.largegain, trial.smallloss, trial.largeloss, trial.smallgain, trial.largegain, trial.largeloss, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.largeloss, trial.largeloss, trial.smallloss, trial.largegain, trial.largegain, trial.largegain, trial.smallgain, trial.largegain, trial.smallloss, trial.largeloss, trial.largeloss, trial.smallloss, trial.largeloss, trial.smallgain, trial.largeloss, trial.largegain, trial.largeloss, trial.smallgain, trial.largeloss, trial.smallgain, trial.largeloss, trial.smallloss, trial.largeloss, trial.smallloss, trial.smallloss, trial.largegain, trial.largeloss, trial.largeloss, trial.largegain, trial.largeloss, trial.largeloss, trial.largegain, trial.largeloss, trial.smallloss, trial.largegain, trial.largegain, trial.largegain, trial.largeloss, trial.largeloss, trial.smallgain, trial.largegain, trial.largeloss, trial.largeloss, trial.smallgain, trial.largeloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.largegain, trial.smallgain, trial.largegain, trial.largegain, trial.smallgain, trial.smallloss, trial.largegain, trial.largeloss, trial.largegain, trial.largeloss, trial.largeloss, trial.largegain, trial.largegain, trial.smallloss, trial.largegain, trial.largeloss, trial.smallloss, trial.smallgain, trial.largegain, trial.largeloss, trial.smallgain, trial.largegain, trial.largegain, trial.smallloss, trial.largegain, trial.largegain, trial.largeloss, trial.largeloss, trial.largeloss, trial.largegain, trial.smallgain, trial.largeloss, trial.largegain, trial.smallgain, trial.smallgain, trial.largeloss, trial.largeloss, trial.largeloss, trial.largegain, trial.largegain, trial.largegain, trial.largegain, trial.largegain, trial.smallloss, trial.smallgain, trial.largeloss, trial.largegain, trial.largegain, trial.smallgain, trial.largeloss, trial.smallloss, trial.largegain, trial.largegain, trial.largegain, trial.largeloss, trial.smallloss, trial.smallloss, trial.smallloss, trial.largeloss, trial.smallloss, trial.largegain, trial.largegain, trial.smallgain, trial.largeloss, trial.largegain, trial.smallloss, trial.largeloss, trial.largegain, trial.largegain, trial.largeloss, trial.smallgain, trial.largegain, trial.smallloss, trial.largeloss, trial.largeloss, trial.largegain, trial.smallloss, trial.largegain, trial.largegain, trial.smallloss, trial.largegain, trial.largegain, trial.smallloss, trial.largegain, trial.smallgain, trial.largeloss, trial.largeloss, trial.largegain, trial.smallgain, trial.smallgain, trial.largeloss, trial.largeloss, trial.largegain, trial.smallloss, trial.smallgain, trial.largeloss, trial.largegain, trial.smallgain, trial.largegain, trial.largegain, trial.largegain, trial.smallgain, trial.largeloss, trial.largegain, trial.smallgain, trial.largegain, trial.largeloss, trial.largegain, trial.largeloss, trial.largeloss, trial.smallloss, trial.smallloss, trial.largeloss, trial.largeloss, trial.largegain, trial.largegain, trial.smallloss, trial.smallloss, trial.largeloss, trial.smallgain, trial.largegain, trial.largeloss, trial.smallgain, trial.largeloss, trial.smallloss, trial.smallgain, trial.largeloss, trial.largegain, trial.largegain, trial.smallgain, trial.smallgain, trial.smallloss, trial.largegain, trial.largegain, trial.smallloss, trial.largegain, trial.largegain, trial.smallgain, trial.largegain, trial.smallgain, trial.largeloss, trial.largeloss, trial.largeloss, trial.largegain, trial.smallgain, trial.smallgain, trial.smallgain, trial.smallgain, trial.largegain, trial.largeloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.largegain, trial.largeloss, trial.largeloss, trial.largegain, trial.largegain, trial.largegain, trial.largeloss, trial.smallgain, trial.smallgain, trial.smallgain, trial.largeloss, trial.largegain, trial.largegain, trial.smallgain, trial.largegain, trial.largegain, trial.largeloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.largegain, trial.smallgain, trial.largeloss, trial.largeloss, trial.smallgain, trial.largegain, trial.largeloss, trial.largeloss, trial.smallgain, trial.largegain, trial.largegain, trial.largeloss, trial.largegain, trial.smallloss, trial.largegain, trial.smallloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.smallgain, trial.smallgain, trial.largegain, trial.largeloss, trial.smallloss, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallgain, trial.largeloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.largegain, trial.smallloss, trial.largegain, trial.smallloss, trial.smallloss, trial.largegain, trial.largeloss, trial.largegain, trial.smallgain, trial.largeloss, trial.largegain, trial.largegain, trial.smallloss, trial.smallloss, trial.largegain, trial.largegain, trial.largeloss, trial.largeloss, trial.largegain, trial.largegain, trial.largegain, trial.largegain, trial.largegain, trial.largeloss, trial.smallloss, trial.largeloss, trial.largegain, trial.largeloss, trial.largeloss, trial.largeloss, trial.largegain, trial.largegain, trial.largegain, trial.smallloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.largegain, trial.smallloss, trial.largegain, trial.largegain, trial.largegain, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.largegain, trial.smallgain, trial.largeloss, trial.smallloss, trial.smallloss, trial.smallloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.largegain, trial.smallloss, trial.smallgain, trial.largegain, trial.largeloss, trial.largeloss, trial.smallloss, trial.smallgain, trial.smallgain, trial.smallloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.smallloss, trial.largegain, trial.smallloss, trial.largegain, trial.smallloss, trial.largegain, trial.largeloss, trial.largegain, trial.largeloss, trial.largeloss, trial.largegain, trial.smallgain, trial.largegain, trial.largeloss, trial.smallgain, trial.largegain, trial.smallgain, trial.largeloss)
+/ selectionmode = sequence
+/ selectionrate = always
+</list>
+
+<list safe1outcometrials>
+/items = (trial.smallgain, trial.smallgain, trial.largeloss, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallloss, trial.smallgain,  trial.largegain, trial.smallloss, trial.smallgain, trial.smallgain, trial.largeloss, trial.smallgain, trial.smallloss, trial.smallloss, trial.smallloss, trial.largegain, trial.smallgain, trial.smallgain, trial.smallloss, trial.smallloss, trial.smallgain, trial.largeloss, trial.smallgain, trial.smallloss, trial.largeloss, trial.smallgain, trial.smallgain, trial.smallloss, trial.smallgain, trial.smallgain, trial.smallloss, trial.smallloss, trial.smallloss, trial.smallgain, trial.largeloss, trial.smallgain, trial.smallgain, trial.largegain, trial.smallgain, trial.largeloss, trial.largeloss, trial.smallloss, trial.smallloss, trial.largegain, trial.smallgain, trial.smallgain, trial.smallloss, trial.smallloss, trial.smallloss, trial.smallgain, trial.smallloss, trial.largeloss, trial.smallgain, trial.smallloss, trial.smallloss, trial.largegain, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallgain, trial.largeloss, trial.smallloss, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallgain, trial.largegain, trial.largeloss, trial.largegain, trial.largegain, trial.smallloss, trial.largeloss, trial.smallgain, trial.smallgain, trial.smallgain, trial.smallgain, trial.smallgain, trial.largegain, trial.largegain, trial.smallgain, trial.smallloss, trial.largeloss, trial.smallloss, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallloss, trial.largeloss, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallloss, trial.largegain, trial.smallloss, trial.smallloss, trial.smallloss, trial.smallloss, trial.smallloss, trial.largegain, trial.largegain, trial.largegain, trial.smallloss, trial.largeloss, trial.largeloss, trial.smallloss, trial.smallgain, trial.smallgain, trial.smallloss, trial.smallloss, trial.smallgain, trial.smallgain, trial.largegain, trial.smallgain, trial.largegain, trial.smallgain, trial.smallgain, trial.largeloss, trial.smallloss, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallgain, trial.smallgain, trial.smallloss, trial.largegain, trial.smallgain, trial.largeloss, trial.smallgain, trial.smallgain, trial.largegain, trial.smallgain, trial.smallgain, trial.largegain, trial.smallloss, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.smallgain, trial.smallgain, trial.smallloss, trial.smallloss, trial.smallloss, trial.smallloss, trial.smallgain, trial.smallgain, trial.smallgain, trial.smallgain, trial.smallloss, trial.largegain, trial.smallgain, trial.largeloss, trial.smallgain, trial.smallloss, trial.smallgain, trial.largeloss, trial.smallloss, trial.smallgain, trial.smallgain, trial.smallgain, trial.largegain, trial.smallloss, trial.smallgain, trial.largeloss, trial.smallloss, trial.largeloss, trial.smallloss, trial.smallloss, trial.smallloss, trial.largegain, trial.smallgain, trial.smallgain, trial.smallgain, trial.smallloss, trial.largegain, trial.smallloss, trial.smallloss, trial.smallloss, trial.largegain, trial.smallgain, trial.smallloss, trial.largegain, trial.largeloss, trial.largeloss, trial.largeloss, trial.smallloss, trial.largegain, trial.smallgain, trial.smallloss, trial.largeloss, trial.smallloss, trial.smallgain, trial.smallloss, trial.largeloss, trial.smallloss, trial.largegain, trial.smallgain, trial.smallgain, trial.largeloss, trial.smallgain, trial.smallgain, trial.largeloss, trial.largeloss, trial.smallgain, trial.smallloss, trial.largegain, trial.smallgain, trial.largeloss, trial.largeloss, trial.largegain, trial.largeloss, trial.smallloss, trial.largeloss, trial.largegain, trial.smallloss, trial.smallgain, trial.smallloss, trial.largegain, trial.smallloss, trial.smallgain, trial.smallgain, trial.smallloss, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallgain, trial.smallgain, trial.smallloss, trial.largeloss, trial.smallgain, trial.smallgain, trial.largeloss, trial.smallloss, trial.largegain, trial.largegain, trial.smallgain, trial.smallgain, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallgain, trial.largeloss, trial.largegain, trial.largegain, trial.smallloss, trial.largegain, trial.smallgain, trial.smallgain, trial.largeloss, trial.largeloss, trial.smallloss, trial.largeloss, trial.smallloss, trial.largegain, trial.largeloss, trial.smallloss, trial.smallgain, trial.smallgain, trial.smallgain, trial.smallloss, trial.largeloss, trial.largeloss, trial.largegain, trial.smallgain, trial.smallgain, trial.smallloss, trial.largegain, trial.largegain, trial.smallloss, trial.smallgain, trial.smallgain, trial.smallgain, trial.smallloss, trial.smallgain, trial.smallgain, trial.largegain, trial.smallgain, trial.largegain, trial.smallloss, trial.largegain, trial.smallloss, trial.smallloss, trial.smallloss, trial.smallloss, trial.smallgain, trial.largeloss, trial.smallgain, trial.smallgain, trial.smallgain, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallloss, trial.smallgain, trial.largeloss, trial.smallgain, trial.largeloss, trial.smallloss, trial.smallloss, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallloss, trial.largeloss, trial.smallloss, trial.smallloss, trial.largeloss, trial.smallgain, trial.smallloss, trial.smallgain, trial.largegain, trial.largegain, trial.largegain, trial.largegain, trial.smallgain, trial.smallgain, trial.largeloss, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallloss, trial.smallloss, trial.smallloss, trial.smallloss, trial.smallgain, trial.smallloss, trial.largeloss, trial.smallgain, trial.smallloss, trial.largeloss, trial.smallgain, trial.smallgain, trial.smallgain, trial.smallgain, trial.largegain, trial.largeloss, trial.smallgain, trial.smallloss, trial.smallloss, trial.largegain, trial.largeloss, trial.largegain, trial.smallgain, trial.largegain, trial.smallloss, trial.largegain, trial.smallloss, trial.smallgain, trial.smallgain, trial.smallgain, trial.smallloss, trial.largeloss, trial.largeloss, trial.largegain, trial.largegain, trial.smallloss, trial.smallloss, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallloss, trial.smallgain, trial.smallgain, trial.largegain, trial.smallloss, trial.largeloss, trial.smallgain, trial.smallgain, trial.smallgain, trial.largegain, trial.smallgain, trial.largeloss, trial.smallgain, trial.smallloss, trial.smallgain, trial.smallloss, trial.largegain, trial.largegain, trial.smallloss, trial.smallloss, trial.smallloss, trial.largeloss, trial.smallgain, trial.smallgain, trial.largeloss, trial.smallloss, trial.smallloss)
+/ selectionmode = sequence
+/ selectionrate = always
+</list>
+
+<list safe2outcometrials>
+/items = (trial.smallloss, trial.largegain, trial.smallgain, trial.smallloss, trial.smallgain, trial.smallgain,  trial.smallloss, trial.largeloss, trial.smallloss, trial.smallgain, trial.largeloss, trial.smallgain, trial.largegain, trial.smallgain, trial.smallloss, trial.smallgain, trial.smallloss, trial.largegain, trial.largeloss, trial.smallloss, trial.smallloss, trial.largeloss, trial.smallgain, trial.smallgain, trial.smallloss, trial.smallloss, trial.smallloss, trial.smallgain, trial.smallloss, trial.largegain, trial.largegain, trial.smallloss, trial.largegain, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallloss, trial.smallloss, trial.smallgain, trial.smallgain, trial.largegain, trial.smallgain, trial.smallgain, trial.smallloss, trial.smallloss, trial.smallgain, trial.largegain, trial.smallgain, trial.smallloss, trial.smallgain, trial.smallgain, trial.smallloss, trial.smallloss, trial.smallgain, trial.smallgain, trial.smallloss, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallgain, trial.largegain, trial.largeloss, trial.smallloss, trial.smallgain, trial.smallloss, trial.largegain, trial.smallgain, trial.smallgain, trial.smallgain, trial.largegain, trial.largeloss, trial.smallgain, trial.largegain, trial.smallloss, trial.largeloss, trial.largegain, trial.largegain, trial.smallloss, trial.smallloss, trial.largegain, trial.smallgain, trial.largeloss, trial.largegain, trial.smallgain, trial.smallgain, trial.smallloss, trial.largeloss, trial.smallgain, trial.smallgain, trial.largeloss, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallloss, trial.smallloss, trial.smallgain, trial.smallgain, trial.smallgain, trial.largegain, trial.smallloss, trial.smallgain, trial.largeloss, trial.smallgain, trial.largeloss, trial.smallgain, trial.smallloss, trial.smallgain, trial.smallgain, trial.smallgain, trial.largegain, trial.smallloss, trial.largeloss, trial.smallloss, trial.largeloss, trial.largegain, trial.smallloss, trial.smallgain, trial.smallgain, trial.smallgain, trial.smallgain, trial.largeloss, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallgain, trial.largeloss, trial.smallgain, trial.smallloss, trial.smallloss, trial.largeloss, trial.smallloss, trial.smallgain, trial.smallloss, trial.largeloss, trial.smallloss, trial.smallloss, trial.largeloss, trial.smallloss, trial.largegain, trial.smallloss, trial.largegain, trial.smallgain, trial.smallloss, trial.smallgain, trial.smallgain, trial.smallloss, trial.largeloss, trial.smallloss, trial.smallloss, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallgain, trial.largegain, trial.smallgain, trial.smallgain, trial.smallgain, trial.smallgain, trial.largegain, trial.largegain, trial.largeloss, trial.smallloss, trial.largegain, trial.smallgain, trial.smallgain, trial.smallloss, trial.largeloss, trial.largegain, trial.smallgain, trial.smallgain, trial.largegain, trial.smallgain, trial.smallgain, trial.largeloss, trial.smallgain, trial.smallloss, trial.smallloss, trial.smallgain, trial.largeloss, trial.smallloss, trial.smallloss, trial.smallloss, trial.smallgain, trial.smallgain, trial.smallgain, trial.smallloss, trial.smallloss, trial.largegain, trial.smallloss, trial.largegain, trial.smallgain, trial.largeloss, trial.largegain, trial.smallloss, trial.largegain, trial.smallloss, trial.smallgain, trial.smallloss, trial.largeloss, trial.largeloss, trial.smallloss, trial.smallgain, trial.smallloss, trial.largeloss, trial.largeloss, trial.smallgain, trial.largeloss, trial.smallloss, trial.smallgain, trial.largeloss, trial.smallgain, trial.smallgain, trial.smallloss, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallgain, trial.largeloss, trial.smallgain, trial.smallloss, trial.smallloss, trial.largeloss, trial.largeloss, trial.smallgain, trial.largeloss, trial.smallloss, trial.smallloss, trial.smallgain, trial.largegain, trial.smallgain, trial.smallgain, trial.largegain, trial.smallloss, trial.smallloss, trial.smallgain, trial.largeloss, trial.smallgain, trial.smallgain, trial.smallloss, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallloss, trial.largegain, trial.smallloss, trial.largegain, trial.largeloss, trial.largeloss, trial.largegain, trial.smallgain, trial.largegain, trial.smallloss, trial.largegain, trial.smallloss, trial.smallgain, trial.smallgain, trial.smallloss, trial.smallloss, trial.largegain, trial.smallloss, trial.smallloss, trial.smallgain, trial.smallgain, trial.smallgain, trial.smallgain, trial.largeloss, trial.largegain, trial.smallloss, trial.largeloss, trial.largeloss, trial.smallloss, trial.smallgain, trial.largegain, trial.smallgain, trial.smallgain, trial.largegain, trial.smallloss, trial.largegain, trial.largeloss, trial.smallloss, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallgain, trial.largeloss, trial.largeloss, trial.largegain, trial.largegain, trial.largegain, trial.largegain, trial.largeloss, trial.smallloss, trial.smallloss, trial.smallloss, trial.smallloss, trial.largeloss, trial.smallgain, trial.smallgain, trial.largegain, trial.smallloss, trial.largeloss, trial.largegain, trial.smallgain, trial.smallgain, trial.smallloss, trial.largeloss, trial.smallloss, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallgain, trial.smallloss, trial.largeloss, trial.smallloss, trial.largegain, trial.smallgain, trial.smallgain, trial.smallgain, trial.smallloss, trial.largegain, trial.smallgain, trial.smallgain, trial.largeloss, trial.smallgain, trial.smallloss, trial.smallgain, trial.smallgain, trial.largegain, trial.smallgain, trial.smallgain, trial.largeloss, trial.largegain, trial.largeloss, trial.smallgain, trial.smallloss, trial.smallloss, trial.largegain, trial.smallloss, trial.largegain, trial.smallloss, trial.smallgain, trial.largegain, trial.smallloss, trial.smallloss, trial.largeloss, trial.smallgain, trial.smallgain, trial.smallgain, trial.smallloss, trial.smallgain, trial.smallgain, trial.smallgain, trial.smallgain, trial.smallloss, trial.smallloss, trial.largeloss, trial.smallloss, trial.largegain, trial.smallloss, trial.smallloss, trial.smallloss, trial.largeloss, trial.smallgain, trial.largeloss, trial.smallloss, trial.largeloss, trial.smallgain, trial.smallgain, trial.smallloss, trial.smallgain, trial.largeloss, trial.smallloss, trial.smallloss, trial.smallloss, trial.largeloss, trial.largegain, trial.largegain, trial.largeloss, trial.smallloss, trial.smallloss, trial.smallloss, trial.smallloss, trial.smallgain, trial.smallgain, trial.smallloss, trial.smallloss, trial.smallloss, trial.smallloss, trial.smallgain, trial.smallgain, trial.smallgain, trial.smallgain, trial.smallgain, trial.largegain)
+/ selectionmode = sequence
+/ selectionrate = always
+</list>
+
+
+################NEED to add all this ontrial end stuff to the other choice trials and change to the correct things (ie risky1 or safe2 or left and right stuff, etc)
+##and set record data to false, since i recorded everything under the feedback trials. 
+<trial choice_risky1left_safe1right>
+/ontrialbegin = [values.randomnum = rand(1,100)]
+/stimulusframes = [1 = risky1left, safe1right,leftF, rightJ]
+/validresponse = ("f", "j")
+/ recorddata = false
+/ontrialend = [
+	values.leftoption="risky1";
+	values.rightoption="safe1";
+	values.leftpic=values.risky1pic;
+	values.rightpic=values.safe1pic;
+	values.turnnum=values.turnnum+1;
+	values.choicert=trial.choice_risky1left_safe1right.latency;
+]
+/ ontrialend = [
+	if (trial.choice_risky1left_safe1right.response==33) {
+		values.selecteddirn="left";
+		values.selectedoption=values.leftoption;} ]
+/ ontrialend = [
+	if (trial.choice_risky1left_safe1right.response==36) {
+		values.selecteddirn="right";
+		values.selectedoption=values.rightoption;} ]
+
+/branch= [if (trial.choice_risky1left_safe1right.response==33) list.risky1outcometrials.nextvalue]
+/branch =[if (trial.choice_risky1left_safe1right.response==36) list.safe1outcometrials.nextvalue]
+
+</trial>
+
+
+
+/branch= [if (values.randomnum <=values.cutoff1 && trial.choice_risky1left_safe1right.response==33) trial.smallgain]
+/branch =[if (values.randomnum <=values.cutoff1 && trial.choice_risky1left_safe1right.response==36) trial.largegain]
+/branch =[if (values.randomnum >values.cutoff1 && values.randomnum <=values.cutoff2 && trial.choice_risky1left_safe1right.response==33) trial.largegain]
+/branch =[if (values.randomnum >values.cutoff1 && values.randomnum <=values.cutoff2 && trial.choice_risky1left_safe1right.response==36) trial.smallgain]
+/branch =[if (values.randomnum >values.cutoff2 && values.randomnum <=values.cutoff3 && trial.choice_risky1left_safe1right.response==33) trial.largeloss]
+/branch =[if (values.randomnum >values.cutoff2 && values.randomnum <=values.cutoff3 && trial.choice_risky1left_safe1right.response==36) trial.smallloss]
+/branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky1left_safe1right.response==33) trial.smallloss]
+/branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky1left_safe1right.response==36) trial.largeloss]
+
+
+<trial choice_risky1right_safe1left>
+/ontrialbegin = [values.randomnum = rand(1,100)]
+/stimulusframes = [1 = risky1right, safe1left,leftF, rightJ]
+/validresponse = ("f", "j")
+/ recorddata = false
+/ontrialend = [
+	values.leftoption="safe1";
+	values.rightoption="risky1";
+	values.leftpic=values.safe1pic;
+	values.rightpic=values.risky1pic;
+	values.turnnum=values.turnnum+1;
+	values.choicert=trial.choice_risky1right_safe1left.latency;
+]
+/ ontrialend = [
+	if (trial.choice_risky1right_safe1left.response==33) {
+		values.selecteddirn="left";
+		values.selectedoption=values.leftoption;} ]
+/ ontrialend = [
+	if (trial.choice_risky1right_safe1left.response==36) {
+		values.selecteddirn="right";
+		values.selectedoption=values.rightoption;} ]
+
+/branch= [if (trial.choice_risky1right_safe1left.response==33) list.safe1outcometrials.nextvalue]
+/branch =[if (trial.choice_risky1right_safe1left.response==36) list.risky1outcometrials.nextvalue]
+
+</trial>
+
+
+
+/branch= [if (values.randomnum <=values.cutoff1 && trial.choice_risky1right_safe1left.response==33) trial.largegain]
+/branch =[if (values.randomnum <=values.cutoff1 && trial.choice_risky1right_safe1left.response==36) trial.smallgain]
+/branch =[if (values.randomnum >values.cutoff1 && values.randomnum <=values.cutoff2 && trial.choice_risky1right_safe1left.response==33) trial.smallgain]
+/branch =[if (values.randomnum >values.cutoff1 && values.randomnum <=values.cutoff2 && trial.choice_risky1right_safe1left.response==36) trial.largegain]
+/branch =[if (values.randomnum >values.cutoff2 && values.randomnum <=values.cutoff3 && trial.choice_risky1right_safe1left.response==33) trial.smallloss]
+/branch =[if (values.randomnum >values.cutoff2 && values.randomnum <=values.cutoff3 && trial.choice_risky1right_safe1left.response==36) trial.largeloss]
+/branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky1right_safe1left.response==33) trial.largeloss]
+/branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky1right_safe1left.response==36) trial.smallloss]
+
+
+
+<trial choice_risky1right_safe2left>
+/ontrialbegin = [values.randomnum = rand(1,100)]
+/stimulusframes = [1 = risky1right, safe2left,leftF, rightJ]
+/validresponse = ("f", "j")
+/ recorddata = false
+/ontrialend = [
+	values.rightoption="risky1";
+	values.leftoption="safe2";
+	values.rightpic=values.risky1pic;
+	values.leftpic=values.safe2pic;
+	values.turnnum=values.turnnum+1;
+	values.choicert=trial.choice_risky1right_safe2left.latency;
+]
+/ ontrialend = [
+	if (trial.choice_risky1right_safe2left.response==33) {
+		values.selecteddirn="left";
+		values.selectedoption=values.leftoption;} ]
+/ ontrialend = [
+	if (trial.choice_risky1right_safe1left.response==36) {
+		values.selecteddirn="right";
+		values.selectedoption=values.rightoption;} ]
+
+/branch= [if (trial.choice_risky1right_safe2left.response==33) list.safe2outcometrials.nextvalue]
+/branch =[if (trial.choice_risky1right_safe2left.response==36) list.risky1outcometrials.nextvalue]
+
+</trial>
+
+/branch= [if (values.randomnum <=values.cutoff1 && trial.choice_risky1right_safe2left.response==33) trial.largegain]
+/branch =[if (values.randomnum <=values.cutoff1 && trial.choice_risky1right_safe2left.response==36) trial.smallgain]
+/branch =[if (values.randomnum >values.cutoff1 && values.randomnum <=values.cutoff2 && trial.choice_risky1right_safe2left.response==33) trial.smallgain]
+/branch =[if (values.randomnum >values.cutoff1 && values.randomnum <=values.cutoff2 && trial.choice_risky1right_safe2left.response==36) trial.largegain]
+/branch =[if (values.randomnum >values.cutoff2 && values.randomnum <=values.cutoff3 && trial.choice_risky1right_safe2left.response==33) trial.smallloss]
+/branch =[if (values.randomnum >values.cutoff2 && values.randomnum <=values.cutoff3 && trial.choice_risky1right_safe2left.response==36) trial.largeloss]
+/branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky1right_safe2left.response==33) trial.largeloss]
+/branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky1right_safe2left.response==36) trial.smallloss]
+
+
+
+
+<trial choice_risky1left_safe2right>
+/ontrialbegin = [values.randomnum = rand(1,100)]
+/stimulusframes = [1 = risky1left, safe2right,leftF, rightJ]
+/validresponse = ("f", "j")
+/ recorddata = false
+/ontrialend = [
+	values.leftoption="risky1";
+	values.rightoption="safe2";
+	values.leftpic=values.risky1pic;
+	values.rightpic=values.safe2pic;
+	values.turnnum=values.turnnum+1;
+	values.choicert=trial.choice_risky1left_safe2right.latency;
+]
+/ ontrialend = [
+	if (trial.choice_risky1left_safe2right.response==33) {
+		values.selecteddirn="left";
+		values.selectedoption=values.leftoption;} ]
+/ ontrialend = [
+	if (trial.choice_risky1left_safe2right.response==36) {
+		values.selecteddirn="right";
+		values.selectedoption=values.rightoption;} ]
+
+/branch= [if (trial.choice_risky1left_safe2right.response==33) list.risky1outcometrials.nextvalue]
+/branch =[if (trial.choice_risky1left_safe2right.response==36) list.safe2outcometrials.nextvalue]
+
+</trial>
+
+/branch= [if (values.randomnum <=values.cutoff1 && trial.choice_risky1left_safe2right.response==33) trial.smallgain]
+/branch =[if (values.randomnum <=values.cutoff1 && trial.choice_risky1left_safe2right.response==36) trial.largegain]
+/branch =[if (values.randomnum >values.cutoff1 && values.randomnum <=values.cutoff2 && trial.choice_risky1left_safe2right.response==33) trial.largegain]
+/branch =[if (values.randomnum >values.cutoff1 && values.randomnum <=values.cutoff2 && trial.choice_risky1left_safe2right.response==36) trial.smallgain]
+/branch =[if (values.randomnum >values.cutoff2 && values.randomnum <=values.cutoff3 && trial.choice_risky1left_safe2right.response==33) trial.largeloss]
+/branch =[if (values.randomnum >values.cutoff2 && values.randomnum <=values.cutoff3 && trial.choice_risky1left_safe2right.response==36) trial.smallloss]
+/branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky1left_safe2right.response==33) trial.smallloss]
+/branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky1left_safe2right.response==36) trial.largeloss]
+
+
+
+
+<trial choice_risky2right_safe1left>
+/ontrialbegin = [values.randomnum = rand(1,100)]
+/stimulusframes = [1 = risky2right, safe1left,leftF, rightJ]
+/validresponse = ("f", "j")
+/ recorddata = false
+/ontrialend = [
+	values.rightoption="risky2";
+	values.leftoption="safe1";
+	values.rightpic=values.risky2pic;
+	values.leftpic=values.safe1pic;
+	values.turnnum=values.turnnum+1;
+	values.choicert=trial.choice_risky2right_safe1left.latency;
+]
+/ ontrialend = [
+	if (trial.choice_risky2right_safe1left.response==33) {
+		values.selecteddirn="left";
+		values.selectedoption=values.leftoption;} ]
+/ ontrialend = [
+	if (trial.choice_risky2right_safe1left.response==36) {
+		values.selecteddirn="right";
+		values.selectedoption=values.rightoption;} ]
+
+/branch= [if (trial.choice_risky2right_safe1left.response==33) list.safe1outcometrials.nextvalue]
+/branch =[if (trial.choice_risky2right_safe1left.response==36) list.risky2outcometrials.nextvalue]
+
+</trial>
+
+/branch= [if (values.randomnum <=values.cutoff1 && trial.choice_risky2right_safe1left.response==33) trial.largegain]
+/branch =[if (values.randomnum <=values.cutoff1 && trial.choice_risky2right_safe1left.response==36) trial.smallgain]
+/branch =[if (values.randomnum >values.cutoff1 && values.randomnum <=values.cutoff2 && trial.choice_risky2right_safe1left.response==33) trial.smallgain]
+/branch =[if (values.randomnum >values.cutoff1 && values.randomnum <=values.cutoff2 && trial.choice_risky2right_safe1left.response==36) trial.largegain]
+/branch =[if (values.randomnum >values.cutoff2 && values.randomnum <=values.cutoff3 && trial.choice_risky2right_safe1left.response==33) trial.smallloss]
+/branch =[if (values.randomnum >values.cutoff2 && values.randomnum <=values.cutoff3 && trial.choice_risky2right_safe1left.response==36) trial.largeloss]
+/branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky2right_safe1left.response==33) trial.largeloss]
+/branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky2right_safe1left.response==36) trial.smallloss]
+
+
+<trial choice_risky2left_safe1right>
+/ontrialbegin = [values.randomnum = rand(1,100)]
+/stimulusframes = [1 = risky2left, safe1right,leftF, rightJ]
+/validresponse = ("f", "j")
+/ recorddata = false
+/ontrialend = [
+	values.leftoption="risky2";
+	values.rightoption="safe1";
+	values.leftpic=values.risky2pic;
+	values.rightpic=values.safe1pic;
+	values.turnnum=values.turnnum+1;
+	values.choicert=trial.choice_risky2left_safe1right.latency;
+]
+/ ontrialend = [
+	if (trial.choice_risky2left_safe1right.response==33) {
+		values.selecteddirn="left";
+		values.selectedoption=values.leftoption;} ]
+/ ontrialend = [
+	if (trial.choice_risky2left_safe1right.response==36) {
+		values.selecteddirn="right";
+		values.selectedoption=values.rightoption;} ]
+
+/branch= [if (trial.choice_risky2left_safe1right.response==33) list.risky1outcometrials.nextvalue]
+/branch =[if (trial.choice_risky2left_safe1right.response==36) list.safe1outcometrials.nextvalue]
+
+</trial>
+
+/branch= [if (values.randomnum <=values.cutoff1 && trial.choice_risky1left_safe1right.response==33) trial.smallgain]
+/branch =[if (values.randomnum <=values.cutoff1 && trial.choice_risky1left_safe1right.response==36) trial.largegain]
+/branch =[if (values.randomnum >values.cutoff1 && values.randomnum <=values.cutoff2 && trial.choice_risky2left_safe1right.response==33) trial.largegain]
+/branch =[if (values.randomnum >values.cutoff1 && values.randomnum <=values.cutoff2 && trial.choice_risky2left_safe1right.response==36) trial.smallgain]
+/branch =[if (values.randomnum >values.cutoff2 && values.randomnum <=values.cutoff3 && trial.choice_risky2left_safe1right.response==33) trial.largeloss]
+/branch =[if (values.randomnum >values.cutoff2 && values.randomnum <=values.cutoff3 && trial.choice_risky2left_safe1right.response==36) trial.smallloss]
+/branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky2left_safe1right.response==33) trial.smallloss]
+/branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky2left_safe1right.response==36) trial.largeloss]
+
+
+<trial choice_risky2right_safe2left>
+/ontrialbegin = [values.randomnum = rand(1,100)]
+/stimulusframes = [1 = risky2right, safe2left,leftF, rightJ]
+/validresponse = ("f", "j")
+/ recorddata = false
+/ontrialend = [
+	values.rightoption="risky2";
+	values.leftoption="safe2";
+	values.leftpic=values.safe2pic;
+	values.rightpic=values.risky2pic;
+	values.turnnum=values.turnnum+1;
+	values.choicert=trial.choice_risky2right_safe2left.latency;
+]
+/ ontrialend = [
+	if (trial.choice_risky2right_safe2left.response==33) {
+		values.selecteddirn="left";
+		values.selectedoption=values.leftoption;} ]
+/ ontrialend = [
+	if (trial.choice_risky2right_safe2left.response==36) {
+		values.selecteddirn="right";
+		values.selectedoption=values.rightoption;} ]
+
+/branch= [if (trial.choice_risky2right_safe2left.response==33) list.safe2outcometrials.nextvalue]
+/branch =[if (trial.choice_risky2right_safe2left.response==36) list.risky2outcometrials.nextvalue]
+
+</trial>
+
+/branch= [if (values.randomnum <=values.cutoff1 && trial.choice_risky2right_safe2left.response==33) trial.largegain]
+/branch =[if (values.randomnum <=values.cutoff1 && trial.choice_risky2right_safe2left.response==36) trial.smallgain]
+/branch =[if (values.randomnum >values.cutoff1 && values.randomnum <=values.cutoff2 && trial.choice_risky2right_safe2left.response==33) trial.smallgain]
+/branch =[if (values.randomnum >values.cutoff1 && values.randomnum <=values.cutoff2 && trial.choice_risky2right_safe2left.response==36) trial.largegain]
+/branch =[if (values.randomnum >values.cutoff2 && values.randomnum <=values.cutoff3 && trial.choice_risky2right_safe2left.response==33) trial.smallloss]
+/branch =[if (values.randomnum >values.cutoff2 && values.randomnum <=values.cutoff3 && trial.choice_risky2right_safe2left.response==36) trial.largeloss]
+/branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky2right_safe2left.response==33) trial.largeloss]
+/branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky2right_safe2left.response==36) trial.smallloss]
+
+
+
+
+<trial choice_risky2left_safe2right>
+/ontrialbegin = [values.randomnum = rand(1,100)]
+/stimulusframes = [1 = risky2left, safe2right,leftF, rightJ]
+/validresponse = ("f", "j")
+/ recorddata = false
+/ontrialend = [
+	values.leftoption="risky2";
+	values.rightoption="safe2";
+	values.rightpic=values.safe2pic;
+	values.leftpic=values.risky2pic;
+	values.turnnum=values.turnnum+1;
+	values.choicert=trial.choice_risky2left_safe2right.latency;
+]
+/ ontrialend = [
+	if (trial.choice_risky2left_safe2right.response==33) {
+		values.selecteddirn="left";
+		values.selectedoption=values.leftoption;} ]
+/ ontrialend = [
+	if (trial.choice_risky2left_safe2right.response==36) {
+		values.selecteddirn="right";
+		values.selectedoption=values.rightoption;} ]
+
+/branch= [if (trial.choice_risky2left_safe2right.response==33) list.risky2outcometrials.nextvalue]
+/branch =[if (trial.choice_risky2left_safe2right.response==36) list.safe2outcometrials.nextvalue]
+
+</trial>
+
+/branch= [if (values.randomnum <=values.cutoff1 && trial.choice_risky2left_safe2right.response==33) trial.smallgain]
+/branch =[if (values.randomnum <=values.cutoff1 && trial.choice_risky2left_safe2right.response==36) trial.largegain]
+/branch =[if (values.randomnum >values.cutoff1 && values.randomnum <=values.cutoff2 && trial.choice_risky2left_safe2right.response==33) trial.largegain]
+/branch =[if (values.randomnum >values.cutoff1 && values.randomnum <=values.cutoff2 && trial.choice_risky2left_safe2right.response==36) trial.smallgain]
+/branch =[if (values.randomnum >values.cutoff2 && values.randomnum <=values.cutoff3 && trial.choice_risky2left_safe2right.response==33) trial.largeloss]
+/branch =[if (values.randomnum >values.cutoff2 && values.randomnum <=values.cutoff3 && trial.choice_risky2left_safe2right.response==36) trial.smallloss]
+/branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky2left_safe2right.response==33) trial.smallloss]
+/branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky2left_safe2right.response==36) trial.largeloss]
+
+
+
+***********
+FORCED TRIALS FOR TRAINING PHASE
+**********
+
+<trial choice_risky1left_risky1right>
+/ontrialbegin = [values.randomnum = rand(1,100)]
+/stimulusframes = [1 = risky1left, risky1right,leftF, rightJ]
+/validresponse = ("f", "j")
+/ recorddata = false
+/ontrialend = [
+	values.leftoption="risky1";
+	values.rightoption="risky1";
+	values.rightpic=values.risky1pic;
+	values.leftpic=values.risky1pic;
+	values.turnnum=values.turnnum+1;
+	values.choicert=trial.choice_risky1left_risky1right.latency;
+]
+/ ontrialend = [
+	if (trial.choice_risky1left_risky1right.response==33) {
+		values.selecteddirn="left";
+		values.selectedoption=values.leftoption;} ]
+/ ontrialend = [
+	if (trial.choice_risky1left_risky1right.response==36) {
+		values.selecteddirn="right";
+		values.selectedoption=values.rightoption;} ]
+
+/branch= [if (trial.choice_risky1left_risky1right.response==33) list.risky1outcometrials.nextvalue]
+/branch =[if (trial.choice_risky1left_risky1right.response==36) list.risky1outcometrials.nextvalue]
+</trial>
+
+<trial choice_risky2left_risky2right>
+/ontrialbegin = [values.randomnum = rand(1,100)]
+/stimulusframes = [1 = risky2left, risky2right,leftF, rightJ]
+/validresponse = ("f", "j")
+/ recorddata = false
+/ontrialend = [
+	values.leftoption="risky2";
+	values.rightoption="risky2";
+	values.rightpic=values.risky2pic;
+	values.leftpic=values.risky2pic;
+	values.turnnum=values.turnnum+1;
+	values.choicert=trial.choice_risky2left_risky2right.latency;
+]
+/ ontrialend = [
+	if (trial.choice_risky2left_risky2right.response==33) {
+		values.selecteddirn="left";
+		values.selectedoption=values.leftoption;} ]
+/ ontrialend = [
+	if (trial.choice_risky2left_risky2right.response==36) {
+		values.selecteddirn="right";
+		values.selectedoption=values.rightoption;} ]
+/branch= [if (trial.choice_risky2left_risky2right.response==33) list.risky2outcometrials.nextvalue]
+/branch =[if (trial.choice_risky2left_risky2right.response==36) list.risky2outcometrials.nextvalue]
+</trial>
+
+<trial choice_safe1left_safe1right>
+/ontrialbegin = [values.randomnum = rand(1,100)]
+/stimulusframes = [1 = safe1left, safe1right,leftF, rightJ]
+/validresponse = ("f", "j")
+/ recorddata = false
+/ontrialend = [
+	values.leftoption="safe1";
+	values.rightoption="safe1";
+	values.rightpic=values.safe1pic;
+	values.leftpic=values.safe1pic;
+	values.turnnum=values.turnnum+1;
+	values.choicert=trial.choice_safe1left_safe1right.latency;
+]
+/ ontrialend = [
+	if (trial.choice_safe1left_safe1right.response==33) {
+		values.selecteddirn="left";
+		values.selectedoption=values.leftoption;} ]
+/ ontrialend = [
+	if (trial.choice_safe1left_safe1right.response==36) {
+		values.selecteddirn="right";
+		values.selectedoption=values.rightoption;} ]
+/branch= [if (trial.choice_safe1left_safe1right.response==33) list.safe1outcometrials.nextvalue]
+/branch =[if (trial.choice_safe1left_safe1right.response==36) list.safe1outcometrials.nextvalue]
+</trial>
+
+<trial choice_safe2left_safe2right>
+/ontrialbegin = [values.randomnum = rand(1,100)]
+/stimulusframes = [1 = safe2left, safe2right,leftF, rightJ]
+/validresponse = ("f", "j")
+/ recorddata = false
+/ontrialend = [
+	values.leftoption="safe2";
+	values.rightoption="safe2";
+	values.rightpic=values.safe2pic;
+	values.leftpic=values.safe2pic;
+	values.turnnum=values.turnnum+1;
+	values.choicert=trial.choice_safe2left_safe2right.latency;
+]
+/ ontrialend = [
+	if (trial.choice_safe2left_safe2right.response==33) {
+		values.selecteddirn="left";
+		values.selectedoption=values.leftoption;} ]
+/ ontrialend = [
+	if (trial.choice_safe2left_safe2right.response==36) {
+		values.selecteddirn="right";
+		values.selectedoption=values.rightoption;} ]
+/branch= [if (trial.choice_safe2left_safe2right.response==33) list.safe2outcometrials.nextvalue]
+/branch =[if (trial.choice_safe2left_safe2right.response==36) list.safe2outcometrials.nextvalue]
+</trial>
+***********
+BLOCKS
+**********
+<list trainingphase1trialselector>
+/ items = [trial.choice_risky1left_risky1right;trial.choice_safe1left_safe1right;trial.choice_risky1left_safe1right;trial.choice_risky1right_safe1left;
+trial.choice_risky2left_risky2right;trial.choice_safe1left_safe1right;trial.choice_risky2left_safe2right;trial.choice_risky2right_safe2left]
+/ itemprobabilities = [0.2;0.2;0.2;0.2;0.05;0.05;0.05;0.05]
+/ poolsize = 20
+/ selectionmode=random
+</list>
+
+
+<list trainingphase2trialselector>
+/ items = [trial.choice_risky1left_risky1right;trial.choice_safe1left_safe1right;trial.choice_risky1left_safe1right;trial.choice_risky1right_safe1left;
+trial.choice_risky2left_risky2right;trial.choice_safe1left_safe1right;trial.choice_risky2left_safe2right;trial.choice_risky2right_safe2left]
+/ itemprobabilities = [0.05;0.05;0.05;0.05;0.2;0.2;0.2;0.2]
+/ poolsize = 20
+/ selectionmode=random
+</list>
+
+
+<block trainingphase1>
+/ trials = [1-3=instructions_main; 4-5=instructions_dists; 6=instructionslides_selectright; 7=instructionslides_selectleft; 8-9=instructions_main;
+10-24= list.trainingphase1trialselector]
+</block>
+<block trainingphase2>
+/ trials = [1-15=list.trainingphase2trialselector]
+</block>
+<block trainingphase3>
+/ trials = [1-15= noreplace(choice_risky1left_safe1right, choice_risky1right_safe1left, choice_risky1right_safe2left, choice_risky1left_safe2right, 
+choice_risky2right_safe1left, choice_risky2left_safe1right, choice_risky2left_safe2right, choice_risky2right_safe2left)]
+</block>
+
+<block test>
+/ trials = [1-60= noreplace(choice_risky1left_safe1right, choice_risky1right_safe1left, choice_risky1right_safe2left, choice_risky1left_safe2right, 
+choice_risky2right_safe1left, choice_risky2left_safe1right, choice_risky2left_safe2right, choice_risky2right_safe2left)]
+</block>
+
+
+<block rest>
+/trials = [1= rest]
+</block>
+
+************************************
+EXPERIMENT AND VALUES
+************************************
+
+<list outcomepics>
+/items=("images/animal-silhouette-dog2nohead.jpg", "images/house.jpg","images/face-03.jpg","images/hammer.jpg")
+/ select = list.outcome_pic_category_names.currentindex
+/ selectionrate = always
+</list>
+
+<list outcome_pic_category_names>
+/items=("animals", "places","faces","tools")
+/replace=false
+/ selectionmode =random
+/ selectionrate = always
+</list>
+
+<list choicepics>
+/items=("images/star.jpg","images/rectangle.jpg", "images/triangle.jpg","images/circle.jpg")
+/replace=false
+/ selectionmode =random
+/ selectionrate = always
+</list>
+
+<expt>
+/ onexptbegin = [
+	values.complete=0;
+	
+	values.largegainpic_category = list.outcome_pic_category_names.nextvalue;
+	values.largegainpic=list.outcomepics.nextvalue;
+	values.smallgainpic_category = list.outcome_pic_category_names.nextvalue;
+	values.smallgainpic=list.outcomepics.nextvalue;
+	values.largelosspic_category = list.outcome_pic_category_names.nextvalue;
+	values.largelosspic=list.outcomepics.nextvalue;
+	values.smalllosspic_category = list.outcome_pic_category_names.nextvalue;
+	values.smalllosspic=list.outcomepics.nextvalue;
+
+	values.risky1pic=list.choicepics.nextvalue;
+	values.risky2pic=list.choicepics.nextvalue;
+	values.safe1pic=list.choicepics.nextvalue;
+	values.safe2pic=list.choicepics.nextvalue;
+]
+/postinstructions = (page.post)
+/blocks = [1-7=sequence(initial_instructions,learningvalues,learningphase2,trainingphase1,trainingphase2,trainingphase3,choice_distributions_learned,memorytest_values_end)]
+/ onexptend = [
+	values.complete=1
+]
+</expt>
+learningphase2
+/blocks = [1-7=sequence(initial_instructions,learningvalues,learningphase2,trainingphase1,trainingphase2,trainingphase3,choice_distributions_learned,memorytest_values_end)]
+
+
+/blocks = [1=learningvalues;2=learningphase2;3=trainingphase1;4=trainingphase2;5=trainingphase3;6=choice_distributions_learned;7=memorytest_values]
+************
+DATA
+*************
+
+<data>
+/separatefiles = true
+/columns = (build, date, time, subject, group, blockcode, blocknum, trialcode, trialnum, stimulusitem, stimulusitem, 
+values.pointsthisturn, values.newtotalscore, response, latency, 
+values.leftoption, values.rightoption, values.leftpic, values.rightpic,
+values.selecteddirn, values.selectedoption, values.turnnum, values.choicert,
+values.largegainpic_category,values.smallgainpic_category,values.smalllosspic_category,values.largelosspic_category,
+values.largegainpic,values.smallgainpic,values.smalllosspic,values.largelosspic,
+values.risky1pic,values.risky2pic,values.safe1pic,values.safe2pic, )
+</data>
+values.leftoption, values.rightoption
+values.leftpic, values.rightpic
+values.selecteddirn (left or right)
+values.selectedoption (e.g. risky1) ---
+turnnum --uptdates everytime on a choice screen
+values.choicert ---latency from choice trial.
+	
+
+check if records both stim. 
+check if records what the image is and waht the assocaited points are...
+ie want points this turn, and points overal
+
+<summarydata>
+/columns = (script.startdate, script.starttime, script.subjectid, script.groupid,
+values.newtotalscore, values.complete, values.largegainpic_category,values.largegainpic,values.smallgainpic_category,values.smallgainpic,values.smallgainpic_category,values.smalllosspic,values.largelosspic_category,values.largelosspic,values.risky1pic,values.risky2pic,values.safe1pic,values.safe2pic)
+</summarydata>
+record various condition info for randomizing pics here too
