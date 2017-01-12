@@ -1,4 +1,4 @@
-﻿****VALUES****
+﻿ ****VALUES****
 *****************
 
 <values>
@@ -742,8 +742,42 @@ If you get any wrong, you will be shown the values again and can try again.
 </trial>
 
 
+**************************
+MEMORY TEST END
+**************************
+
+<openended smallgainlearning_noFeedback>
+/stimulusframes = [1=smallgain]
+/ position = (50,80)
+/correctresponse = (values.smallgainvalue)
+/ validresponse = (anyresponse)
+</openended>
+
+<openended smalllosslearning_noFeedback>
+/stimulusframes = [1=smallloss]
+/ position = (50,80)
+/correctresponse = (values.smalllossvalue)
+/ validresponse = (anyresponse)
+</openended>
+
+<openended largegainlearning_noFeedback>
+/stimulusframes = [1=largegain]
+/ position = (50,80)
+/correctresponse = (values.largegainvalue)
+/ validresponse = (anyresponse)
+</openended> 
+
+
+<openended largelosslearning_noFeedback>
+/stimulusframes = [1=largeloss]
+/ position = (50,80)
+/correctresponse = (values.largelossvalue)
+/ validresponse = (anyresponse)
+</openended> 
+
+
 <block memorytest_values_end>
-/ trials = [1=instructions_memorytest_values; 2-5=noreplace(largelosslearning,smalllosslearning,smallgainlearning,largegainlearning)]
+/ trials = [1=instructions_memorytest_values; 2-5=noreplace(largelosslearning_noFeedback,smalllosslearning_noFeedback,smallgainlearning_noFeedback,largegainlearning_noFeedback)]
 </block>
 
 
@@ -798,6 +832,13 @@ Type '2' if you think this machine was more likely to give you stamps with <%val
 / validresponse = (57)
 </trial>
 
+<text likert_scale_instructions>
+/ items = ("Please indicate how confident you are in your response. Use your mouse to select an option.")
+/ txcolor = black
+/ position = (50%, 20%)
+/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
+</text>
+
 
 
 <openended risky1learning> 
@@ -805,28 +846,49 @@ Type '2' if you think this machine was more likely to give you stamps with <%val
 / position = (50,80)
 / validresponse = ("1","2")
 </openended>
+<likert risky1learning_scale>
+/ stimulusframes = [1=likert_scale_instructions] 
+/ position = (50%, 50%)
+/ anchors = [1="Not At All Confident"; 2="Somewhat Confident"; 3="Undecided"; 4="Confident"; 5="Very Confident"]
+</likert>
+
 
 <openended risky2learning> 
 /stimulusframes = [1=risky2center, instructions_distribution2]
 / position = (50,80)
 / validresponse = ("1","2")
 </openended>
+<likert risky2learning_scale>
+/ stimulusframes = [1=likert_scale_instructions] 
+/ position = (50%, 50%)
+/ anchors = [1="Not At All Confident"; 2="Somewhat Confident"; 3="Undecided"; 4="Confident"; 5="Very Confident"]
+</likert>
 
 <openended safe1learning> 
 /stimulusframes = [1=safe1center,  instructions_distribution2]
 / position = (50,80)
 / validresponse = ("1","2")
 </openended>
+<likert safe1learning_scale>
+/ stimulusframes = [1=likert_scale_instructions] 
+/ position = (50%, 50%)
+/ anchors = [1="Not At All Confident"; 2="Somewhat Confident"; 3="Undecided"; 4="Confident"; 5="Very Confident"]
+</likert>
 
 <openended safe2learning> 
 /stimulusframes = [1=safe2center,  instructions_distribution2]
 / position = (50,80)
 / validresponse = ("1","2")
 </openended>
+<likert safe2learning_scale>
+/ stimulusframes = [1=likert_scale_instructions] 
+/ position = (50%, 50%)
+/ anchors = [1="Not At All Confident"; 2="Somewhat Confident"; 3="Undecided"; 4="Confident"; 5="Very Confident"]
+</likert>
 
 
 <block choice_distributions_learned>
-/ trials = [1=instructions_distributiontest;2-5=noreplace(risky1learning, risky2learning, safe1learning, safe2learning)]
+/ trials = [1=instructions_distributiontest; 2=risky1learning; 3=risky1learning_scale; 4=risky2learning; 5=risky2learning_scale; 6=safe1learning; 7=safe1learning_scale; 8=safe2learning; 9=safe2learning_scale]
 </block>
 
 
@@ -1396,7 +1458,7 @@ EXPERIMENT AND VALUES
 	values.safe2pic=list.choicepics.nextvalue;
 ]
 /postinstructions = (page.post)
-/blocks = [1=initial_instructions;2=learningvalues;3=learningphase2;4=trainingphase1;5=trainingphase2;6=trainingphase3;7=choice_distributions_learned;8=memorytest_values_end]
+/blocks = [1=initial_instructions; 2=learningvalues; 3=learningphase2; 4=learningphase2; 5=trainingphase1; 6=trainingphase2; 7=trainingphase3; 8=test; 9=choice_distributions_learned; 10=memorytest_values_end]
 / onexptend = [
 	values.complete=1
 ]
@@ -1418,7 +1480,8 @@ values.leftoption, values.rightoption, values.leftpic, values.rightpic,
 values.selecteddirn, values.selectedoption, values.turnnum, values.choicert,
 values.largegainpic_category,values.smallgainpic_category,values.smalllosspic_category,values.largelosspic_category,
 values.largegainpic,values.smallgainpic,values.smalllosspic,values.largelosspic,
-values.risky1pic,values.risky2pic,values.safe1pic,values.safe2pic, )
+values.risky1pic,values.risky2pic,values.safe1pic,values.safe2pic,
+likert.risky1learning_scale, likert.risky2learning_scale, likert.safe1learning_scale, likert.safe2learning_scale)
 </data>
 values.leftoption, values.rightoption
 values.leftpic, values.rightpic
