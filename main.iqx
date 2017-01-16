@@ -187,7 +187,9 @@ CHOICE PIX IN CENTER FOR LEARNING TEST
 </picture>
 
 <text rest>
-/items = ("Y")
+/items = ("You are halfway through the task.
+
+Press the spacebar when you are ready to continue.")
 </text>
 
 **************
@@ -849,7 +851,7 @@ Type '2' if you think this machine was more likely to give you stamps with <%val
 <likert risky1learning_scale>
 / stimulusframes = [1=likert_scale_instructions] 
 / position = (50%, 50%)
-/ anchors = [1="Not At All Confident"; 2="Somewhat Confident"; 3="Undecided"; 4="Confident"; 5="Very Confident"]
+/ anchors = [1="Not At All Confident"; 2="A Little Confident"; 3="Somewhat Confident"; 4="Very Confident"; 5="Completely Confident"]
 </likert>
 
 
@@ -900,7 +902,7 @@ TRIALS
 not actually used now...
 <trial rest> 
 /stimulusframes = [1=rest]
-/trialduration = 3000
+/ validresponse = (" ")
 </trial>
 
 
@@ -1400,13 +1402,15 @@ trial.choice_risky2left_risky2right;trial.choice_safe1left_safe1right;trial.choi
 <block trainingphase2>
 / trials = [1-15=list.trainingphase2trialselector]
 </block>
-<block trainingphase3>
-/ trials = [1-15= noreplace(choice_risky1left_safe1right, choice_risky1right_safe1left, choice_risky1right_safe2left, choice_risky1left_safe2right, 
+
+This below has all evenly spread out
+<block testblock1>
+/ trials = [1-20= noreplace(choice_risky1left_safe1right, choice_risky1right_safe1left, choice_risky1right_safe2left, choice_risky1left_safe2right, 
 choice_risky2right_safe1left, choice_risky2left_safe1right, choice_risky2left_safe2right, choice_risky2right_safe2left)]
 </block>
 
-<block test>
-/ trials = [1-60= noreplace(choice_risky1left_safe1right, choice_risky1right_safe1left, choice_risky1right_safe2left, choice_risky1left_safe2right, 
+<block testblock2>
+/ trials = [1-50= noreplace(choice_risky1left_safe1right, choice_risky1right_safe1left, choice_risky1right_safe2left, choice_risky1left_safe2right, 
 choice_risky2right_safe1left, choice_risky2left_safe1right, choice_risky2left_safe2right, choice_risky2right_safe2left)]
 </block>
 
@@ -1458,7 +1462,7 @@ EXPERIMENT AND VALUES
 	values.safe2pic=list.choicepics.nextvalue;
 ]
 /postinstructions = (page.post)
-/blocks = [1=initial_instructions; 2=learningvalues; 3=learningphase2; 4=learningphase2; 5=trainingphase1; 6=trainingphase2; 7=trainingphase3; 8=test; 9=choice_distributions_learned; 10=memorytest_values_end]
+/blocks = [1=initial_instructions; 2=learningvalues; 3=learningphase2; 4=trainingphase1; 5=trainingphase2; 6=testblock1; 7=rest; 8=testblock2; 9=choice_distributions_learned; 10=memorytest_values_end]
 / onexptend = [
 	values.complete=1
 ]
