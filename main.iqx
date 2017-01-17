@@ -754,6 +754,13 @@ MEMORY TEST END
 /correctresponse = (values.smallgainvalue)
 / validresponse = (anyresponse)
 </openended>
+<likert smallgainlearning_noFeedback_scale>
+/ stimulusframes = [1=likert_scale_instructions] 
+/ position = (50%, 50%)
+/ anchors = [1="Not At All Confident"; 2="A Little Confident"; 3="Mildly Confident"; 4="Somewhat Confident"; 5="Generally Confident"; 6="Highly Confident"; 7="Completely Confident"]
+/ numpoints = 7
+/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
+</likert>
 
 <openended smalllosslearning_noFeedback>
 /stimulusframes = [1=smallloss]
@@ -761,13 +768,27 @@ MEMORY TEST END
 /correctresponse = (values.smalllossvalue)
 / validresponse = (anyresponse)
 </openended>
+<likert smalllosslearning_noFeedback_scale>
+/ stimulusframes = [1=likert_scale_instructions] 
+/ position = (50%, 50%)
+/ anchors = [1="Not At All Confident"; 2="A Little Confident"; 3="Mildly Confident"; 4="Somewhat Confident"; 5="Generally Confident"; 6="Highly Confident"; 7="Completely Confident"]
+/ numpoints = 7
+/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
+</likert>
 
 <openended largegainlearning_noFeedback>
 /stimulusframes = [1=largegain]
 / position = (50,80)
 /correctresponse = (values.largegainvalue)
 / validresponse = (anyresponse)
-</openended> 
+</openended>
+<likert largegainlearning_noFeedback_scale>
+/ stimulusframes = [1=likert_scale_instructions] 
+/ position = (50%, 50%)
+/ anchors = [1="Not At All Confident"; 2="A Little Confident"; 3="Mildly Confident"; 4="Somewhat Confident"; 5="Generally Confident"; 6="Highly Confident"; 7="Completely Confident"]
+/ numpoints = 7
+/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
+</likert> 
 
 
 <openended largelosslearning_noFeedback>
@@ -776,10 +797,17 @@ MEMORY TEST END
 /correctresponse = (values.largelossvalue)
 / validresponse = (anyresponse)
 </openended> 
+<likert largelosslearning_noFeedback_scale>
+/ stimulusframes = [1=likert_scale_instructions] 
+/ position = (50%, 50%)
+/ anchors = [1="Not At All Confident"; 2="A Little Confident"; 3="Mildly Confident"; 4="Somewhat Confident"; 5="Generally Confident"; 6="Highly Confident"; 7="Completely Confident"]
+/ numpoints = 7
+/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
+</likert>
 
 
 <block memorytest_values_end>
-/ trials = [1=instructions_memorytest_values; 2-5=noreplace(largelosslearning_noFeedback,smalllosslearning_noFeedback,smallgainlearning_noFeedback,largegainlearning_noFeedback)]
+/ trials = [1=instructions_memorytest_values; 2=largelosslearning_noFeedback; 3=largelosslearning_noFeedback_scale; 4=smalllosslearning_noFeedback; 5=smalllosslearning_noFeedback_scale; 6=smallgainlearning_noFeedback; 7=smallgainlearning_noFeedback_scale; 8=largegainlearning_noFeedback; 9=largegainlearning_noFeedback_scale]
 </block>
 
 
@@ -851,7 +879,9 @@ Type '2' if you think this machine was more likely to give you stamps with <%val
 <likert risky1learning_scale>
 / stimulusframes = [1=likert_scale_instructions] 
 / position = (50%, 50%)
-/ anchors = [1="Not At All Confident"; 2="A Little Confident"; 3="Somewhat Confident"; 4="Very Confident"; 5="Completely Confident"]
+/ anchors = [1="Not At All Confident"; 2="A Little Confident"; 3="Mildly Confident"; 4="Somewhat Confident"; 5="Generally Confident"; 6="Highly Confident"; 7="Completely Confident"]
+/ numpoints = 7
+/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
 </likert>
 
 
@@ -863,7 +893,9 @@ Type '2' if you think this machine was more likely to give you stamps with <%val
 <likert risky2learning_scale>
 / stimulusframes = [1=likert_scale_instructions] 
 / position = (50%, 50%)
-/ anchors = [1="Not At All Confident"; 2="Somewhat Confident"; 3="Undecided"; 4="Confident"; 5="Very Confident"]
+/ anchors = [1="Not At All Confident"; 2="A Little Confident"; 3="Mildly Confident"; 4="Somewhat Confident"; 5="Generally Confident"; 6="Highly Confident"; 7="Completely Confident"]
+/ numpoints = 7
+/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
 </likert>
 
 <openended safe1learning> 
@@ -874,7 +906,9 @@ Type '2' if you think this machine was more likely to give you stamps with <%val
 <likert safe1learning_scale>
 / stimulusframes = [1=likert_scale_instructions] 
 / position = (50%, 50%)
-/ anchors = [1="Not At All Confident"; 2="Somewhat Confident"; 3="Undecided"; 4="Confident"; 5="Very Confident"]
+/ anchors = [1="Not At All Confident"; 2="A Little Confident"; 3="Mildly Confident"; 4="Somewhat Confident"; 5="Generally Confident"; 6="Highly Confident"; 7="Completely Confident"]
+/ numpoints = 7
+/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
 </likert>
 
 <openended safe2learning> 
@@ -885,7 +919,9 @@ Type '2' if you think this machine was more likely to give you stamps with <%val
 <likert safe2learning_scale>
 / stimulusframes = [1=likert_scale_instructions] 
 / position = (50%, 50%)
-/ anchors = [1="Not At All Confident"; 2="Somewhat Confident"; 3="Undecided"; 4="Confident"; 5="Very Confident"]
+/ anchors = [1="Not At All Confident"; 2="A Little Confident"; 3="Mildly Confident"; 4="Somewhat Confident"; 5="Generally Confident"; 6="Highly Confident"; 7="Completely Confident"]
+/ numpoints = 7
+/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
 </likert>
 
 
@@ -1403,7 +1439,7 @@ trial.choice_risky2left_risky2right;trial.choice_safe1left_safe1right;trial.choi
 / trials = [1-15=list.trainingphase2trialselector]
 </block>
 
-This below has all evenly spread out
+** This below has all evenly spread out
 <block testblock1>
 / trials = [1-20= noreplace(choice_risky1left_safe1right, choice_risky1right_safe1left, choice_risky1right_safe2left, choice_risky1left_safe2right, 
 choice_risky2right_safe1left, choice_risky2left_safe1right, choice_risky2left_safe2right, choice_risky2right_safe2left)]
@@ -1485,7 +1521,8 @@ values.selecteddirn, values.selectedoption, values.turnnum, values.choicert,
 values.largegainpic_category,values.smallgainpic_category,values.smalllosspic_category,values.largelosspic_category,
 values.largegainpic,values.smallgainpic,values.smalllosspic,values.largelosspic,
 values.risky1pic,values.risky2pic,values.safe1pic,values.safe2pic,
-likert.risky1learning_scale, likert.risky2learning_scale, likert.safe1learning_scale, likert.safe2learning_scale)
+likert.risky1learning_scale, likert.risky2learning_scale, likert.safe1learning_scale, likert.safe2learning_scale
+likert.smallgainlearning_noFeedback_scale, likert.largegainlearning_noFeedback_scale, likert.largelosslearning_noFeedback_scale, likert.smalllosslearning_noFeedback_scale)
 </data>
 values.leftoption, values.rightoption
 values.leftpic, values.rightpic
