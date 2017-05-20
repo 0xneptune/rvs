@@ -1,4 +1,7 @@
-﻿ ****VALUES****
+﻿This is the second version where they have to learn 1 machine at a time first to make it easier
+
+
+ ****VALUES****
 *****************
 
 <values>
@@ -7,6 +10,7 @@
 
 /randomnum = "NA"
 /newtotalscore = 0
+/bonusPayment = 0
 
 /pointsthisturn=0
 
@@ -15,15 +19,15 @@
 /smalllossvalue=-1
 /largelossvalue=-4
 
-/largegainpic="images/house.jpg"
-/smallgainpic="images/animal-silhouette-dog2nohead.jpg"
-/smalllosspic="images/face-03.jpg"
-/largelosspic="images/hammer.jpg"
+/largegainpic="house.jpg"
+/smallgainpic="animal-silhouette-dog2nohead.jpg"
+/smalllosspic="face-03.jpg"
+/largelosspic="hammer.jpg"
 
-/risky1pic="images/star.jpg"
-/risky2pic="images/rectangle.jpg"
-/safe1pic="images/triangle.jpg"
-/safe2pic="images/circle.jpg"
+/risky1pic="star.jpg"
+/risky2pic="rectangle.jpg"
+/safe1pic="triangle.jpg"
+/safe2pic="circle.jpg"
 
 /largegainpic_category=""
 /smallgainpic_category=""
@@ -114,49 +118,48 @@ INSTRUCTIONS SCREEN --ie to learn the values
 CHOICE IMAGES
 ********************************
 
-
-<picture risky1right>
+<picture risky1left>
 /items = ("<%values.risky1pic%>")
 /position = (25,50)
 / transparentcolor = white
 / size = (25%, 25%)
 </picture>
 
-<picture risky1left>
+<picture risky1right>
 /items = ("<%values.risky1pic%>")
 /position = (75,50)
 / size = (25%, 25%)
 </picture>
 
-<picture risky2right>
-/items = ("<%values.risky2pic%>")
-/position = (25,50)
-/ size = (25%, 25%)
-</picture>
-
 <picture risky2left>
 /items = ("<%values.risky2pic%>")
+/position = (25,50)
+/ size = (25%, 25%)
+</picture>
+
+<picture risky2right>
+/items = ("<%values.risky2pic%>")
 /position = (75,50)
 / size = (25%, 25%)
 </picture>
 
-<picture safe1right>
+<picture safe1left>
 /items = ("<%values.safe1pic%>")
 /position = (25,50)
 / size = (25%, 25%)
 </picture>
-<picture safe1left>
+<picture safe1right>
 /items = ("<%values.safe1pic%>")
 /position = (75,50)
 / size = (25%, 25%)
 </picture>
 
-<picture safe2right>
+<picture safe2left>
 /items = ("<%values.safe2pic%>")
 /position = (25,50)
 / size = (25%, 25%)
 </picture>
-<picture safe2left>
+<picture safe2right>
 /items = ("<%values.safe2pic%>")
 /position = (75,50)
 / size = (25%, 25%)
@@ -199,7 +202,7 @@ PICTURES FOR SECOND LEARNING PHASE
 <picture LGright>
 /position = (75, 50)
 / items = ("<%values.largegainpic%>")
-/ size = (45%, 45%)
+/ size = (40%, 40%)
 </picture>
 
 
@@ -236,19 +239,19 @@ PICTURES FOR SECOND LEARNING PHASE
 <picture SLright>
 /items =("<%values.smalllosspic%>")
 /position = (75,50)
-/ size = (50%, 50%)
+/ size = (40%, 40%)
 </picture>
 
 <picture SLleft>
 /items =("<%values.smalllosspic%>")
 /position = (25,50)
-/ size = (50%, 50%)
+/ size = (40%, 40%)
 </picture>
 *************
 INSTRUCTION PAGES
 **************
 <picture instructionslides>
-/items =("images/Slide01.jpg","images/Slide02.jpg","images/Slide03.jpg","images/Slide04.jpg","images/slide05.jpg","images/slide05_b.jpg","images/slide06.jpg","images/slide07.jpg","images/slide11.jpg","images/slide13.jpg",)
+/items =("slide01.jpg","slide02.jpg","slide03.jpg","slide04.jpg","slide05.jpg","slide05_b.jpg","slide06.jpg","slide07.jpg","slide7b.jpg","slide13.jpg")
 / select = sequence
 / size = (80%, 80%)
 </picture>
@@ -259,7 +262,7 @@ INSTRUCTION PAGES
 </trial>
 
 <picture instructionslides_selectright>
-/items =("images/slide09.jpg")
+/items =("slide09.jpg")
 / size = (80%, 80%)
 </picture>
 <trial instructionslides_selectright>
@@ -268,7 +271,7 @@ INSTRUCTION PAGES
 </trial>
 
 <picture instructionslides_selectleft>
-/items =("images/slide10.jpg")
+/items =("slide10.jpg")
 / size = (80%, 80%)
 </picture>
 <trial instructionslides_selectleft>
@@ -281,16 +284,16 @@ INSTRUCTION PAGES
 /items =(
 "Each machine can give you any of the 4 types of stamps.
 
-However, some of the machines are more likely to give you stamps with <%values.largegainpic_category%> (+<%values.largegainvalue%> points) and <%values.largelosspic_category%> (<%values.largelossvalue%> points) - for example, the purple machine shown here.
+However, some of the machines are more likely to give you stamps that let you gain many points (<%values.largegainpic_category%>, +<%values.largegainvalue%> points) but also ones where you lose many points(<%values.largelosspic_category%>, <%values.largelossvalue%> points) - for example, the purple machine shown here.
 
-Other machines are more likely to give you stamps with <%values.smallgainpic_category%> (+<%values.smallgainvalue%> points) and <%values.smalllosspic_category%> (<%values.smalllossvalue%> points) - for example, the orange machine shown here. 
+Other machines are more likely to give you stamps where you gain less points (<%values.smallgainpic_category%>, +<%values.smallgainvalue%> points) but also stamps where you lose less points (<%values.smalllosspic_category%>, <%values.smalllossvalue%> points) - for example, the orange machine shown here. 
 
-~n~n~n~n~n~n~n~n~n~n~n~n~nPress Spacebar to continue",
+~n~n~n~n~n~n~n~n~n~n~nPress Spacebar to continue",
 
-"~n~nNote that, over the long run all the machines will give you the SAME amount of points. The only difference is in which types of stamps are more likely.
+"~n~nNote that, over the long run all the machines will give you the SAME amount of points. The only difference is in which types of stamps are more likely, ones that give you large gains and losses, vs smaller gains and losses.
 
 While playing, you will have to figure out which machines are more likely to give you which types of stamps.
-~n~n~n~n~n~n~n~n~n~n~n~n~nPress Spacebar to continue")
+~n~n~n~n~n~n~n~n~n~n~nPress Spacebar to continue")
 / fontstyle = ("Arial Black", 3%, false, false, false, false, 5, 1)
 / size = (70%, 80%)
 / select = sequence
@@ -302,7 +305,7 @@ While playing, you will have to figure out which machines are more likely to giv
 ^^While playing, you will have to figure out which machines are more likely to give you which types of stamps.
 
 <picture instructions_dist_pix>
-/ items =("images/bothdists.jpg")
+/ items =("bothdists.jpg")
 / position= (50%, 65%)
 / size = (65%, 65%)
 </picture>
@@ -313,7 +316,7 @@ While playing, you will have to figure out which machines are more likely to giv
 
 Each machine can give you any of the 4 types of stamps. However, some of the machines are more likely to give you stamps with houses (+5 points) and faces (-4 points) - for example, the purple machine shown here .Other machines are more likely to give you stamps with tools (+2 points) and houses (-1 point) – for example, the orange machine shown here. While playing, you will have to figure out which machines are more likely to give you which types of stamps. Note that, over the long run all the machines will give you the same amount of points. The only difference is in which types of stamps are more likely .
 
-<page preTrainingPhase1>
+page preTrainingPhase1>
 ^^^There are four different types of machines that can give you
 stamps. They can be identified by the colour and shape on each machine. 
 
@@ -321,7 +324,7 @@ stamps. They can be identified by the colour and shape on each machine.
 ^You will not know what stamp you'll get until you select a machine.
 </page>
 
-<page preTrainingPhase2>
+page preTrainingPhase2>
 ^^Each machine can give you any of the 4 types of stamps.
 
 ^^However, some of the machines are more likely to give you stamps with <%values.largegainpic_category%> (<%values.largegainvalue%> points)
@@ -333,23 +336,25 @@ and <%values.smalllosspic_category%> (<%values.smalllossvalue%> points).
 ^^While playing, you will have to figure out which machines are more likely to give you which types of stamps.
 </page>
 
-<page preTrainingPhase3>
+page preTrainingPhase3>
 ^^To play the game: on each turn, you will see 2 machines. 
 ^You will have to choose which one you would like to receive a stamp from; 
 the machine on the left or the right side of the screen. 
 ^After you select one, the stamp you received will appear. 
 </page>
 
-<page preTrainingPhase4>
+page preTrainingPhase4>
 ^^^Press the "F" key to select the left machine, and the "J" key to select the right machine.
 </page>
 
-<page preTrainingPhase5>
+page preTrainingPhase5>
 ^^^^Now you may begin playing. 
 </page>
-
 <page post>
-^^^^Thank you for participating in this study, we appreciate your time!
+^^^^You have completed the first part of the study. 
+^^Please return to the qualtrics survey and complete the second part of the study,
+which consists of some questionnaires.
+
 </page>
 
 ************
@@ -431,6 +436,14 @@ largegaininstructions, smallgaininstructions, smalllossinstructions, largelossin
 /size = (7%, 7%)
 /fontstyle = ("Arial", 3%)
 /position = (25%,20%)
+</text>
+
+
+<text pressspacebar>
+/items = ("Press Spacebar")
+/size = (30%, 7%)
+/fontstyle = ("Arial", 3%)
+/position = (50%,20%)
 </text>
 
 <openended smallgainlearning>
@@ -703,7 +716,7 @@ ie selects item 1 if wrong, 2 if correct
 / timeout = values.feedbackdur
 </trial>
 
-<block learningphase2>
+<block learninglargervalue>
 / trials = [1=instructions_main; 2-13 = noreplace(LG_LL, LG_SG, LG_SL, LL_LG, LL_SG, LL_SL, SG_LG, SG_LL, SG_SL, SL_LG, SL_LL, SL_SG)]
 </block>
 / bgstim = (whichone, leftF, rightJ)
@@ -757,8 +770,8 @@ MEMORY TEST END
 <likert smallgainlearning_noFeedback_scale>
 / stimulusframes = [1=likert_scale_instructions] 
 / position = (50%, 50%)
-/ anchors = [1="Not At All Confident"; 2="A Little Confident"; 3="Mildly Confident"; 4="Somewhat Confident"; 5="Generally Confident"; 6="Highly Confident"; 7="Completely Confident"]
-/ numpoints = 7
+/ anchors = [1="Not At All"; 2="A Little"; 3="Moderately"; 4="Fairly"; 5="Completely"]
+/ numpoints = 5
 / fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
 </likert>
 
@@ -771,8 +784,8 @@ MEMORY TEST END
 <likert smalllosslearning_noFeedback_scale>
 / stimulusframes = [1=likert_scale_instructions] 
 / position = (50%, 50%)
-/ anchors = [1="Not At All Confident"; 2="A Little Confident"; 3="Mildly Confident"; 4="Somewhat Confident"; 5="Generally Confident"; 6="Highly Confident"; 7="Completely Confident"]
-/ numpoints = 7
+/ anchors = [1="Not At All"; 2="A Little"; 3="Moderately"; 4="Fairly"; 5="Completely"]
+/ numpoints = 5
 / fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
 </likert>
 
@@ -785,8 +798,8 @@ MEMORY TEST END
 <likert largegainlearning_noFeedback_scale>
 / stimulusframes = [1=likert_scale_instructions] 
 / position = (50%, 50%)
-/ anchors = [1="Not At All Confident"; 2="A Little Confident"; 3="Mildly Confident"; 4="Somewhat Confident"; 5="Generally Confident"; 6="Highly Confident"; 7="Completely Confident"]
-/ numpoints = 7
+/ anchors = [1="Not At All"; 2="A Little"; 3="Moderately"; 4="Fairly"; 5="Completely"]
+/ numpoints = 5
 / fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
 </likert> 
 
@@ -800,8 +813,8 @@ MEMORY TEST END
 <likert largelosslearning_noFeedback_scale>
 / stimulusframes = [1=likert_scale_instructions] 
 / position = (50%, 50%)
-/ anchors = [1="Not At All Confident"; 2="A Little Confident"; 3="Mildly Confident"; 4="Somewhat Confident"; 5="Generally Confident"; 6="Highly Confident"; 7="Completely Confident"]
-/ numpoints = 7
+/ anchors = [1="Not At All"; 2="A Little"; 3="Moderately"; 4="Fairly"; 5="Completely"]
+/ numpoints = 5
 / fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
 </likert>
 
@@ -810,6 +823,28 @@ MEMORY TEST END
 / trials = [1=instructions_memorytest_values; 2=largelosslearning_noFeedback; 3=largelosslearning_noFeedback_scale; 4=smalllosslearning_noFeedback; 5=smalllosslearning_noFeedback_scale; 6=smallgainlearning_noFeedback; 7=smallgainlearning_noFeedback_scale; 8=largegainlearning_noFeedback; 9=largegainlearning_noFeedback_scale]
 </block>
 
+**************************
+THANK YOU + PAYMENT
+**************************
+
+<text thankYouAndPaymentText>
+/ items = ("Thank you for participating in this study. You have earned <%values.bonusPayment%> cents bonus pay.")
+/ txcolor = black
+/ position = (50%, 20%)
+/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
+</text>
+
+<trial thankYouAndPaymentTrial>
+/ ontrialbegin = [
+	values.bonusPayment = values.newtotalscore * 1.5
+]
+/ stimulusframes = [1=thankYouAndPaymentText]
+/ validresponse = (57)
+</trial>
+
+<block thankYouAndPaymentBlock>
+/ trials = [1=thankYouAndPaymentTrial]
+</block>
 
 **************************
 FOR TEST OF WHAT DISTRIBUTIONS WERE LEARNED AT THE END
@@ -879,8 +914,8 @@ Type '2' if you think this machine was more likely to give you stamps with <%val
 <likert risky1learning_scale>
 / stimulusframes = [1=likert_scale_instructions] 
 / position = (50%, 50%)
-/ anchors = [1="Not At All Confident"; 2="A Little Confident"; 3="Mildly Confident"; 4="Somewhat Confident"; 5="Generally Confident"; 6="Highly Confident"; 7="Completely Confident"]
-/ numpoints = 7
+/ anchors = [1="Not At All"; 2="A Little"; 3="Moderately"; 4="Fairly"; 5="Completely"]
+/ numpoints = 5
 / fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
 </likert>
 
@@ -893,8 +928,8 @@ Type '2' if you think this machine was more likely to give you stamps with <%val
 <likert risky2learning_scale>
 / stimulusframes = [1=likert_scale_instructions] 
 / position = (50%, 50%)
-/ anchors = [1="Not At All Confident"; 2="A Little Confident"; 3="Mildly Confident"; 4="Somewhat Confident"; 5="Generally Confident"; 6="Highly Confident"; 7="Completely Confident"]
-/ numpoints = 7
+/ anchors = [1="Not At All"; 2="A Little"; 3="Moderately"; 4="Fairly"; 5="Completely"]
+/ numpoints = 5
 / fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
 </likert>
 
@@ -906,8 +941,8 @@ Type '2' if you think this machine was more likely to give you stamps with <%val
 <likert safe1learning_scale>
 / stimulusframes = [1=likert_scale_instructions] 
 / position = (50%, 50%)
-/ anchors = [1="Not At All Confident"; 2="A Little Confident"; 3="Mildly Confident"; 4="Somewhat Confident"; 5="Generally Confident"; 6="Highly Confident"; 7="Completely Confident"]
-/ numpoints = 7
+/ anchors = [1="Not At All"; 2="A Little"; 3="Moderately"; 4="Fairly"; 5="Completely"]
+/ numpoints = 5
 / fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
 </likert>
 
@@ -919,8 +954,8 @@ Type '2' if you think this machine was more likely to give you stamps with <%val
 <likert safe2learning_scale>
 / stimulusframes = [1=likert_scale_instructions] 
 / position = (50%, 50%)
-/ anchors = [1="Not At All Confident"; 2="A Little Confident"; 3="Mildly Confident"; 4="Somewhat Confident"; 5="Generally Confident"; 6="Highly Confident"; 7="Completely Confident"]
-/ numpoints = 7
+/ anchors = [1="Not At All"; 2="A Little"; 3="Moderately"; 4="Fairly"; 5="Completely"]
+/ numpoints = 5
 / fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
 </likert>
 
@@ -1410,10 +1445,87 @@ FORCED TRIALS FOR TRAINING PHASE
 /branch= [if (trial.choice_safe2left_safe2right.response==33) list.safe2outcometrials.nextvalue]
 /branch =[if (trial.choice_safe2left_safe2right.response==36) list.safe2outcometrials.nextvalue]
 </trial>
+
+########single machine trials ###################
+<trial risky1center>
+/stimulusframes = [1 = risky1center, pressspacebar]
+/validresponse = (57)
+/ recorddata = false
+/ontrialend = [
+	values.leftoption="risky1";
+	values.leftpic=values.risky1pic;
+	values.turnnum=values.turnnum+1;
+	values.choicert=trial.risky1center.latency;
+]
+/branch= [list.risky1outcometrials.nextvalue]
+</trial>
+
+<trial risky2center>
+/stimulusframes = [1 = risky2center, pressspacebar]
+/validresponse = (57)
+/ recorddata = false
+/ontrialend = [
+	values.leftoption="risky2";
+	values.leftpic=values.risky2pic;
+	values.turnnum=values.turnnum+1;
+	values.choicert=trial.risky1center.latency;
+]
+/branch= [list.risky2outcometrials.nextvalue]
+</trial>
+
+<trial safe1center>
+/stimulusframes = [1 = safe1center, pressspacebar]
+/validresponse = (57)
+/ recorddata = false
+/ontrialend = [
+	values.leftoption="safe1";
+	values.leftpic=values.safe1pic;
+	values.turnnum=values.turnnum+1;
+	values.choicert=trial.safe1center.latency;
+]
+/branch= [list.safe1outcometrials.nextvalue]
+</trial>
+
+
+<trial safe2center>
+/stimulusframes = [1 = safe2center, pressspacebar]
+/validresponse = (57)
+/ recorddata = false
+/ontrialend = [
+	values.leftoption="safe2";
+	values.leftpic=values.safe2pic;
+	values.turnnum=values.turnnum+1;
+	values.choicert=trial.safe1center.latency;
+]
+/branch= [list.safe2outcometrials.nextvalue]
+</trial>
+
+
+
 ***********
 BLOCKS
 **********
-<list trainingphase1trialselector>
+
+<list singlemachine_trialselector>
+/items=[trial.risky1center;trial.risky2center;trial.safe1center;trial.safe2center]
+/replace=false
+/ selectionmode =random
+/ selectionrate = block
+</list>
+
+<block singlemachine> 
+/ trials = [1-15=list.singlemachine_trialselector]
+</block>
+
+<block pre_single_instructions> 
+/ trials = [1-3=instructions_main; 4-5=instructions_dists; 6=instructions_main;]
+</block>
+
+<block pre_twomachine_instructions> 
+/ trials = [1=instructionslides_selectright; 2=instructionslides_selectleft; 3=instructions_main;]
+</block>
+
+list trainingphase1trialselector>
 / items = [trial.choice_risky1left_risky1right;trial.choice_safe1left_safe1right;trial.choice_risky1left_safe1right;trial.choice_risky1right_safe1left;
 trial.choice_risky2left_risky2right;trial.choice_safe1left_safe1right;trial.choice_risky2left_safe2right;trial.choice_risky2right_safe2left]
 / itemprobabilities = [0.2;0.2;0.2;0.2;0.05;0.05;0.05;0.05]
@@ -1422,7 +1534,7 @@ trial.choice_risky2left_risky2right;trial.choice_safe1left_safe1right;trial.choi
 </list>
 
 
-<list trainingphase2trialselector>
+list trainingphase2trialselector>
 / items = [trial.choice_risky1left_risky1right;trial.choice_safe1left_safe1right;trial.choice_risky1left_safe1right;trial.choice_risky1right_safe1left;
 trial.choice_risky2left_risky2right;trial.choice_safe1left_safe1right;trial.choice_risky2left_safe2right;trial.choice_risky2right_safe2left]
 / itemprobabilities = [0.05;0.05;0.05;0.05;0.2;0.2;0.2;0.2]
@@ -1431,36 +1543,41 @@ trial.choice_risky2left_risky2right;trial.choice_safe1left_safe1right;trial.choi
 </list>
 
 
-<block trainingphase1>
+block trainingphase1>
 / trials = [1-3=instructions_main; 4-5=instructions_dists; 6=instructionslides_selectright; 7=instructionslides_selectleft; 8-9=instructions_main;
 10-24= list.trainingphase1trialselector]
 </block>
-<block trainingphase2>
+block trainingphase2>
 / trials = [1-15=list.trainingphase2trialselector]
 </block>
 
 ** This below has all evenly spread out
-<block testblock1>
+block testblock1>
 / trials = [1-20= noreplace(choice_risky1left_safe1right, choice_risky1right_safe1left, choice_risky1right_safe2left, choice_risky1left_safe2right, 
 choice_risky2right_safe1left, choice_risky2left_safe1right, choice_risky2left_safe2right, choice_risky2right_safe2left)]
 </block>
 
-<block testblock2>
+<block testblock>
 / trials = [1-50= noreplace(choice_risky1left_safe1right, choice_risky1right_safe1left, choice_risky1right_safe2left, choice_risky1left_safe2right, 
 choice_risky2right_safe1left, choice_risky2left_safe1right, choice_risky2left_safe2right, choice_risky2right_safe2left)]
 </block>
 
 
-<block rest>
+block rest>
 /trials = [1= rest]
 </block>
+
+
+
+
+
 
 ************************************
 EXPERIMENT AND VALUES
 ************************************
 
 <list outcomepics>
-/items=("images/animal-silhouette-dog2nohead.jpg", "images/house.jpg","images/face-03.jpg","images/hammer.jpg")
+/items=("animal-silhouette-dog2nohead.jpg", "house.jpg","face-03.jpg","hammer.jpg")
 / select = list.outcome_pic_category_names.currentindex
 / selectionrate = always
 </list>
@@ -1473,7 +1590,7 @@ EXPERIMENT AND VALUES
 </list>
 
 <list choicepics>
-/items=("images/star.jpg","images/rectangle.jpg", "images/triangle.jpg","images/circle.jpg")
+/items=("star.jpg","rectangle.jpg", "triangle.jpg","circle.jpg")
 /replace=false
 / selectionmode =random
 / selectionrate = always
@@ -1498,16 +1615,18 @@ EXPERIMENT AND VALUES
 	values.safe2pic=list.choicepics.nextvalue;
 ]
 /postinstructions = (page.post)
-/blocks = [1=initial_instructions; 2=learningvalues; 3=learningphase2; 4=trainingphase1; 5=trainingphase2; 6=testblock1; 7=rest; 8=testblock2; 9=choice_distributions_learned; 10=memorytest_values_end]
+/blocks = [1=initial_instructions; 2=learningvalues; 3=learninglargervalue; 4=pre_single_instructions; 5-8=singlemachine; 9=pre_twomachine_instructions; 10=testblock; 11=choice_distributions_learned; 12=memorytest_values_end; 13=block.thankYouAndPaymentBlock]
 / onexptend = [
 	values.complete=1
 ]
 </expt>
-learningphase2
-/blocks = [1-7=sequence(initial_instructions,learningvalues,learningphase2,trainingphase1,trainingphase2,trainingphase3,choice_distributions_learned,memorytest_values_end)]
+/blocks = [1=initial_instructions; 2=learningvalues; 3=learninglargervalue; 4=trainingphase1; 5=trainingphase2; 6=testblock1; 7=rest; 8=testblock2; 9=choice_distributions_learned; 10=memorytest_values_end; 11=block.thankYouAndPaymentBlock]
+
+learninglargervalue
+/blocks = [1-7=sequence(initial_instructions,learningvalues,learninglargervalue,trainingphase1,trainingphase2,trainingphase3,choice_distributions_learned,memorytest_values_end)]
 
 
-/blocks = [1=learningvalues;2=learningphase2;3=trainingphase1;4=trainingphase2;5=trainingphase3;6=choice_distributions_learned;7=memorytest_values]
+/blocks = [1=learningvalues;2=learninglargervalue;3=trainingphase1;4=trainingphase2;5=trainingphase3;6=choice_distributions_learned;7=memorytest_values]
 ************
 DATA
 *************
@@ -1538,6 +1657,6 @@ ie want points this turn, and points overal
 
 <summarydata>
 /columns = (script.startdate, script.starttime, script.subjectid, script.groupid,
-values.newtotalscore, values.complete, values.largegainpic_category,values.largegainpic,values.smallgainpic_category,values.smallgainpic,values.smallgainpic_category,values.smalllosspic,values.largelosspic_category,values.largelosspic,values.risky1pic,values.risky2pic,values.safe1pic,values.safe2pic)
+values.newtotalscore, values.bonusPayment, values.complete, values.largegainpic_category,values.largegainpic,values.smallgainpic_category,values.smallgainpic,values.smallgainpic_category,values.smalllosspic,values.largelosspic_category,values.largelosspic,values.risky1pic,values.risky2pic,values.safe1pic,values.safe2pic)
 </summarydata>
 record various condition info for randomizing pics here too
