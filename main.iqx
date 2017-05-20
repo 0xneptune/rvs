@@ -4,9 +4,11 @@
  ****VALUES****
 *****************
 
+** For posting online, change 'imagespath' to an empty string
 <values>
 /feedbackdur=2500
 /valuetaskcorr = 0
+/imagespath="images/"
 
 /randomnum = "NA"
 /newtotalscore = 0
@@ -19,15 +21,15 @@
 /smalllossvalue=-1
 /largelossvalue=-4
 
-/largegainpic="house.jpg"
-/smallgainpic="animal-silhouette-dog2nohead.jpg"
-/smalllosspic="face-03.jpg"
-/largelosspic="hammer.jpg"
+/largegainpic="<%values.imagespath%>house.jpg"
+/smallgainpic="<%values.imagespath%>animal-silhouette-dog2nohead.jpg"
+/smalllosspic="<%values.imagespath%>face-03.jpg"
+/largelosspic="<%values.imagespath%>hammer.jpg"
 
-/risky1pic="star.jpg"
-/risky2pic="rectangle.jpg"
-/safe1pic="triangle.jpg"
-/safe2pic="circle.jpg"
+/risky1pic="<%values.imagespath%>star.jpg"
+/risky2pic="<%values.imagespath%>rectangle.jpg"
+/safe1pic="<%values.imagespath%>triangle.jpg"
+/safe2pic="<%values.imagespath%>circle.jpg"
 
 /largegainpic_category=""
 /smallgainpic_category=""
@@ -251,7 +253,7 @@ PICTURES FOR SECOND LEARNING PHASE
 INSTRUCTION PAGES
 **************
 <picture instructionslides>
-/items =("slide01.jpg","slide02.jpg","slide03.jpg","slide04.jpg","slide05.jpg","slide05_b.jpg","slide06.jpg","slide07.jpg","slide7b.jpg","slide13.jpg")
+/items =("<%values.imagespath%>slide01.jpg","<%values.imagespath%>slide02.jpg","<%values.imagespath%>slide03.jpg","<%values.imagespath%>slide04.jpg","<%values.imagespath%>slide05.jpg","<%values.imagespath%>slide05_b.jpg","<%values.imagespath%>slide06.jpg","<%values.imagespath%>slide07.jpg","<%values.imagespath%>slide7b.jpg","<%values.imagespath%>slide13.jpg")
 / select = sequence
 / size = (80%, 80%)
 </picture>
@@ -262,7 +264,7 @@ INSTRUCTION PAGES
 </trial>
 
 <picture instructionslides_selectright>
-/items =("slide09.jpg")
+/items =("<%values.imagespath%>slide09.jpg")
 / size = (80%, 80%)
 </picture>
 <trial instructionslides_selectright>
@@ -271,7 +273,7 @@ INSTRUCTION PAGES
 </trial>
 
 <picture instructionslides_selectleft>
-/items =("slide10.jpg")
+/items =("<%values.imagespath%>slide10.jpg")
 / size = (80%, 80%)
 </picture>
 <trial instructionslides_selectleft>
@@ -305,7 +307,7 @@ While playing, you will have to figure out which machines are more likely to giv
 ^^While playing, you will have to figure out which machines are more likely to give you which types of stamps.
 
 <picture instructions_dist_pix>
-/ items =("bothdists.jpg")
+/ items =("<%values.imagespath%>bothdists.jpg")
 / position= (50%, 65%)
 / size = (65%, 65%)
 </picture>
@@ -1577,7 +1579,7 @@ EXPERIMENT AND VALUES
 ************************************
 
 <list outcomepics>
-/items=("animal-silhouette-dog2nohead.jpg", "house.jpg","face-03.jpg","hammer.jpg")
+/items=("<%values.imagespath%>animal-silhouette-dog2nohead.jpg", "<%values.imagespath%>house.jpg","<%values.imagespath%>face-03.jpg","<%values.imagespath%>hammer.jpg")
 / select = list.outcome_pic_category_names.currentindex
 / selectionrate = always
 </list>
@@ -1590,7 +1592,7 @@ EXPERIMENT AND VALUES
 </list>
 
 <list choicepics>
-/items=("star.jpg","rectangle.jpg", "triangle.jpg","circle.jpg")
+/items=("<%values.imagespath%>star.jpg","<%values.imagespath%>rectangle.jpg", "<%values.imagespath%>triangle.jpg","<%values.imagespath%>circle.jpg")
 /replace=false
 / selectionmode =random
 / selectionrate = always
