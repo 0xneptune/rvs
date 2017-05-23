@@ -334,15 +334,6 @@ which consists of some questionnaires.
 INITIAL LEARNING PHASE FOR VALUES TO IMAGES
 ************
 
-<text correctmessage>
-/items = ("correct")
-</text> 
-
-<text errormessage>
-/items = ("incorrect")
-</text> 
-
-
 <text whichone>
 /items= ("Which stamp is worth more?")
 /size = (40%, 10%)
@@ -363,7 +354,6 @@ INITIAL LEARNING PHASE FOR VALUES TO IMAGES
 /position = (25%,20%)
 </text>
 
-
 <text pressspacebar>
 /items = ("Press Spacebar")
 /size = (30%, 7%)
@@ -371,51 +361,9 @@ INITIAL LEARNING PHASE FOR VALUES TO IMAGES
 /position = (50%,20%)
 </text>
 
-<openended smallgainlearning>
-/stimulusframes = [1=smallgain]
-/ position = (50,80)
-/correctresponse = (values.smallgainvalue)
-/correctmessage = true(correctmessage, 500)
-/errormessage = true(errormessage, 500)
-/ validresponse = (anyresponse)
-</openended>
-
-<openended smalllosslearning>
-/stimulusframes = [1=smallloss]
-/ position = (50,80)
-/correctresponse = (values.smalllossvalue)
-/correctmessage = true(correctmessage, 500)
-/errormessage = true(errormessage, 500)
-/ validresponse = (anyresponse)
-</openended>
-
-<openended largegainlearning>
-/stimulusframes = [1=largegain]
-/ position = (50,80)
-/correctresponse = (values.largegainvalue)
-/correctmessage = true(correctmessage, 500)
-/errormessage = true(errormessage, 500)
-/ validresponse = (anyresponse)
-</openended> 
-
-
-<openended largelosslearning>
-/stimulusframes = [1=largeloss]
-/ position = (50,80)
-/correctresponse = (values.largelossvalue)
-/correctmessage = true(correctmessage, 500)
-/errormessage = true(errormessage, 500)
-/ validresponse = (anyresponse)
-</openended> 
 instructions_dists
 <block initial_instructions>
 / trials = [1-4=instructions_main]
-</block>
-
-
-<block learningvalues>
-/ trials = [1=instructions_memorytest_values; 2-5=noreplace(largelosslearning,smalllosslearning,smallgainlearning,largegainlearning)]
-/ branch = [if (block.learningvalues.correctcount!=4) block.learningvalues]
 </block>
 
 ******
@@ -644,43 +592,6 @@ ie selects item 1 if wrong, 2 if correct
 <block learninglargervalue>
 / trials = [1=instructions_main; 2-13 = noreplace(LG_LL, LG_SG, LG_SL, LL_LG, LL_SG, LL_SL, SG_LG, SG_LL, SG_SL, SL_LG, SL_LL, SL_SG)]
 </block>
-/ bgstim = (whichone, leftF, rightJ)
-*******************
-####for end of the task to see if they still remember it
-****************
-
-
-text instructions_memorytest>
-/items = ("Almost done! Few more questions...")
-/ txcolor =black
-/Position = (50, 35)
-</text> 
-
-<text instructions_memorytest_values_1>
-/items = ("Next, please enter the point values of each stamp, and press enter to go to the next screen.
-
-Please type a minus sign before the number if you lose that many points.
-")
-/ txcolor =black
-/Position = (50, 30)
-/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
-</text> 
-
-If you get any wrong, you will be shown the values again and can try again.
-
-<text instructions_memorytest_values_2>
-/items = ("Press [SpaceBar] to Continue")
-/ txcolor =black
-/Position = (50, 80)
-/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
-</text> 
-
-
-<trial instructions_memorytest_values>
-/ stimulusframes = [1=instructions_memorytest_values_1, instructions_memorytest_values_2]
-/ validresponse = (57)
-</trial>
-
 
 **************************
 MEMORY TEST END
@@ -745,7 +656,7 @@ MEMORY TEST END
 
 
 <block memorytest_values_end>
-/ trials = [1=instructions_memorytest_values; 2=largelosslearning_noFeedback; 3=largelosslearning_noFeedback_scale; 4=smalllosslearning_noFeedback; 5=smalllosslearning_noFeedback_scale; 6=smallgainlearning_noFeedback; 7=smallgainlearning_noFeedback_scale; 8=largegainlearning_noFeedback; 9=largegainlearning_noFeedback_scale]
+/ trials = [1=largelosslearning_noFeedback; 2=largelosslearning_noFeedback_scale; 3=smalllosslearning_noFeedback; 4=smalllosslearning_noFeedback_scale; 5=smallgainlearning_noFeedback; 6=smallgainlearning_noFeedback_scale; 7=largegainlearning_noFeedback; 8=largegainlearning_noFeedback_scale]
 </block>
 
 **************************
@@ -1540,18 +1451,12 @@ EXPERIMENT AND VALUES
 	values.safe2pic=list.choicepics.nextvalue;
 ]
 /postinstructions = (page.post)
-/blocks = [1=initial_instructions; 2=learningvalues; 3=learninglargervalue; 4=pre_single_instructions; 5-8=singlemachine; 9=pre_twomachine_instructions; 10=testblock; 11=choice_distributions_learned; 12=memorytest_values_end; 13=block.thankYouAndPaymentBlock]
+/blocks = [1=initial_instructions; 2=learninglargervalue; 3=pre_single_instructions; 4-7=singlemachine; 8=pre_twomachine_instructions; 9=testblock; 10=choice_distributions_learned; 11=memorytest_values_end; 12=block.thankYouAndPaymentBlock]
 / onexptend = [
 	values.complete=1
 ]
 </expt>
-/blocks = [1=initial_instructions; 2=learningvalues; 3=learninglargervalue; 4=trainingphase1; 5=trainingphase2; 6=testblock1; 7=rest; 8=testblock2; 9=choice_distributions_learned; 10=memorytest_values_end; 11=block.thankYouAndPaymentBlock]
 
-learninglargervalue
-/blocks = [1-7=sequence(initial_instructions,learningvalues,learninglargervalue,trainingphase1,trainingphase2,trainingphase3,choice_distributions_learned,memorytest_values_end)]
-
-
-/blocks = [1=learningvalues;2=learninglargervalue;3=trainingphase1;4=trainingphase2;5=trainingphase3;6=choice_distributions_learned;7=memorytest_values]
 ************
 DATA
 *************
