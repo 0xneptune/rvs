@@ -593,71 +593,6 @@ ie selects item 1 if wrong, 2 if correct
 / trials = [1=instructions_main; 2-13 = noreplace(LG_LL, LG_SG, LG_SL, LL_LG, LL_SG, LL_SL, SG_LG, SG_LL, SG_SL, SL_LG, SL_LL, SL_SG)]
 </block>
 
-**************************
-MEMORY TEST END
-**************************
-
-<openended smallgainlearning_noFeedback>
-/stimulusframes = [1=smallgain]
-/ position = (50,80)
-/correctresponse = (values.smallgainvalue)
-/ validresponse = (anyresponse)
-</openended>
-<likert smallgainlearning_noFeedback_scale>
-/ stimulusframes = [1=likert_scale_instructions] 
-/ position = (50%, 50%)
-/ anchors = [1="Not At All"; 2="A Little"; 3="Moderately"; 4="Fairly"; 5="Completely"]
-/ numpoints = 5
-/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
-</likert>
-
-<openended smalllosslearning_noFeedback>
-/stimulusframes = [1=smallloss]
-/ position = (50,80)
-/correctresponse = (values.smalllossvalue)
-/ validresponse = (anyresponse)
-</openended>
-<likert smalllosslearning_noFeedback_scale>
-/ stimulusframes = [1=likert_scale_instructions] 
-/ position = (50%, 50%)
-/ anchors = [1="Not At All"; 2="A Little"; 3="Moderately"; 4="Fairly"; 5="Completely"]
-/ numpoints = 5
-/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
-</likert>
-
-<openended largegainlearning_noFeedback>
-/stimulusframes = [1=largegain]
-/ position = (50,80)
-/correctresponse = (values.largegainvalue)
-/ validresponse = (anyresponse)
-</openended>
-<likert largegainlearning_noFeedback_scale>
-/ stimulusframes = [1=likert_scale_instructions] 
-/ position = (50%, 50%)
-/ anchors = [1="Not At All"; 2="A Little"; 3="Moderately"; 4="Fairly"; 5="Completely"]
-/ numpoints = 5
-/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
-</likert> 
-
-
-<openended largelosslearning_noFeedback>
-/stimulusframes = [1=largeloss]
-/ position = (50,80)
-/correctresponse = (values.largelossvalue)
-/ validresponse = (anyresponse)
-</openended> 
-<likert largelosslearning_noFeedback_scale>
-/ stimulusframes = [1=likert_scale_instructions] 
-/ position = (50%, 50%)
-/ anchors = [1="Not At All"; 2="A Little"; 3="Moderately"; 4="Fairly"; 5="Completely"]
-/ numpoints = 5
-/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
-</likert>
-
-
-<block memorytest_values_end>
-/ trials = [1=largelosslearning_noFeedback; 2=largelosslearning_noFeedback_scale; 3=smalllosslearning_noFeedback; 4=smalllosslearning_noFeedback_scale; 5=smallgainlearning_noFeedback; 6=smallgainlearning_noFeedback_scale; 7=largegainlearning_noFeedback; 8=largegainlearning_noFeedback_scale]
-</block>
 
 **************************
 THANK YOU + PAYMENT
@@ -1440,7 +1375,7 @@ EXPERIMENT AND VALUES
 	values.safe2pic=list.choicepics.nextvalue;
 ]
 /postinstructions = (page.post)
-/blocks = [1=initial_instructions; 2=learninglargervalue; 3=pre_single_instructions; 4=pre_twomachine_instructions; 5=testblock; 6=choice_distributions_learned; 7=memorytest_values_end; 8=block.thankYouAndPaymentBlock]
+/blocks = [1=initial_instructions; 2=learninglargervalue; 3=pre_single_instructions; 4=pre_twomachine_instructions; 5=testblock; 6=choice_distributions_learned; 7=block.thankYouAndPaymentBlock]
 / onexptend = [
 	values.complete=1
 ]
