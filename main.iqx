@@ -87,35 +87,6 @@ STIMULI
 / size = (50%, 50%)
 </picture>
 
-*******************
-INSTRUCTIONS SCREEN --ie to learn the values
-****************
-
-<picture largegaininstructions>
-/position = (75, 70)
-/ items = ("<%values.largegainpic%>")
-/ size = (20%, 20%)
-</picture>
-
-<picture largelossinstructions>
-/items = ("<%values.largelosspic%>")
-/position = (25, 30)
-/ size = (20%, 20%)
-</picture>
-
-<picture smallgaininstructions>
-/position = (25, 70)
-/items = ("<%values.smallgainpic%>")
-/ size = (20%, 20%)
-</picture>
-
-<picture smalllossinstructions>
-/items =("<%values.smalllosspic%>")
-/position = (75, 30)
-/ size = (20%, 20%)
-</picture>
-
-
 ********************************
 CHOICE IMAGES
 ********************************
@@ -363,53 +334,6 @@ which consists of some questionnaires.
 INITIAL LEARNING PHASE FOR VALUES TO IMAGES
 ************
 
-<text smallgainvaluetext>
-/ items = ("<%values.smallgainvalue%>")
-/ position = (25, 85) 
-/ size = (7%, 7%)
-</text>
-
-<text largegainvaluetext>
-/items = ("<%values.largegainvalue%>")
-/ position = (75, 85)
-/size = (7%, 7%)
-</text>
-
-<text smalllossvaluetext>
-/items = ("<%values.smalllossvalue%>")
-/ position = (75, 45) 
-/size = (7%, 7%)
-</text>
-
-<text largelossvaluetext>
-/items = ("<%values.largelossvalue%>")
-/ position = (25, 45)
-/size = (7%, 7%)
-</text>
-
-<text instructions>
-/ items = ("Please take your time to memorize the point values associated with each type of stamp.")
-/ txcolor = black
-/ fontstyle = ("Arial Black", 3.87%, true, false, false, false, 5, 1)
-/ valign = top
-/ halign = center
-/ size = (70%, 20%)
-/ position = (50%, 5%)
-</text>
-
-<text instructions2>
-/items = ("Press [SpaceBar] to continue")
-/ txcolor = black
-/ fontstyle = ("Arial Black", 3.87%, true, false, false, false, 5, 1)
-/ position = (50, 90)
-</text> 
-
-<trial values_screen>
-/ stimulusframes = [1=instructions, instructions2, smallgainvaluetext, largegainvaluetext, smalllossvaluetext, largelossvaluetext, 
-largegaininstructions, smallgaininstructions, smalllossinstructions, largelossinstructions]
-/ validresponse = (57)
-</trial>
-
 <text correctmessage>
 /items = ("correct")
 </text> 
@@ -417,7 +341,6 @@ largegaininstructions, smallgaininstructions, smalllossinstructions, largelossin
 <text errormessage>
 /items = ("incorrect")
 </text> 
-
 
 
 <text whichone>
@@ -491,7 +414,7 @@ instructions_dists
 
 
 <block learningvalues>
-/ trials = [1=values_screen; 2=instructions_memorytest_values; 3-6=noreplace(largelosslearning,smalllosslearning,smallgainlearning,largegainlearning)]
+/ trials = [1=instructions_memorytest_values; 2-5=noreplace(largelosslearning,smalllosslearning,smallgainlearning,largegainlearning)]
 / branch = [if (block.learningvalues.correctcount!=4) block.learningvalues]
 </block>
 
