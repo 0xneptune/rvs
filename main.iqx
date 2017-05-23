@@ -224,7 +224,7 @@ PICTURES FOR SECOND LEARNING PHASE
 INSTRUCTION PAGES
 **************
 <picture instructionslides>
-/items =("<%values.imagespath%>slide01.jpg","<%values.imagespath%>slide02.jpg","<%values.imagespath%>slide03.jpg","<%values.imagespath%>slide05.jpg","<%values.imagespath%>slide05_b.jpg","<%values.imagespath%>slide06.jpg","<%values.imagespath%>slide07.jpg","<%values.imagespath%>slide7b.jpg","<%values.imagespath%>slide13.jpg")
+/items =("<%values.imagespath%>slide01.jpg","<%values.imagespath%>slide02.jpg","<%values.imagespath%>slide03.jpg","<%values.imagespath%>slide05.jpg","<%values.imagespath%>slide05_b.jpg","<%values.imagespath%>slide06.jpg","<%values.imagespath%>slide07.jpg","<%values.imagespath%>slide13.jpg")
 / select = sequence
 / size = (80%, 80%)
 </picture>
