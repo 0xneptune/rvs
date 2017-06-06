@@ -653,91 +653,6 @@ Press SPACEBAR to continue.")
 </text> 
 
 
-<text instructions_distribution2>
-/items = ("What type of machine did you think this was?
-
-Type '1' if you think this machine was more likely to give you stamps with <%values.largegainpic_category%> and <%values.largelosspic_category%>.
-Type '2' if you think this machine was more likely to give you stamps with <%values.smallgainpic_category%> and <%values.smalllosspic_category%>.")
-/ txcolor =black
-/Position = (50, 20)
-/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
-</text> 
-
-<trial instructions_distributiontest>
-/ stimulusframes = [1=instructions_distribution1]
-/ validresponse = (57)
-</trial>
-
-<text likert_scale_instructions>
-/ items = ("Please indicate how confident you are in your response. Use your mouse to select an option.")
-/ txcolor = black
-/ position = (50%, 20%)
-/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
-</text>
-
-
-
-<openended risky1learning> 
-/stimulusframes = [1=risky1center, instructions_distribution2]
-/ position = (50,80)
-/ validresponse = ("1","2")
-</openended>
-<likert risky1learning_scale>
-/ stimulusframes = [1=likert_scale_instructions] 
-/ position = (50%, 50%)
-/ anchors = [1="Not At All"; 2="A Little"; 3="Moderately"; 4="Fairly"; 5="Completely"]
-/ numpoints = 5
-/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
-</likert>
-
-
-<openended risky2learning> 
-/stimulusframes = [1=risky2center, instructions_distribution2]
-/ position = (50,80)
-/ validresponse = ("1","2")
-</openended>
-<likert risky2learning_scale>
-/ stimulusframes = [1=likert_scale_instructions] 
-/ position = (50%, 50%)
-/ anchors = [1="Not At All"; 2="A Little"; 3="Moderately"; 4="Fairly"; 5="Completely"]
-/ numpoints = 5
-/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
-</likert>
-
-<openended safe1learning> 
-/stimulusframes = [1=safe1center,  instructions_distribution2]
-/ position = (50,80)
-/ validresponse = ("1","2")
-</openended>
-<likert safe1learning_scale>
-/ stimulusframes = [1=likert_scale_instructions] 
-/ position = (50%, 50%)
-/ anchors = [1="Not At All"; 2="A Little"; 3="Moderately"; 4="Fairly"; 5="Completely"]
-/ numpoints = 5
-/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
-</likert>
-
-<openended safe2learning> 
-/stimulusframes = [1=safe2center,  instructions_distribution2]
-/ position = (50,80)
-/ validresponse = ("1","2")
-</openended>
-<likert safe2learning_scale>
-/ stimulusframes = [1=likert_scale_instructions] 
-/ position = (50%, 50%)
-/ anchors = [1="Not At All"; 2="A Little"; 3="Moderately"; 4="Fairly"; 5="Completely"]
-/ numpoints = 5
-/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
-</likert>
-
-
-<block choice_distributions_learned>
-/ trials = [1=instructions_distributiontest; 2=risky1learning; 3=risky1learning_scale; 4=risky2learning; 5=risky2learning_scale; 6=safe1learning; 7=safe1learning_scale; 8=safe2learning; 9=safe2learning_scale]
-</block>
-
-
-
-
 ************
 TRIALS
 ************
@@ -1375,7 +1290,7 @@ EXPERIMENT AND VALUES
 	values.safe2pic=list.choicepics.nextvalue;
 ]
 /postinstructions = (page.post)
-/blocks = [1=initial_instructions; 2=learninglargervalue; 3=pre_single_instructions; 4=pre_twomachine_instructions; 5=testblock; 6=choice_distributions_learned; 7=block.thankYouAndPaymentBlock]
+/blocks = [1=initial_instructions; 2=learninglargervalue; 3=pre_single_instructions; 4=pre_twomachine_instructions; 5=testblock; 6=block.thankYouAndPaymentBlock]
 / onexptend = [
 	values.complete=1
 ]
@@ -1393,9 +1308,7 @@ values.leftoption, values.rightoption, values.leftpic, values.rightpic,
 values.selecteddirn, values.selectedoption, values.turnnum, values.choicert,
 values.largegainpic_category,values.smallgainpic_category,values.smalllosspic_category,values.largelosspic_category,
 values.largegainpic,values.smallgainpic,values.smalllosspic,values.largelosspic,
-values.risky1pic,values.risky2pic,values.safe1pic,values.safe2pic,
-likert.risky1learning_scale, likert.risky2learning_scale, likert.safe1learning_scale, likert.safe2learning_scale
-likert.smallgainlearning_noFeedback_scale, likert.largegainlearning_noFeedback_scale, likert.largelosslearning_noFeedback_scale, likert.smalllosslearning_noFeedback_scale)
+values.risky1pic,values.risky2pic,values.safe1pic,values.safe2pic)
 </data>
 values.leftoption, values.rightoption
 values.leftpic, values.rightpic
