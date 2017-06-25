@@ -17,10 +17,10 @@
 
 /pointsthisturn=0
 
-/largegainvalue=5
+/largegainvalue=10
 /smallgainvalue=2
 /smalllossvalue=-1
-/largelossvalue=-4
+/largelossvalue=-9
 
 /largegainpic="<%values.imagespath%>house.jpg"
 /smallgainpic="<%values.imagespath%>animal-silhouette-dog2nohead.jpg"
@@ -663,27 +663,66 @@ not actually used now...
 / validresponse = (" ")
 </trial>
 
+<text smallgain_value_feedback>
+/items=("<%values.smallgainvalue%>")
+/ fontstyle = ("Arial Black", 3%, false, false, false, false, 5, 1)
+/ select = sequence
+/ valign = top
+/ halign = center
+/ position = (50%, 80%)
+/ hjustify = center
+</text>
 
 <trial smallgain>
-/ stimulusframes = [1=smallgain]
+/ stimulusframes = [1=smallgain, smallgain_value_feedback]
 / ontrialend = [values.newtotalscore +=values.smallgainvalue;values.pointsthisturn=values.smallgainvalue;]
 / timeout = values.feedbackdur
 </trial>
 
+<text largegain_value_feedback>
+/items=("<%values.largegainvalue%>")
+/ fontstyle = ("Arial Black", 3%, false, false, false, false, 5, 1)
+/ select = sequence
+/ valign = top
+/ halign = center
+/ position = (50%, 80%)
+/ hjustify = center
+</text>
+
 <trial largegain>
-/ stimulusframes = [1=largegain]
+/ stimulusframes = [1=largegain, largegain_value_feedback]
 / ontrialend = [values.newtotalscore +=values.largegainvalue; values.pointsthisturn=values.largegainvalue;]
 / timeout = values.feedbackdur
 </trial>
 
+<text smallloss_value_feedback>
+/items=("<%values.smalllossvalue%>")
+/ fontstyle = ("Arial Black", 3%, false, false, false, false, 5, 1)
+/ select = sequence
+/ valign = top
+/ halign = center
+/ position = (50%, 80%)
+/ hjustify = center
+</text>
+
 <trial smallloss>
-/ stimulusframes = [1=smallloss]
+/ stimulusframes = [1=smallloss, smallgain_value_feedback]
 / ontrialend = [values.newtotalscore +=values.smalllossvalue; values.pointsthisturn=values.smalllossvalue;]
 / timeout = values.feedbackdur
 </trial>
 
+<text largeloss_value_feedback>
+/items=("<%values.largelossvalue%>")
+/ fontstyle = ("Arial Black", 3%, false, false, false, false, 5, 1)
+/ select = sequence
+/ valign = top
+/ halign = center
+/ position = (50%, 80%)
+/ hjustify = center
+</text>
+
 <trial largeloss>
-/ stimulusframes = [1=largeloss]
+/ stimulusframes = [1=largeloss, largeloss_value_feedback]
 / ontrialend = [values.newtotalscore +=values.largelossvalue; values.pointsthisturn=values.largelossvalue;]
 / timeout = values.feedbackdur
 </trial>
