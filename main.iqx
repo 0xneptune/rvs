@@ -1,5 +1,5 @@
 ﻿This is the second version where they have to learn 1 machine at a time first to make it easier**
-**Note** : We have now removed this. There is no one machine learning section.
+**Note** : We have now removed this. There is no one machine learning section. 
 
 
  ****VALUES****
@@ -366,6 +366,64 @@ instructions_dists
 <block initial_instructions>
 / trials = [1-4=instructions_main]
 </block>
+
+**********************
+WORK IN PROGRESS - CHOICE/QUESTION SCREEN (run block "choice_distributions_learned" to use)
+**********************
+
+<text instructions_distribution2>
+/items = ("Why did you choose this machine?
+
+            '1' = 'To avoid -9'
+
+            '2' = 'To avoid -1'
+
+            '3' = 'To gain +2'
+
+            '4' = 'To gain + 10'") 
+
+/ txcolor =black
+/Position = (50, 20)
+/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
+</text> 
+
+<trial instructions_distributiontest>
+/ stimulusframes = [1=instructions_distribution1]
+/ validresponse = (57)
+</trial>
+
+<openended risky1learning> 
+/stimulusframes = [1=risky1center, instructions_distribution2]
+/ position = (50,80)
+/ validresponse = ("2", "3", "4", "5")
+</openended>
+
+<openended risky2learning> 
+/stimulusframes = [1=risky2center, instructions_distribution2]
+/ position = (50,80)
+/ validresponse = ("2", "3", "4", "5")
+</openended>
+
+<openended safe1learning> 
+/stimulusframes = [1=safe1center, instructions_distribution2]
+/ position = (50,80)
+/ validresponse = ("2", "3", "4", "5")
+</openended>
+
+
+<openended safe2learning> 
+/stimulusframes = [1=safe2center, instructions_distribution2]
+/ position = (50,80)
+/ validresponse = ("2", "3", "4", "5")
+</openended>
+
+
+<block choice_distributions_learned>
+/ trials = [1=instructions_distributiontest; 2=risky1learning; 3=risky2learning; 4=safe1learning; 5=safe2learning]
+</block>
+
+**********************
+
 
 ******
 SECOND LEARNING PHASE -ie select the higher values
