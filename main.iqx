@@ -422,6 +422,62 @@ WORK IN PROGRESS - CHOICE/QUESTION SCREEN (run block "choice_distributions_learn
 / trials = [1=instructions_distributiontest; 2=risky1learning; 3=risky2learning; 4=safe1learning; 5=safe2learning]
 </block>
 
+################################################### THALIA'S STUFF #############################################
+##i copied stuff from elsewhere to demonstrate how to branch to the question and then to feedback
+##i renamed your question trials also here because hte names confused me
+#also i renamed choice_risky1left_safe1right_testing_branching just for demonstration purposes because it wouldnt let me keep the same name twice
+<openended risky1question> 
+/stimulusframes = [1=risky1center, instructions_distribution2]
+/ position = (50,80)
+/ validresponse = ("1", "2", "3", "4")
+/ branch = [list.risky1outcometrials.nextvalue]
+</openended>
+######### i set it to branch after here to the next value for the feedback screen
+
+<openended safe1question> 
+/stimulusframes = [1=safe1center, instructions_distribution2]
+/ position = (50,80)
+/ validresponse = ("1", "2", "3", "4")
+/ branch = [list.safe1outcometrials.nextvalue]
+</openended>
+
+<trial choice_risky1left_safe1right_testing_branching>
+/ontrialbegin = [values.randomnum = rand(1,100)]
+/stimulusframes = [1 = risky1left, safe1right,leftF, rightJ]
+/validresponse = ("f", "j")
+/ recorddata = false
+/ontrialend = [
+	values.leftoption="risky1";
+	values.rightoption="safe1";
+	values.leftpic=values.risky1pic;
+	values.rightpic=values.safe1pic;
+	values.turnnum=values.turnnum+1;
+	values.choicert=trial.choice_risky1left_safe1right_testing_branching.latency;
+]
+/ ontrialend = [
+	if (trial.choice_risky1left_safe1right_testing_branching.response==33) {
+		values.selecteddirn="left";
+		values.selectedoption=values.leftoption;} ]
+/ ontrialend = [
+	if (trial.choice_risky1left_safe1right_testing_branching.response==36) {
+		values.selecteddirn="right";
+		values.selectedoption=values.rightoption;} ]
+
+/branch= [if (trial.choice_risky1left_safe1right_testing_branching.response==33) openended.risky1question]
+/branch =[if (trial.choice_risky1left_safe1right_testing_branching.response==36) openended.safe1question]
+
+</trial>
+OLD BRANCHING WAS THIS BELOW. CHANGED IT TO WHAT IS ABOVE
+/branch= [if (trial.choice_risky1left_safe1right.response==33) list.risky1outcometrials.nextvalue]
+/branch =[if (trial.choice_risky1left_safe1right.response==36) list.safe1outcometrials.nextvalue]
+
+
+<block testing_branching>
+/ trials = [1=choice_risky1left_safe1right_testing_branching; 2=choice_risky1left_safe1right_testing_branching]
+</block>
+
+################################################### THALIA'S STUFF DONE #############################################
+
 **********************
 
 
