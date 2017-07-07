@@ -32,6 +32,9 @@
 /safe1pic="<%values.imagespath%>triangle.jpg"
 /safe2pic="<%values.imagespath%>circle.jpg"
 
+/riskycolour=""
+/safecolour=""
+
 /largegainpic_category=""
 /smallgainpic_category=""
 /largelosspic_category=""
@@ -1425,6 +1428,13 @@ EXPERIMENT AND VALUES
 / selectionrate = always
 </list>
 
+<list choicecolours>
+/items=("blue", "red")
+/replace=false
+/selectionmode=random
+/selectionrate=always
+</list>
+
 <expt>
 / onexptbegin = [
 	values.complete=0;
@@ -1442,6 +1452,9 @@ EXPERIMENT AND VALUES
 	values.risky2pic=list.choicepics.nextvalue;
 	values.safe1pic=list.choicepics.nextvalue;
 	values.safe2pic=list.choicepics.nextvalue;
+	
+	values.riskycolour=list.choicecolours.nextvalue;
+	values.safecolour=list.choicecolours.nextvalue;
 ]
 /postinstructions = (page.post)
 /blocks = [1=initial_instructions; 2=learninglargervalue; 3=pre_single_instructions; 4=pre_twomachine_instructions; 5=testblock; 6=block.thankYouAndPaymentBlock]
