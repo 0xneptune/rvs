@@ -96,6 +96,23 @@ STIMULI
 CHOICE IMAGES
 ********************************
 
+<item machine_images>
+/1="<%values.imagespath%>dark-blue-circle-risky.jpg"
+/2="<%values.imagespath%>light-blue-star-risky.jpg"
+/3="<%values.imagespath%>dark-red-rectangle-safe.jpg"
+/4="<%values.imagespath%>light-red-triangle-safe.jpg"
+
+/5="<%values.imagespath%>dark-red-rectangle-risky.jpg"
+/6="<%values.imagespath%>light-red-triangle-risky.jpg"
+/7="<%values.imagespath%>dark-blue-circle-safe.jpg"
+/8="<%values.imagespath%>light-blue-star-safe.jpg"
+</item>
+
+** Inquisit seems to need to have all images loaded upfront. Thus, load them here, but don't use this picture element.
+<picture machine_images_load>
+/ items = machine_images
+</picture>
+
 <picture risky1left>
 /items = ("<%values.risky1pic%>")
 /position = (25,50)
@@ -1424,13 +1441,6 @@ EXPERIMENT AND VALUES
 / selectionrate = always
 </list>
 
-<list choicepics>
-/items=("<%values.imagespath%>star.jpg","<%values.imagespath%>rectangle.jpg", "<%values.imagespath%>triangle.jpg","<%values.imagespath%>circle.jpg")
-/replace=false
-/ selectionmode =random
-/ selectionrate = always
-</list>
-
 <list choicecolours>
 /items=("blue", "red")
 /replace=false
@@ -1450,19 +1460,22 @@ EXPERIMENT AND VALUES
 	values.largelosspic=list.outcomepics.nextvalue;
 	values.smalllosspic_category = list.outcome_pic_category_names.nextvalue;
 	values.smalllosspic=list.outcomepics.nextvalue;
-
-	values.risky1pic=list.choicepics.nextvalue;
-	values.risky2pic=list.choicepics.nextvalue;
-	values.safe1pic=list.choicepics.nextvalue;
-	values.safe2pic=list.choicepics.nextvalue;
 	
 	values.riskycolour=list.choicecolours.nextvalue;
 	values.safecolour=list.choicecolours.nextvalue;
 	
 	if (values.riskycolour == "blue") {
-		values.grouped_machine_image_index=1
+		values.grouped_machine_image_index = 1;
+		values.risky1pic = item.machine_images.item(1);
+		values.risky2pic = item.machine_images.item(2);
+		values.safe1pic  = item.machine_images.item(3);
+		values.safe2pic  = item.machine_images.item(4);
 	} else if (values.riskycolour == "red") {
-		values.grouped_machine_image_index=2
+		values.grouped_machine_image_index=2;
+		values.risky1pic = item.machine_images.item(5);
+		values.risky2pic = item.machine_images.item(6);
+		values.safe1pic  = item.machine_images.item(7);
+		values.safe2pic  = item.machine_images.item(8);
 	}
 ]
 /postinstructions = (page.post)
