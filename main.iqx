@@ -266,12 +266,12 @@ However, some of the machines are more likely to give you stamps that let you ga
 
 Other machines are more likely to give you stamps where you gain less points (<%values.smallgainpic_category%>, +<%values.smallgainvalue%> points) but also stamps where you lose less points (<%values.smalllosspic_category%>, <%values.smalllossvalue%> points) - for example, the <%values.safecolour%> machine shown here. 
 
-~n~n~n~n~n~n~n~n~n~n~nPress Spacebar to continue",
+~n~n~n~n~n~n~n~n~nPress Spacebar to continue",
 
 "~n~nNote that, over the long run all the machines will give you the SAME amount of points. The only difference is in which types of stamps are more likely, ones that give you large gains and losses, vs smaller gains and losses.
 
 While playing, you will have to figure out which machines are more likely to give you which types of stamps.
-~n~n~n~n~n~n~n~n~n~n~nPress Spacebar to continue")
+~n~n~n~n~n~n~n~n~n~n~n~nPress Spacebar to continue")
 / fontstyle = ("Arial Black", 3%, false, false, false, false, 5, 1)
 / size = (70%, 80%)
 / select = sequence
