@@ -7,7 +7,7 @@
 
 ** For posting online, change 'imagespath' to an empty string
 <values>
-/feedbackdur=2500
+/feedbackdur=0
 /valuetaskcorr = 0
 /imagespath="images/"
 
@@ -50,6 +50,7 @@
 /choicert="NA"
 
 /complete=0
+/grouped_machine_image_index=1
 </values>
 
 ********************
@@ -261,9 +262,9 @@ INSTRUCTION PAGES
 /items =(
 "Each machine can give you any of the 4 types of stamps.
 
-However, some of the machines are more likely to give you stamps that let you gain many points (<%values.largegainpic_category%>, +<%values.largegainvalue%> points) but also ones where you lose many points(<%values.largelosspic_category%>, <%values.largelossvalue%> points) - for example, the purple machine shown here.
+However, some of the machines are more likely to give you stamps that let you gain many points (<%values.largegainpic_category%>, +<%values.largegainvalue%> points) but also ones where you lose many points(<%values.largelosspic_category%>, <%values.largelossvalue%> points) - for example, the <%values.riskycolour%> machine shown here.
 
-Other machines are more likely to give you stamps where you gain less points (<%values.smallgainpic_category%>, +<%values.smallgainvalue%> points) but also stamps where you lose less points (<%values.smalllosspic_category%>, <%values.smalllossvalue%> points) - for example, the orange machine shown here. 
+Other machines are more likely to give you stamps where you gain less points (<%values.smallgainpic_category%>, +<%values.smallgainvalue%> points) but also stamps where you lose less points (<%values.smalllosspic_category%>, <%values.smalllossvalue%> points) - for example, the <%values.safecolour%> machine shown here. 
 
 ~n~n~n~n~n~n~n~n~n~n~nPress Spacebar to continue",
 
@@ -282,10 +283,12 @@ While playing, you will have to figure out which machines are more likely to giv
 ^^While playing, you will have to figure out which machines are more likely to give you which types of stamps.
 
 <picture instructions_dist_pix>
-/ items =("<%values.imagespath%>bothdists.jpg")
-/ position= (50%, 65%)
-/ size = (65%, 65%)
+/ items = ("<%values.imagespath%>group-redSafe-blueRisky.jpg", "<%values.imagespath%>group-redRisky-blueSafe.jpg")
+/ position= (50%, 70%)
+/ size = (40%, 35%)
+/ select = values.grouped_machine_image_index
 </picture>
+
 <trial instructions_dists>
 / stimulusframes = [1=instructions_dist_text, instructions_dist_pix]
 / validresponse = (57)
@@ -1455,6 +1458,12 @@ EXPERIMENT AND VALUES
 	
 	values.riskycolour=list.choicecolours.nextvalue;
 	values.safecolour=list.choicecolours.nextvalue;
+	
+	if (values.riskycolour == "blue") {
+		values.grouped_machine_image_index=1
+	} else if (values.riskycolour == "red") {
+		values.grouped_machine_image_index=2
+	}
 ]
 /postinstructions = (page.post)
 /blocks = [1=initial_instructions; 2=learninglargervalue; 3=pre_single_instructions; 4=pre_twomachine_instructions; 5=testblock; 6=block.thankYouAndPaymentBlock]
