@@ -449,20 +449,6 @@ WORK IN PROGRESS - CHOICE/QUESTION SCREEN (run block "choice_distributions_learn
 ##i copied stuff from elsewhere to demonstrate how to branch to the question and then to feedback
 ##i renamed your question trials also here because hte names confused me
 #also i renamed choice_risky1left_safe1right_testing_branching just for demonstration purposes because it wouldnt let me keep the same name twice
-<openended risky1question> 
-/stimulusframes = [1=risky1center, instructions_distribution2]
-/ position = (50,80)
-/ validresponse = ("1", "2", "3", "4")
-/ branch = [list.risky1outcometrials.nextvalue]
-</openended>
-######### i set it to branch after here to the next value for the feedback screen
-
-<openended safe1question> 
-/stimulusframes = [1=safe1center, instructions_distribution2]
-/ position = (50,80)
-/ validresponse = ("1", "2", "3", "4")
-/ branch = [list.safe1outcometrials.nextvalue]
-</openended>
 
 <trial choice_risky1left_safe1right_testing_branching>
 /ontrialbegin = [values.randomnum = rand(1,100)]
@@ -485,18 +471,14 @@ WORK IN PROGRESS - CHOICE/QUESTION SCREEN (run block "choice_distributions_learn
 	if (trial.choice_risky1left_safe1right_testing_branching.response==36) {
 		values.selecteddirn="right";
 		values.selectedoption=values.rightoption;} ]
-
 /branch= [if (trial.choice_risky1left_safe1right_testing_branching.response==33) openended.risky1question]
 /branch =[if (trial.choice_risky1left_safe1right_testing_branching.response==36) openended.safe1question]
-
 </trial>
-OLD BRANCHING WAS THIS BELOW. CHANGED IT TO WHAT IS ABOVE
-/branch= [if (trial.choice_risky1left_safe1right.response==33) list.risky1outcometrials.nextvalue]
-/branch =[if (trial.choice_risky1left_safe1right.response==36) list.safe1outcometrials.nextvalue]
 
 
 <block testing_branching>
-/ trials = [1=choice_risky1left_safe1right_testing_branching; 2=choice_risky1left_safe1right_testing_branching]
+/ trials = [1=choice_risky1left_safe1right_testing_branching;
+            2=choice_risky1left_safe1right_testing_branching]
 </block>
 
 ################################################### THALIA'S STUFF DONE #############################################
@@ -895,7 +877,36 @@ LIST OF OUTCOME TRIALS ---currently I made 400 trials. set as long as task just 
 
 
 ################NEED to add all this ontrial end stuff to the other choice trials and change to the correct things (ie risky1 or safe2 or left and right stuff, etc)
-##and set record data to false, since i recorded everything under the feedback trials. 
+##and set record data to false, since i recorded everything under the feedback trials.
+
+<openended risky1question> 
+/stimulusframes = [1=risky1center, instructions_distribution2]
+/ position = (50,80)
+/ validresponse = ("1", "2", "3", "4")
+/ branch = [list.risky1outcometrials.nextvalue]
+</openended>
+
+<openended risky2question> 
+/stimulusframes = [1=risky2center, instructions_distribution2]
+/ position = (50,80)
+/ validresponse = ("1", "2", "3", "4")
+/ branch = [list.risky2outcometrials.nextvalue]
+</openended>
+
+<openended safe1question> 
+/stimulusframes = [1=safe1center, instructions_distribution2]
+/ position = (50,80)
+/ validresponse = ("1", "2", "3", "4")
+/ branch = [list.safe1outcometrials.nextvalue]
+</openended>
+
+<openended safe2question> 
+/stimulusframes = [1=safe2center, instructions_distribution2]
+/ position = (50,80)
+/ validresponse = ("1", "2", "3", "4")
+/ branch = [list.safe2outcometrials.nextvalue]
+</openended>
+
 <trial choice_risky1left_safe1right>
 /ontrialbegin = [values.randomnum = rand(1,100)]
 /stimulusframes = [1 = risky1left, safe1right,leftF, rightJ]
@@ -918,9 +929,8 @@ LIST OF OUTCOME TRIALS ---currently I made 400 trials. set as long as task just 
 		values.selecteddirn="right";
 		values.selectedoption=values.rightoption;} ]
 
-/branch= [if (trial.choice_risky1left_safe1right.response==33) list.risky1outcometrials.nextvalue]
-/branch =[if (trial.choice_risky1left_safe1right.response==36) list.safe1outcometrials.nextvalue]
-
+/branch= [if (trial.choice_risky1left_safe1right.response==33) openended.risky1question]
+/branch =[if (trial.choice_risky1left_safe1right.response==36) openended.safe1question]
 </trial>
 
 
@@ -957,8 +967,8 @@ LIST OF OUTCOME TRIALS ---currently I made 400 trials. set as long as task just 
 		values.selecteddirn="right";
 		values.selectedoption=values.rightoption;} ]
 
-/branch= [if (trial.choice_risky1right_safe1left.response==33) list.safe1outcometrials.nextvalue]
-/branch =[if (trial.choice_risky1right_safe1left.response==36) list.risky1outcometrials.nextvalue]
+/branch= [if (trial.choice_risky1right_safe1left.response==33) openended.safe1question]
+/branch =[if (trial.choice_risky1right_safe1left.response==36) openended.risky1question]
 
 </trial>
 
@@ -997,8 +1007,8 @@ LIST OF OUTCOME TRIALS ---currently I made 400 trials. set as long as task just 
 		values.selecteddirn="right";
 		values.selectedoption=values.rightoption;} ]
 
-/branch= [if (trial.choice_risky1right_safe2left.response==33) list.safe2outcometrials.nextvalue]
-/branch =[if (trial.choice_risky1right_safe2left.response==36) list.risky1outcometrials.nextvalue]
+/branch= [if (trial.choice_risky1right_safe2left.response==33) openended.safe2question]
+/branch =[if (trial.choice_risky1right_safe2left.response==36) openended.risky1question]
 
 </trial>
 
@@ -1036,8 +1046,8 @@ LIST OF OUTCOME TRIALS ---currently I made 400 trials. set as long as task just 
 		values.selecteddirn="right";
 		values.selectedoption=values.rightoption;} ]
 
-/branch= [if (trial.choice_risky1left_safe2right.response==33) list.risky1outcometrials.nextvalue]
-/branch =[if (trial.choice_risky1left_safe2right.response==36) list.safe2outcometrials.nextvalue]
+/branch= [if (trial.choice_risky1left_safe2right.response==33) openended.risky1question]
+/branch =[if (trial.choice_risky1left_safe2right.response==36) openended.safe2question]
 
 </trial>
 
@@ -1075,8 +1085,8 @@ LIST OF OUTCOME TRIALS ---currently I made 400 trials. set as long as task just 
 		values.selecteddirn="right";
 		values.selectedoption=values.rightoption;} ]
 
-/branch= [if (trial.choice_risky2right_safe1left.response==33) list.safe1outcometrials.nextvalue]
-/branch =[if (trial.choice_risky2right_safe1left.response==36) list.risky2outcometrials.nextvalue]
+/branch= [if (trial.choice_risky2right_safe1left.response==33) openended.safe1question]
+/branch =[if (trial.choice_risky2right_safe1left.response==36) openended.risky2question]
 
 </trial>
 
@@ -1112,8 +1122,8 @@ LIST OF OUTCOME TRIALS ---currently I made 400 trials. set as long as task just 
 		values.selecteddirn="right";
 		values.selectedoption=values.rightoption;} ]
 
-/branch= [if (trial.choice_risky2left_safe1right.response==33) list.risky1outcometrials.nextvalue]
-/branch =[if (trial.choice_risky2left_safe1right.response==36) list.safe1outcometrials.nextvalue]
+/branch= [if (trial.choice_risky2left_safe1right.response==33) openended.risky1question]
+/branch =[if (trial.choice_risky2left_safe1right.response==36) openended.safe1question]
 
 </trial>
 
@@ -1149,8 +1159,8 @@ LIST OF OUTCOME TRIALS ---currently I made 400 trials. set as long as task just 
 		values.selecteddirn="right";
 		values.selectedoption=values.rightoption;} ]
 
-/branch= [if (trial.choice_risky2right_safe2left.response==33) list.safe2outcometrials.nextvalue]
-/branch =[if (trial.choice_risky2right_safe2left.response==36) list.risky2outcometrials.nextvalue]
+/branch= [if (trial.choice_risky2right_safe2left.response==33) openended.safe2question]
+/branch =[if (trial.choice_risky2right_safe2left.response==36) openended.risky2question]
 
 </trial>
 
@@ -1188,8 +1198,8 @@ LIST OF OUTCOME TRIALS ---currently I made 400 trials. set as long as task just 
 		values.selecteddirn="right";
 		values.selectedoption=values.rightoption;} ]
 
-/branch= [if (trial.choice_risky2left_safe2right.response==33) list.risky2outcometrials.nextvalue]
-/branch =[if (trial.choice_risky2left_safe2right.response==36) list.safe2outcometrials.nextvalue]
+/branch= [if (trial.choice_risky2left_safe2right.response==33) openended.risky2question]
+/branch =[if (trial.choice_risky2left_safe2right.response==36) openended.safe2question]
 
 </trial>
 
@@ -1230,8 +1240,8 @@ FORCED TRIALS FOR TRAINING PHASE
 		values.selecteddirn="right";
 		values.selectedoption=values.rightoption;} ]
 
-/branch= [if (trial.choice_risky1left_risky1right.response==33) list.risky1outcometrials.nextvalue]
-/branch =[if (trial.choice_risky1left_risky1right.response==36) list.risky1outcometrials.nextvalue]
+/branch= [if (trial.choice_risky1left_risky1right.response==33) openended.risky1question]
+/branch =[if (trial.choice_risky1left_risky1right.response==36) openended.risky1question]
 </trial>
 
 <trial choice_risky2left_risky2right>
@@ -1255,8 +1265,8 @@ FORCED TRIALS FOR TRAINING PHASE
 	if (trial.choice_risky2left_risky2right.response==36) {
 		values.selecteddirn="right";
 		values.selectedoption=values.rightoption;} ]
-/branch= [if (trial.choice_risky2left_risky2right.response==33) list.risky2outcometrials.nextvalue]
-/branch =[if (trial.choice_risky2left_risky2right.response==36) list.risky2outcometrials.nextvalue]
+/branch= [if (trial.choice_risky2left_risky2right.response==33) openended.risky2question]
+/branch =[if (trial.choice_risky2left_risky2right.response==36) openended.risky2question]
 </trial>
 
 <trial choice_safe1left_safe1right>
@@ -1280,8 +1290,8 @@ FORCED TRIALS FOR TRAINING PHASE
 	if (trial.choice_safe1left_safe1right.response==36) {
 		values.selecteddirn="right";
 		values.selectedoption=values.rightoption;} ]
-/branch= [if (trial.choice_safe1left_safe1right.response==33) list.safe1outcometrials.nextvalue]
-/branch =[if (trial.choice_safe1left_safe1right.response==36) list.safe1outcometrials.nextvalue]
+/branch= [if (trial.choice_safe1left_safe1right.response==33) openended.safe1question]
+/branch =[if (trial.choice_safe1left_safe1right.response==36) openended.safe1question]
 </trial>
 
 <trial choice_safe2left_safe2right>
@@ -1305,8 +1315,8 @@ FORCED TRIALS FOR TRAINING PHASE
 	if (trial.choice_safe2left_safe2right.response==36) {
 		values.selecteddirn="right";
 		values.selectedoption=values.rightoption;} ]
-/branch= [if (trial.choice_safe2left_safe2right.response==33) list.safe2outcometrials.nextvalue]
-/branch =[if (trial.choice_safe2left_safe2right.response==36) list.safe2outcometrials.nextvalue]
+/branch= [if (trial.choice_safe2left_safe2right.response==33) openended.safe2question]
+/branch =[if (trial.choice_safe2left_safe2right.response==36) openended.safe2question]
 </trial>
 
 ########single machine trials ###################
