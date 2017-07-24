@@ -279,17 +279,18 @@ INSTRUCTION PAGES
 /items =(
 "Each machine can give you any of the 4 types of stamps.
 
-However, some of the machines are more likely to give you stamps that let you gain many points (<%values.largegainpic_category%>, +<%values.largegainvalue%> points) but also ones where you lose many points(<%values.largelosspic_category%>, <%values.largelossvalue%> points) - for example, the <%values.riskycolour%> machine shown here.
+However, the <%values.riskycolour%> machines are more likely to give you stamps that let you gain MANY points (<%values.largegainpic_category%>, +<%values.largegainvalue%> points) but also stamps where you lose MANY points (<%values.largelosspic_category%>, <%values.largelossvalue%> points).
 
-Other machines are more likely to give you stamps where you gain less points (<%values.smallgainpic_category%>, +<%values.smallgainvalue%> points) but also stamps where you lose less points (<%values.smalllosspic_category%>, <%values.smalllossvalue%> points) - for example, the <%values.safecolour%> machine shown here. 
+On the other hand, the <%values.safecolour%> machines are more likely to give you stamps where you gain LESS points (<%values.smallgainpic_category%>, +<%values.smallgainvalue%> points) but also stamps where you lose LESS points (<%values.smalllosspic_category%>, <%values.smalllossvalue%> points).
+
+ADD STUFFF.
 
 ~n~n~n~n~n~n~n~n~nPress Spacebar to continue",
 
 "~n~nNote that, over the long run all the machines will give you the SAME amount of points. The only difference is in which types of stamps are more likely, ones that give you large gains and losses, vs smaller gains and losses.
 
-While playing, you will have to figure out which machines are more likely to give you which types of stamps.
 ~n~n~n~n~n~n~n~n~n~n~n~nPress Spacebar to continue")
-/ fontstyle = ("Arial Black", 3%, false, false, false, false, 5, 1)
+/ fontstyle = ("Arial", 3%, false, false, false, false, 5, 1)
 / size = (70%, 80%)
 / select = sequence
 / valign = top
@@ -395,15 +396,16 @@ CHOICE/QUESTION SCREEN
 **********************
 
 <text instructions_distribution2>
-/items = ("Why did you choose this machine?
+/items = (
+
+
+
+"Why did you choose this machine?
 
             '1' = 'To avoid -9'
-
             '2' = 'To avoid -1'
-
             '3' = 'To gain +2'
-
-            '4' = 'To gain + 10'") 
+            '4' = 'To gain +10'") 
 
 / txcolor =black
 /Position = (50, 20)
