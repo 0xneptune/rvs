@@ -1,11 +1,21 @@
-﻿This is the second version where they have to learn 1 machine at a time first to make it easier**
-**Note** : We have now removed this. There is no one machine learning section. 
+﻿********************************************************************************
+// Risky vs Safe Decision Making Game - Version 3
+//
+// AUTHORS: Computational Affective Neuroscience (CAN) Lab, U of T
+//
+// NOTES:
+//  - Second version had users learn one machine at a time to make it easier.
+//  - Third version has now removed this. There is no one machine learning
+//    section. Users just engage with the main task.
+********************************************************************************
 
 
- ****VALUES****
-*****************
+********************************************************************************
+// VALUES
+********************************************************************************
 
-** For posting online, change 'imagespath' to an empty string
+
+// For posting online, change 'imagespath' to an empty string
 <values>
 /feedbackdur=0
 /valuetaskcorr = 0
@@ -53,9 +63,12 @@
 /grouped_machine_image_index=1
 </values>
 
-********************
-SETTINGS
-********************
+
+********************************************************************************
+// SETTINGS
+********************************************************************************
+
+
 <defaults>
 / screencolor = lightgray 
 / txbgcolor = lightgray
@@ -63,9 +76,11 @@ SETTINGS
 / fontstyle = ("Arial", 5%)
 </defaults>
 
-**********************
-STIMULI
-*********************
+
+********************************************************************************
+// STIMULI
+********************************************************************************
+
 
 <picture largegain>
 / items = ("<%values.largegainpic%>")
@@ -92,9 +107,11 @@ STIMULI
 / size = (50%, 50%)
 </picture>
 
-********************************
-CHOICE IMAGES
-********************************
+
+********************************************************************************
+// CHOICE IMAGES
+********************************************************************************
+
 
 <item machine_images>
 /1="<%values.imagespath%>dark-blue-circle-risky.jpg"
@@ -108,7 +125,8 @@ CHOICE IMAGES
 /8="<%values.imagespath%>light-blue-star-safe.jpg"
 </item>
 
-** Inquisit seems to need to have all images loaded upfront. Thus, load them here, but don't use this picture element.
+// Inquisit seems to need to have all images loaded upfront. Thus, load them
+// here, but don't use this picture element.
 <picture machine_images_load>
 / items = machine_images
 </picture>
@@ -160,9 +178,11 @@ CHOICE IMAGES
 / size = (25%, 25%)
 </picture>
 
-*************
-CHOICE PIX IN CENTER FOR LEARNING TEST
-**************
+
+********************************************************************************
+// CHOICE PIX IN CENTER FOR LEARNING TEST
+********************************************************************************
+
 
 <picture risky1center>
 /items = ("<%values.risky1pic%>")
@@ -190,9 +210,11 @@ CHOICE PIX IN CENTER FOR LEARNING TEST
 Press the spacebar when you are ready to continue.")
 </text>
 
-**************
-PICTURES FOR SECOND LEARNING PHASE
-****************
+
+********************************************************************************
+// PICTURES FOR SECOND LEARNING PHASE
+********************************************************************************
+
 
 <picture LGright>
 /position = (75, 50)
@@ -242,9 +264,13 @@ PICTURES FOR SECOND LEARNING PHASE
 /position = (25,50)
 / size = (40%, 40%)
 </picture>
-*************
-INSTRUCTION PAGES
-**************
+
+
+********************************************************************************
+// INSTRUCTION PAGES
+********************************************************************************
+
+
 <picture instructionslides>
 /items =("<%values.imagespath%>slide01.jpg","<%values.imagespath%>slide02.jpg","<%values.imagespath%>slide03.jpg","<%values.imagespath%>slide06.jpg","<%values.imagespath%>slide07.jpg","<%values.imagespath%>slide13.jpg")
 / select = sequence
@@ -355,9 +381,11 @@ which consists of some questionnaires.
 
 </page>
 
-************
-INITIAL LEARNING PHASE FOR VALUES TO IMAGES
-************
+
+********************************************************************************
+// INITIAL LEARNING PHASE FOR VALUES TO IMAGES
+********************************************************************************
+
 
 <text whichone>
 /items= ("Which stamp is worth more?")
@@ -391,9 +419,11 @@ instructions_dists
 / trials = [1-4=instructions_main]
 </block>
 
-**********************
-CHOICE/QUESTION SCREEN
-**********************
+
+********************************************************************************
+// CHOICE/QUESTION SCREEN
+********************************************************************************
+
 
 <text instructions_distribution2>
 /items = (
@@ -412,9 +442,11 @@ CHOICE/QUESTION SCREEN
 / fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
 </text>
 
-**************************
-THANK YOU + PAYMENT
-**************************
+
+********************************************************************************
+// THANK YOU + PAYMENT
+********************************************************************************
+
 
 <text thankYouAndPaymentText>
 / items = ("Thank you for participating in this study. You have earned <%values.bonusPayment%> cents bonus pay.")
@@ -435,9 +467,11 @@ THANK YOU + PAYMENT
 / trials = [1=thankYouAndPaymentTrial]
 </block>
 
-**************************
-FOR TEST OF WHAT DISTRIBUTIONS WERE LEARNED AT THE END
-**************************
+
+********************************************************************************
+// FOR TEST OF WHAT DISTRIBUTIONS WERE LEARNED AT THE END
+********************************************************************************
+
 
 picture disrisky>
 /items = ("images/distrubtionrisky.jpg")
@@ -471,9 +505,11 @@ Press SPACEBAR to continue.")
 </text> 
 
 
-************
-TRIALS
-************
+********************************************************************************
+// TRIALS
+********************************************************************************
+
+
 not actually used now...
 <trial rest> 
 /stimulusframes = [1=rest]
@@ -545,9 +581,12 @@ not actually used now...
 </trial>
 
 
-***************************
-LIST OF OUTCOME TRIALS ---currently I made 400 trials. set as long as task just in case.
-***************************
+********************************************************************************
+// LIST OF OUTCOME TRIALS
+//
+// Currently we have 400 trials. Set as long as task just in case.
+********************************************************************************
+
 
 <list risky1outcometrials>
 /items = (trial.largegain, trial.largeloss, trial.largegain, trial.smallloss, trial.largegain, trial.largeloss, trial.largegain, trial.largegain, trial.smallloss, trial.largeloss, trial.smallgain, trial.largegain, trial.largegain, trial.largeloss, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.largeloss, trial.smallgain, trial.largeloss, trial.smallloss, trial.largeloss, trial.largegain, trial.largegain, trial.largeloss, trial.smallgain, trial.smallloss, trial.smallgain, trial.largeloss, trial.smallgain, trial.largeloss, trial.largegain, trial.smallloss, trial.smallloss, trial.largegain, trial.largeloss, trial.largeloss, trial.smallloss, trial.smallgain, trial.largegain, trial.largegain, trial.largegain, trial.smallloss, trial.largegain, trial.largegain, trial.largegain, trial.largegain, trial.largegain, trial.smallgain, trial.smallgain, trial.largegain, trial.smallloss, trial.largegain, trial.largegain, trial.smallloss, trial.largeloss, trial.smallloss, trial.largegain, trial.largegain, trial.largegain, trial.largegain, trial.largeloss, trial.largegain, trial.smallloss, trial.largeloss, trial.largeloss, trial.smallgain, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.largegain, trial.largeloss, trial.largegain, trial.smallgain, trial.largegain, trial.smallgain, trial.largegain, trial.largegain, trial.largegain, trial.largegain, trial.smallgain, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.largegain, trial.smallgain, trial.smallloss, trial.largegain, trial.smallloss, trial.largeloss, trial.largeloss, trial.smallgain, trial.smallloss, trial.largeloss, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.smallgain, trial.largegain, trial.smallgain, trial.largegain, trial.smallloss, trial.largegain, trial.largegain, trial.smallgain, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallloss, trial.smallloss, trial.smallloss, trial.largeloss, trial.largegain, trial.largeloss, trial.largeloss, trial.smallgain, trial.largeloss, trial.largegain, trial.largeloss, trial.largeloss, trial.smallgain, trial.smallloss, trial.largegain, trial.smallgain, trial.largegain, trial.largeloss, trial.largegain, trial.largegain, trial.largegain, trial.largegain, trial.smallloss, trial.smallloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.smallgain, trial.smallloss, trial.largegain, trial.largegain, trial.smallgain, trial.largegain, trial.largeloss, trial.largegain, trial.smallgain, trial.largeloss, trial.largegain, trial.largegain, trial.largeloss, trial.largegain, trial.smallgain, trial.smallloss, trial.smallgain, trial.smallloss, trial.largeloss, trial.smallgain, trial.largegain, trial.largeloss, trial.largeloss, trial.largeloss, trial.smallgain, trial.largegain, trial.smallloss, trial.largegain, trial.largegain, trial.largegain, trial.smallloss, trial.largegain, trial.smallloss, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.largegain, trial.largeloss, trial.largeloss, trial.smallloss, trial.largeloss, trial.smallgain, trial.largeloss, trial.largegain, trial.largegain, trial.largeloss, trial.largeloss, trial.largeloss, trial.smallgain, trial.largeloss, trial.largeloss, trial.largegain, trial.largegain, trial.smallgain, trial.smallloss, trial.largeloss, trial.largeloss, trial.largegain, trial.largegain, trial.largeloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.largegain, trial.smallgain, trial.largegain, trial.largegain, trial.smallgain, trial.largegain, trial.largeloss, trial.smallloss, trial.largegain, trial.smallloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.smallgain, trial.smallloss, trial.largeloss, trial.smallgain, trial.largeloss, trial.largegain, trial.largegain, trial.largeloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.smallloss, trial.largeloss, trial.smallloss, trial.largegain, trial.largeloss, trial.largeloss, trial.smallloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.largegain, trial.smallgain, trial.smallloss, trial.smallloss, trial.smallgain, trial.smallloss, trial.smallgain, trial.largegain, trial.smallgain, trial.largegain, trial.largeloss, trial.largegain, trial.largegain, trial.smallloss, trial.largegain, trial.smallgain, trial.largeloss, trial.smallgain, trial.smallloss, trial.largeloss, trial.largegain, trial.largegain, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.smallgain, trial.smallgain, trial.largeloss, trial.largegain, trial.largeloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.smallloss, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.largeloss, trial.largeloss, trial.largeloss, trial.smallgain, trial.smallloss, trial.largegain, trial.largegain, trial.smallgain, trial.largeloss, trial.largeloss, trial.smallloss, trial.largeloss, trial.smallgain, trial.largeloss, trial.largegain, trial.largegain, trial.smallgain, trial.largegain, trial.largegain, trial.largeloss, trial.largegain, trial.smallgain, trial.largegain, trial.largeloss, trial.largegain, trial.smallloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.largeloss, trial.smallloss, trial.largeloss, trial.smallgain, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.largeloss, trial.largeloss, trial.largeloss, trial.largeloss, trial.smallloss, trial.largegain, trial.largeloss, trial.largegain, trial.largegain, trial.smallloss, trial.largeloss, trial.smallgain, trial.largeloss, trial.largegain, trial.largeloss, trial.largeloss, trial.smallloss, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.smallgain, trial.smallloss, trial.largegain, trial.largegain, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.smallgain, trial.largeloss, trial.smallgain, trial.largeloss, trial.largeloss, trial.smallloss, trial.largeloss, trial.largegain, trial.smallloss, trial.largeloss, trial.largegain, trial.smallgain, trial.largegain, trial.largeloss, trial.largeloss, trial.largegain, trial.largeloss, trial.smallgain, trial.largegain, trial.largegain, trial.largeloss, trial.smallloss, trial.smallloss, trial.largegain, trial.smallgain, trial.smallgain, trial.largegain, trial.smallloss, trial.largeloss, trial.largegain, trial.largegain, trial.smallloss, trial.smallgain, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.largegain, trial.smallgain, trial.largeloss, trial.largegain, trial.largeloss, trial.largegain, trial.largeloss, trial.smallloss, trial.smallloss, trial.largegain, trial.smallgain, trial.largeloss, trial.largeloss)
@@ -911,10 +950,10 @@ LIST OF OUTCOME TRIALS ---currently I made 400 trials. set as long as task just 
 /branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky2left_safe2right.response==36) trial.largeloss]
 
 
+********************************************************************************
+// FORCED TRIALS FOR TRAINING PHASE
+********************************************************************************
 
-***********
-FORCED TRIALS FOR TRAINING PHASE
-**********
 
 <trial choice_risky1left_risky1right>
 /ontrialbegin = [values.randomnum = rand(1,100)]
@@ -1072,10 +1111,10 @@ FORCED TRIALS FOR TRAINING PHASE
 </trial>
 
 
+********************************************************************************
+// BLOCKS
+********************************************************************************
 
-***********
-BLOCKS
-***********
 
 <block pre_single_instructions> 
 / trials = [1-3=instructions_main; 4-5=instructions_dists; 6=instructions_main;]
@@ -1128,13 +1167,10 @@ block rest>
 </block>
 
 
+********************************************************************************
+// EXPERIMENT AND VALUES
+********************************************************************************
 
-
-
-
-************************************
-EXPERIMENT AND VALUES
-************************************
 
 <list outcomepics>
 /items=("<%values.imagespath%>animal-silhouette-dog2nohead.jpg", "<%values.imagespath%>house.jpg","<%values.imagespath%>face-03.jpg","<%values.imagespath%>hammer.jpg")
@@ -1193,9 +1229,11 @@ EXPERIMENT AND VALUES
 ]
 </expt>
 
-************
-DATA
-*************
+
+********************************************************************************
+// DATA RECORDING
+********************************************************************************
+
 
 <data>
 /separatefiles = true
