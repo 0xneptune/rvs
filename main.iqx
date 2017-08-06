@@ -659,37 +659,34 @@ not actually used now...
 / selectionrate = always
 </list>
 
+// Need to add all this ontrial end stuff to the other choice trials and change
+// to the correct things (ie risky1 or safe2 or left and right stuff, etc) and
+// set record data to false, since i recorded everything under the feedback
+// trials.
 
-################NEED to add all this ontrial end stuff to the other choice trials and change to the correct things (ie risky1 or safe2 or left and right stuff, etc)
-##and set record data to false, since i recorded everything under the feedback trials.
-
-<openended risky1question> 
-/stimulusframes = [1=risky1center, instructions_distribution2]
-/ position = (50,80)
-/ validresponse = ("1", "2", "3", "4")
+<trial risky1question> 
+/ stimulusframes = [1=risky1center, instructions_distribution2]
+/ validresponse = (2, 3, 4, 5)
 / branch = [list.risky1outcometrials.nextvalue]
-</openended>
+</trial>
 
-<openended risky2question> 
-/stimulusframes = [1=risky2center, instructions_distribution2]
-/ position = (50,80)
-/ validresponse = ("1", "2", "3", "4")
+<trial risky2question> 
+/ stimulusframes = [1=risky2center, instructions_distribution2]
+/ validresponse = (2, 3, 4, 5)
 / branch = [list.risky2outcometrials.nextvalue]
-</openended>
+</trial>
 
-<openended safe1question> 
-/stimulusframes = [1=safe1center, instructions_distribution2]
-/ position = (50,80)
-/ validresponse = ("1", "2", "3", "4")
+<trial safe1question> 
+/ stimulusframes = [1=safe1center, instructions_distribution2]
+/ validresponse = (2, 3, 4, 5)
 / branch = [list.safe1outcometrials.nextvalue]
-</openended>
+</trial>
 
-<openended safe2question> 
-/stimulusframes = [1=safe2center, instructions_distribution2]
-/ position = (50,80)
-/ validresponse = ("1", "2", "3", "4")
+<trial safe2question> 
+/ stimulusframes = [1=safe2center, instructions_distribution2]
+/ validresponse = (2, 3, 4, 5)
 / branch = [list.safe2outcometrials.nextvalue]
-</openended>
+</trial>
 
 <trial choice_risky1left_safe1right>
 /ontrialbegin = [values.randomnum = rand(1,100)]
@@ -713,8 +710,8 @@ not actually used now...
 		values.selecteddirn="right";
 		values.selectedoption=values.rightoption;} ]
 
-/branch= [if (trial.choice_risky1left_safe1right.response==33) openended.risky1question]
-/branch =[if (trial.choice_risky1left_safe1right.response==36) openended.safe1question]
+/branch= [if (trial.choice_risky1left_safe1right.response==33) trial.risky1question]
+/branch =[if (trial.choice_risky1left_safe1right.response==36) trial.safe1question]
 </trial>
 
 
@@ -751,8 +748,8 @@ not actually used now...
 		values.selecteddirn="right";
 		values.selectedoption=values.rightoption;} ]
 
-/branch= [if (trial.choice_risky1right_safe1left.response==33) openended.safe1question]
-/branch =[if (trial.choice_risky1right_safe1left.response==36) openended.risky1question]
+/branch= [if (trial.choice_risky1right_safe1left.response==33) trial.safe1question]
+/branch =[if (trial.choice_risky1right_safe1left.response==36) trial.risky1question]
 
 </trial>
 
@@ -791,8 +788,8 @@ not actually used now...
 		values.selecteddirn="right";
 		values.selectedoption=values.rightoption;} ]
 
-/branch= [if (trial.choice_risky1right_safe2left.response==33) openended.safe2question]
-/branch =[if (trial.choice_risky1right_safe2left.response==36) openended.risky1question]
+/branch= [if (trial.choice_risky1right_safe2left.response==33) trial.safe2question]
+/branch =[if (trial.choice_risky1right_safe2left.response==36) trial.risky1question]
 
 </trial>
 
@@ -830,8 +827,8 @@ not actually used now...
 		values.selecteddirn="right";
 		values.selectedoption=values.rightoption;} ]
 
-/branch= [if (trial.choice_risky1left_safe2right.response==33) openended.risky1question]
-/branch =[if (trial.choice_risky1left_safe2right.response==36) openended.safe2question]
+/branch= [if (trial.choice_risky1left_safe2right.response==33) trial.risky1question]
+/branch =[if (trial.choice_risky1left_safe2right.response==36) trial.safe2question]
 
 </trial>
 
@@ -869,8 +866,8 @@ not actually used now...
 		values.selecteddirn="right";
 		values.selectedoption=values.rightoption;} ]
 
-/branch= [if (trial.choice_risky2right_safe1left.response==33) openended.safe1question]
-/branch =[if (trial.choice_risky2right_safe1left.response==36) openended.risky2question]
+/branch= [if (trial.choice_risky2right_safe1left.response==33) trial.safe1question]
+/branch =[if (trial.choice_risky2right_safe1left.response==36) trial.risky2question]
 
 </trial>
 
@@ -906,8 +903,8 @@ not actually used now...
 		values.selecteddirn="right";
 		values.selectedoption=values.rightoption;} ]
 
-/branch= [if (trial.choice_risky2left_safe1right.response==33) openended.risky1question]
-/branch =[if (trial.choice_risky2left_safe1right.response==36) openended.safe1question]
+/branch= [if (trial.choice_risky2left_safe1right.response==33) trial.risky1question]
+/branch =[if (trial.choice_risky2left_safe1right.response==36) trial.safe1question]
 
 </trial>
 
@@ -943,8 +940,8 @@ not actually used now...
 		values.selecteddirn="right";
 		values.selectedoption=values.rightoption;} ]
 
-/branch= [if (trial.choice_risky2right_safe2left.response==33) openended.safe2question]
-/branch =[if (trial.choice_risky2right_safe2left.response==36) openended.risky2question]
+/branch= [if (trial.choice_risky2right_safe2left.response==33) trial.safe2question]
+/branch =[if (trial.choice_risky2right_safe2left.response==36) trial.risky2question]
 
 </trial>
 
@@ -982,8 +979,8 @@ not actually used now...
 		values.selecteddirn="right";
 		values.selectedoption=values.rightoption;} ]
 
-/branch= [if (trial.choice_risky2left_safe2right.response==33) openended.risky2question]
-/branch =[if (trial.choice_risky2left_safe2right.response==36) openended.safe2question]
+/branch= [if (trial.choice_risky2left_safe2right.response==33) trial.risky2question]
+/branch =[if (trial.choice_risky2left_safe2right.response==36) trial.safe2question]
 
 </trial>
 
@@ -1024,8 +1021,8 @@ not actually used now...
 		values.selecteddirn="right";
 		values.selectedoption=values.rightoption;} ]
 
-/branch= [if (trial.choice_risky1left_risky1right.response==33) openended.risky1question]
-/branch =[if (trial.choice_risky1left_risky1right.response==36) openended.risky1question]
+/branch= [if (trial.choice_risky1left_risky1right.response==33) trial.risky1question]
+/branch =[if (trial.choice_risky1left_risky1right.response==36) trial.risky1question]
 </trial>
 
 <trial choice_risky2left_risky2right>
@@ -1049,8 +1046,8 @@ not actually used now...
 	if (trial.choice_risky2left_risky2right.response==36) {
 		values.selecteddirn="right";
 		values.selectedoption=values.rightoption;} ]
-/branch= [if (trial.choice_risky2left_risky2right.response==33) openended.risky2question]
-/branch =[if (trial.choice_risky2left_risky2right.response==36) openended.risky2question]
+/branch= [if (trial.choice_risky2left_risky2right.response==33) trial.risky2question]
+/branch =[if (trial.choice_risky2left_risky2right.response==36) trial.risky2question]
 </trial>
 
 <trial choice_safe1left_safe1right>
@@ -1074,8 +1071,8 @@ not actually used now...
 	if (trial.choice_safe1left_safe1right.response==36) {
 		values.selecteddirn="right";
 		values.selectedoption=values.rightoption;} ]
-/branch= [if (trial.choice_safe1left_safe1right.response==33) openended.safe1question]
-/branch =[if (trial.choice_safe1left_safe1right.response==36) openended.safe1question]
+/branch= [if (trial.choice_safe1left_safe1right.response==33) trial.safe1question]
+/branch =[if (trial.choice_safe1left_safe1right.response==36) trial.safe1question]
 </trial>
 
 <trial choice_safe2left_safe2right>
@@ -1099,8 +1096,8 @@ not actually used now...
 	if (trial.choice_safe2left_safe2right.response==36) {
 		values.selecteddirn="right";
 		values.selectedoption=values.rightoption;} ]
-/branch= [if (trial.choice_safe2left_safe2right.response==33) openended.safe2question]
-/branch =[if (trial.choice_safe2left_safe2right.response==36) openended.safe2question]
+/branch= [if (trial.choice_safe2left_safe2right.response==33) trial.safe2question]
+/branch =[if (trial.choice_safe2left_safe2right.response==36) trial.safe2question]
 </trial>
 
 ########single machine trials ###################
