@@ -500,28 +500,6 @@ which consists of some questionnaires.
 // FOR TEST OF WHAT DISTRIBUTIONS WERE LEARNED AT THE END
 ********************************************************************************
 
-
-picture disrisky>
-/items = ("images/distrubtionrisky.jpg")
-/position = (75,50)
-/ transparentcolor = white
-/ size = (45%, 45%)
-</picture>
-
-picture dissafe>
-/items = ("images/distrubtionsafe.jpg")
-/position = (25,50)
-/ transparentcolor = white
-/ size = (45%, 45%)
-</picture>
- 
-text instructions_distribution>
-/items = ("Please answer the next questions by typing '1' or '2'")
-/ txcolor =black
-/Position = (50, 90)
-/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
-</text>   
-
 <text instructions_distribution1>
 /items = ("You are almost done the task. 
 Now we would just like to ask you a few quick questions about the task.
