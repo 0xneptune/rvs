@@ -451,6 +451,28 @@ instructions_dists
 
 
 ********************************************************************************
+* ATTENTION CHECK SCREEN
+********************************************************************************
+
+
+<text attention_check_text>
+/ items = ("This is an Attention Check. Press 'Space' to Continue")
+/ fontstyle = ("Arial", 3%, false, false, false, false, 5, 1)
+/ size = (70%, 80%)
+/ select = sequence
+/ valign = top
+/ halign = center
+/ position = (50%, 50%)
+/ hjustify = center
+</text>
+
+<trial attention_check>
+/ stimulusframes = [1=attention_check_text]
+/ validresponse = (57)
+</trial>
+
+
+********************************************************************************
 // THANK YOU + PAYMENT
 ********************************************************************************
 
@@ -1154,16 +1176,32 @@ not actually used now...
 </block>
 
 <block testblock>
-/ trials = [1-50= noreplace(
-	choice_risky1left_safe1right,
-	choice_risky1right_safe1left,
-	choice_risky1right_safe2left,
-	choice_risky1left_safe2right,
-	choice_risky2right_safe1left,
-	choice_risky2left_safe1right,
-	choice_risky2left_safe2right,
-	choice_risky2right_safe2left
-)]
+/ trials = [
+	1-25 = noreplace(
+		choice_risky1left_safe1right,
+		choice_risky1right_safe1left,
+		choice_risky1right_safe2left,
+		choice_risky1left_safe2right,
+		choice_risky2right_safe1left,
+		choice_risky2left_safe1right,
+		choice_risky2left_safe2right,
+		choice_risky2right_safe2left
+	);
+
+	26 =
+		attention_check;
+
+	27-51 = noreplace(
+		choice_risky1left_safe1right,
+		choice_risky1right_safe1left,
+		choice_risky1right_safe2left,
+		choice_risky1left_safe2right,
+		choice_risky2right_safe1left,
+		choice_risky2left_safe1right,
+		choice_risky2left_safe2right,
+		choice_risky2right_safe2left
+	)
+]
 </block>
 
 
