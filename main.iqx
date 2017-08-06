@@ -1146,54 +1146,31 @@ not actually used now...
 </block>
 
 <block pre_twomachine_instructions> 
-/ trials = [1=instructionslides_selectright; 2=instructionslides_selectleft; 3=instructions_main;]
-</block>
-
-list trainingphase1trialselector>
-/ items = [trial.choice_risky1left_risky1right;trial.choice_safe1left_safe1right;trial.choice_risky1left_safe1right;trial.choice_risky1right_safe1left;
-trial.choice_risky2left_risky2right;trial.choice_safe1left_safe1right;trial.choice_risky2left_safe2right;trial.choice_risky2right_safe2left]
-/ itemprobabilities = [0.2;0.2;0.2;0.2;0.05;0.05;0.05;0.05]
-/ poolsize = 20
-/ selectionmode=random
-</list>
-
-
-list trainingphase2trialselector>
-/ items = [trial.choice_risky1left_risky1right;trial.choice_safe1left_safe1right;trial.choice_risky1left_safe1right;trial.choice_risky1right_safe1left;
-trial.choice_risky2left_risky2right;trial.choice_safe1left_safe1right;trial.choice_risky2left_safe2right;trial.choice_risky2right_safe2left]
-/ itemprobabilities = [0.05;0.05;0.05;0.05;0.2;0.2;0.2;0.2]
-/ poolsize = 20
-/ selectionmode=random
-</list>
-
-
-block trainingphase1>
-/ trials = [1-3=instructions_main; 4-5=instructions_dists; 6=instructionslides_selectright; 7=instructionslides_selectleft; 8-9=instructions_main;
-10-24= list.trainingphase1trialselector]
-</block>
-block trainingphase2>
-/ trials = [1-15=list.trainingphase2trialselector]
-</block>
-
-** This below has all evenly spread out
-block testblock1>
-/ trials = [1-20= noreplace(choice_risky1left_safe1right, choice_risky1right_safe1left, choice_risky1right_safe2left, choice_risky1left_safe2right, 
-choice_risky2right_safe1left, choice_risky2left_safe1right, choice_risky2left_safe2right, choice_risky2right_safe2left)]
+/ trials = [
+	1=instructionslides_selectright;
+	2=instructionslides_selectleft;
+	3=instructions_main;
+]
 </block>
 
 <block testblock>
-/ trials = [1-50= noreplace(choice_risky1left_safe1right, choice_risky1right_safe1left, choice_risky1right_safe2left, choice_risky1left_safe2right, 
-choice_risky2right_safe1left, choice_risky2left_safe1right, choice_risky2left_safe2right, choice_risky2right_safe2left)]
-</block>
-
-
-block rest>
-/trials = [1= rest]
+/ trials = [1-50= noreplace(
+	choice_risky1left_safe1right,
+	choice_risky1right_safe1left,
+	choice_risky1right_safe2left,
+	choice_risky1left_safe2right,
+	choice_risky2right_safe1left,
+	choice_risky2left_safe1right,
+	choice_risky2left_safe2right,
+	choice_risky2right_safe2left
+)]
 </block>
 
 
 ********************************************************************************
 // EXPERIMENT AND VALUES
+//
+// Program start is here, specifically 'onexptbegin', and the 'blocks' list. 
 ********************************************************************************
 
 
