@@ -687,6 +687,7 @@ not actually used now...
 / branch = [list.safe2outcometrials.nextvalue]
 </trial>
 
+
 <trial choice_risky1left_safe1right>
 /ontrialbegin = [values.randomnum = rand(1,100)]
 /stimulusframes = [1 = risky1left, safe1right,leftF, rightJ]
@@ -712,17 +713,6 @@ not actually used now...
 /branch= [if (trial.choice_risky1left_safe1right.response==33) trial.risky1question]
 /branch =[if (trial.choice_risky1left_safe1right.response==36) trial.safe1question]
 </trial>
-
-
-
-/branch= [if (values.randomnum <=values.cutoff1 && trial.choice_risky1left_safe1right.response==33) trial.smallgain]
-/branch =[if (values.randomnum <=values.cutoff1 && trial.choice_risky1left_safe1right.response==36) trial.largegain]
-/branch =[if (values.randomnum >values.cutoff1 && values.randomnum <=values.cutoff2 && trial.choice_risky1left_safe1right.response==33) trial.largegain]
-/branch =[if (values.randomnum >values.cutoff1 && values.randomnum <=values.cutoff2 && trial.choice_risky1left_safe1right.response==36) trial.smallgain]
-/branch =[if (values.randomnum >values.cutoff2 && values.randomnum <=values.cutoff3 && trial.choice_risky1left_safe1right.response==33) trial.largeloss]
-/branch =[if (values.randomnum >values.cutoff2 && values.randomnum <=values.cutoff3 && trial.choice_risky1left_safe1right.response==36) trial.smallloss]
-/branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky1left_safe1right.response==33) trial.smallloss]
-/branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky1left_safe1right.response==36) trial.largeloss]
 
 
 <trial choice_risky1right_safe1left>
@@ -753,18 +743,6 @@ not actually used now...
 </trial>
 
 
-
-/branch= [if (values.randomnum <=values.cutoff1 && trial.choice_risky1right_safe1left.response==33) trial.largegain]
-/branch =[if (values.randomnum <=values.cutoff1 && trial.choice_risky1right_safe1left.response==36) trial.smallgain]
-/branch =[if (values.randomnum >values.cutoff1 && values.randomnum <=values.cutoff2 && trial.choice_risky1right_safe1left.response==33) trial.smallgain]
-/branch =[if (values.randomnum >values.cutoff1 && values.randomnum <=values.cutoff2 && trial.choice_risky1right_safe1left.response==36) trial.largegain]
-/branch =[if (values.randomnum >values.cutoff2 && values.randomnum <=values.cutoff3 && trial.choice_risky1right_safe1left.response==33) trial.smallloss]
-/branch =[if (values.randomnum >values.cutoff2 && values.randomnum <=values.cutoff3 && trial.choice_risky1right_safe1left.response==36) trial.largeloss]
-/branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky1right_safe1left.response==33) trial.largeloss]
-/branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky1right_safe1left.response==36) trial.smallloss]
-
-
-
 <trial choice_risky1right_safe2left>
 /ontrialbegin = [values.randomnum = rand(1,100)]
 /stimulusframes = [1 = risky1right, safe2left,leftF, rightJ]
@@ -791,17 +769,6 @@ not actually used now...
 /branch =[if (trial.choice_risky1right_safe2left.response==36) trial.risky1question]
 
 </trial>
-
-/branch= [if (values.randomnum <=values.cutoff1 && trial.choice_risky1right_safe2left.response==33) trial.largegain]
-/branch =[if (values.randomnum <=values.cutoff1 && trial.choice_risky1right_safe2left.response==36) trial.smallgain]
-/branch =[if (values.randomnum >values.cutoff1 && values.randomnum <=values.cutoff2 && trial.choice_risky1right_safe2left.response==33) trial.smallgain]
-/branch =[if (values.randomnum >values.cutoff1 && values.randomnum <=values.cutoff2 && trial.choice_risky1right_safe2left.response==36) trial.largegain]
-/branch =[if (values.randomnum >values.cutoff2 && values.randomnum <=values.cutoff3 && trial.choice_risky1right_safe2left.response==33) trial.smallloss]
-/branch =[if (values.randomnum >values.cutoff2 && values.randomnum <=values.cutoff3 && trial.choice_risky1right_safe2left.response==36) trial.largeloss]
-/branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky1right_safe2left.response==33) trial.largeloss]
-/branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky1right_safe2left.response==36) trial.smallloss]
-
-
 
 
 <trial choice_risky1left_safe2right>
@@ -831,17 +798,6 @@ not actually used now...
 
 </trial>
 
-/branch= [if (values.randomnum <=values.cutoff1 && trial.choice_risky1left_safe2right.response==33) trial.smallgain]
-/branch =[if (values.randomnum <=values.cutoff1 && trial.choice_risky1left_safe2right.response==36) trial.largegain]
-/branch =[if (values.randomnum >values.cutoff1 && values.randomnum <=values.cutoff2 && trial.choice_risky1left_safe2right.response==33) trial.largegain]
-/branch =[if (values.randomnum >values.cutoff1 && values.randomnum <=values.cutoff2 && trial.choice_risky1left_safe2right.response==36) trial.smallgain]
-/branch =[if (values.randomnum >values.cutoff2 && values.randomnum <=values.cutoff3 && trial.choice_risky1left_safe2right.response==33) trial.largeloss]
-/branch =[if (values.randomnum >values.cutoff2 && values.randomnum <=values.cutoff3 && trial.choice_risky1left_safe2right.response==36) trial.smallloss]
-/branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky1left_safe2right.response==33) trial.smallloss]
-/branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky1left_safe2right.response==36) trial.largeloss]
-
-
-
 
 <trial choice_risky2right_safe1left>
 /ontrialbegin = [values.randomnum = rand(1,100)]
@@ -869,15 +825,6 @@ not actually used now...
 /branch =[if (trial.choice_risky2right_safe1left.response==36) trial.risky2question]
 
 </trial>
-
-/branch= [if (values.randomnum <=values.cutoff1 && trial.choice_risky2right_safe1left.response==33) trial.largegain]
-/branch =[if (values.randomnum <=values.cutoff1 && trial.choice_risky2right_safe1left.response==36) trial.smallgain]
-/branch =[if (values.randomnum >values.cutoff1 && values.randomnum <=values.cutoff2 && trial.choice_risky2right_safe1left.response==33) trial.smallgain]
-/branch =[if (values.randomnum >values.cutoff1 && values.randomnum <=values.cutoff2 && trial.choice_risky2right_safe1left.response==36) trial.largegain]
-/branch =[if (values.randomnum >values.cutoff2 && values.randomnum <=values.cutoff3 && trial.choice_risky2right_safe1left.response==33) trial.smallloss]
-/branch =[if (values.randomnum >values.cutoff2 && values.randomnum <=values.cutoff3 && trial.choice_risky2right_safe1left.response==36) trial.largeloss]
-/branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky2right_safe1left.response==33) trial.largeloss]
-/branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky2right_safe1left.response==36) trial.smallloss]
 
 
 <trial choice_risky2left_safe1right>
@@ -907,15 +854,6 @@ not actually used now...
 
 </trial>
 
-/branch= [if (values.randomnum <=values.cutoff1 && trial.choice_risky1left_safe1right.response==33) trial.smallgain]
-/branch =[if (values.randomnum <=values.cutoff1 && trial.choice_risky1left_safe1right.response==36) trial.largegain]
-/branch =[if (values.randomnum >values.cutoff1 && values.randomnum <=values.cutoff2 && trial.choice_risky2left_safe1right.response==33) trial.largegain]
-/branch =[if (values.randomnum >values.cutoff1 && values.randomnum <=values.cutoff2 && trial.choice_risky2left_safe1right.response==36) trial.smallgain]
-/branch =[if (values.randomnum >values.cutoff2 && values.randomnum <=values.cutoff3 && trial.choice_risky2left_safe1right.response==33) trial.largeloss]
-/branch =[if (values.randomnum >values.cutoff2 && values.randomnum <=values.cutoff3 && trial.choice_risky2left_safe1right.response==36) trial.smallloss]
-/branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky2left_safe1right.response==33) trial.smallloss]
-/branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky2left_safe1right.response==36) trial.largeloss]
-
 
 <trial choice_risky2right_safe2left>
 /ontrialbegin = [values.randomnum = rand(1,100)]
@@ -944,17 +882,6 @@ not actually used now...
 
 </trial>
 
-/branch= [if (values.randomnum <=values.cutoff1 && trial.choice_risky2right_safe2left.response==33) trial.largegain]
-/branch =[if (values.randomnum <=values.cutoff1 && trial.choice_risky2right_safe2left.response==36) trial.smallgain]
-/branch =[if (values.randomnum >values.cutoff1 && values.randomnum <=values.cutoff2 && trial.choice_risky2right_safe2left.response==33) trial.smallgain]
-/branch =[if (values.randomnum >values.cutoff1 && values.randomnum <=values.cutoff2 && trial.choice_risky2right_safe2left.response==36) trial.largegain]
-/branch =[if (values.randomnum >values.cutoff2 && values.randomnum <=values.cutoff3 && trial.choice_risky2right_safe2left.response==33) trial.smallloss]
-/branch =[if (values.randomnum >values.cutoff2 && values.randomnum <=values.cutoff3 && trial.choice_risky2right_safe2left.response==36) trial.largeloss]
-/branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky2right_safe2left.response==33) trial.largeloss]
-/branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky2right_safe2left.response==36) trial.smallloss]
-
-
-
 
 <trial choice_risky2left_safe2right>
 /ontrialbegin = [values.randomnum = rand(1,100)]
@@ -982,15 +909,6 @@ not actually used now...
 /branch =[if (trial.choice_risky2left_safe2right.response==36) trial.safe2question]
 
 </trial>
-
-/branch= [if (values.randomnum <=values.cutoff1 && trial.choice_risky2left_safe2right.response==33) trial.smallgain]
-/branch =[if (values.randomnum <=values.cutoff1 && trial.choice_risky2left_safe2right.response==36) trial.largegain]
-/branch =[if (values.randomnum >values.cutoff1 && values.randomnum <=values.cutoff2 && trial.choice_risky2left_safe2right.response==33) trial.largegain]
-/branch =[if (values.randomnum >values.cutoff1 && values.randomnum <=values.cutoff2 && trial.choice_risky2left_safe2right.response==36) trial.smallgain]
-/branch =[if (values.randomnum >values.cutoff2 && values.randomnum <=values.cutoff3 && trial.choice_risky2left_safe2right.response==33) trial.largeloss]
-/branch =[if (values.randomnum >values.cutoff2 && values.randomnum <=values.cutoff3 && trial.choice_risky2left_safe2right.response==36) trial.smallloss]
-/branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky2left_safe2right.response==33) trial.smallloss]
-/branch =[if (values.randomnum >values.cutoff3 && values.randomnum <=values.cutoff4 && trial.choice_risky2left_safe2right.response==36) trial.largeloss]
 
 
 ********************************************************************************
