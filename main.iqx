@@ -272,7 +272,12 @@ Press the spacebar when you are ready to continue.")
 
 
 <picture instructionslides>
-/items =("<%values.imagespath%>slide01.jpg","<%values.imagespath%>slide02.jpg","<%values.imagespath%>slide03.jpg","<%values.imagespath%>slide06.jpg","<%values.imagespath%>slide07.jpg","<%values.imagespath%>slide13.jpg")
+/items =("<%values.imagespath%>slide01.jpg",
+         "<%values.imagespath%>slide02.jpg",
+		 "<%values.imagespath%>slide03.jpg",
+		 "<%values.imagespath%>slide06.jpg",
+		 "<%values.imagespath%>slide07.jpg",
+		 "<%values.imagespath%>slide13.jpg")
 / select = sequence
 / size = (80%, 80%)
 </picture>
@@ -286,6 +291,7 @@ Press the spacebar when you are ready to continue.")
 /items =("<%values.imagespath%>slide09.jpg")
 / size = (80%, 80%)
 </picture>
+
 <trial instructionslides_selectright>
 / stimulusframes = [1=instructionslides_selectright]
 / validresponse = ("j")
@@ -295,6 +301,7 @@ Press the spacebar when you are ready to continue.")
 /items =("<%values.imagespath%>slide10.jpg")
 / size = (80%, 80%)
 </picture>
+
 <trial instructionslides_selectleft>
 / stimulusframes = [1=instructionslides_selectleft]
 / validresponse = ("f")
@@ -437,9 +444,9 @@ instructions_dists
             '3' = 'To gain +2'
             '4' = 'To gain +10'") 
 
-/ txcolor =black
-/Position = (50, 20)
-/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
+/txcolor =black
+/position = (50, 20)
+/fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
 </text>
 
 
@@ -527,8 +534,14 @@ not actually used now...
 </text>
 
 <trial smallgain>
-/ stimulusframes = [1=smallgain, smallgain_value_feedback]
-/ ontrialend = [values.newtotalscore +=values.smallgainvalue;values.pointsthisturn=values.smallgainvalue;]
+/ stimulusframes = [
+	1=smallgain,
+    smallgain_value_feedback
+]
+/ ontrialend = [
+	values.newtotalscore +=values.smallgainvalue;
+    values.pointsthisturn=values.smallgainvalue;
+]
 / timeout = values.feedbackdur
 </trial>
 
@@ -543,8 +556,14 @@ not actually used now...
 </text>
 
 <trial largegain>
-/ stimulusframes = [1=largegain, largegain_value_feedback]
-/ ontrialend = [values.newtotalscore +=values.largegainvalue; values.pointsthisturn=values.largegainvalue;]
+/ stimulusframes = [
+	1=largegain,
+	largegain_value_feedback
+]
+/ ontrialend = [
+	values.newtotalscore +=values.largegainvalue;
+	values.pointsthisturn=values.largegainvalue;
+]
 / timeout = values.feedbackdur
 </trial>
 
@@ -560,7 +579,10 @@ not actually used now...
 
 <trial smallloss>
 / stimulusframes = [1=smallloss, smallgain_value_feedback]
-/ ontrialend = [values.newtotalscore +=values.smalllossvalue; values.pointsthisturn=values.smalllossvalue;]
+/ ontrialend = [
+	values.newtotalscore +=values.smalllossvalue;
+	values.pointsthisturn=values.smalllossvalue;
+]
 / timeout = values.feedbackdur
 </trial>
 
@@ -576,7 +598,10 @@ not actually used now...
 
 <trial largeloss>
 / stimulusframes = [1=largeloss, largeloss_value_feedback]
-/ ontrialend = [values.newtotalscore +=values.largelossvalue; values.pointsthisturn=values.largelossvalue;]
+/ ontrialend = [
+	values.newtotalscore +=values.largelossvalue;
+	values.pointsthisturn=values.largelossvalue;
+]
 / timeout = values.feedbackdur
 </trial>
 
@@ -1173,7 +1198,10 @@ block rest>
 
 
 <list outcomepics>
-/items=("<%values.imagespath%>animal-silhouette-dog2nohead.jpg", "<%values.imagespath%>house.jpg","<%values.imagespath%>face-03.jpg","<%values.imagespath%>hammer.jpg")
+/ items=("<%values.imagespath%>animal-silhouette-dog2nohead.jpg",
+		 "<%values.imagespath%>house.jpg",
+		 "<%values.imagespath%>face-03.jpg",
+		 "<%values.imagespath%>hammer.jpg")
 / select = list.outcome_pic_category_names.currentindex
 / selectionrate = always
 </list>
@@ -1223,10 +1251,14 @@ block rest>
 	}
 ]
 /postinstructions = (page.post)
-/blocks = [1=initial_instructions; 2=pre_single_instructions; 3=pre_twomachine_instructions; 4=testblock; 5=block.thankYouAndPaymentBlock]
-/ onexptend = [
-	values.complete=1
+/blocks = [
+	1=initial_instructions;
+	2=pre_single_instructions;
+	3=pre_twomachine_instructions;
+	4=testblock;
+	5=block.thankYouAndPaymentBlock
 ]
+/onexptend = [values.complete=1]
 </expt>
 
 
