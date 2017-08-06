@@ -6,4 +6,5 @@ at U of T.
 ### Links
 
 - [Language Reference](http://www.millisecond.com/support/docs/v5/html/language/languagereference.htm)
+- [Keyboard Scan Codes](http://www.millisecond.com/support/docs/v5/html/language/scancodes.htm)
 - [Inquisit 5 Help](http://www.millisecond.com/support/docs/v5/Inquisit.pdf)
