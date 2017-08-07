@@ -495,22 +495,6 @@ Press the spacebar when you are ready to continue."
 
 
 ********************************************************************************
-// FOR TEST OF WHAT DISTRIBUTIONS WERE LEARNED AT THE END
-********************************************************************************
-
-
-<text instructions_distribution1>
-/items = ("You are almost done the task. 
-Now we would just like to ask you a few quick questions about the task.
-
-Press SPACEBAR to continue.")
-/ txcolor =black
-/Position = (50, 50)
-/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
-</text> 
-
-
-********************************************************************************
 // TRIALS
 ********************************************************************************
 
