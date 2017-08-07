@@ -432,10 +432,10 @@ which consists of some questionnaires.
 
 "Why did you choose this machine?
 
-            '1' = 'To avoid -9'
-            '2' = 'To avoid -1'
-            '3' = 'To gain +2'
-            '4' = 'To gain +10'") 
+            '1' = 'To avoid <%values.largelossvalue%>'
+            '2' = 'To avoid <%values.smalllossvalue%>'
+            '3' = 'To gain  <%values.smallgainvalue%>'
+            '4' = 'To gain  <%values.largegainvalue%>'")
 
 /txcolor =black
 /position = (50, 20)
