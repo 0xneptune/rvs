@@ -470,6 +470,49 @@ Press the spacebar when you are ready to continue."
 
 
 ********************************************************************************
+// GAME END ATTENTION QUIZ
+********************************************************************************
+
+
+<text attentionQuiz>
+/items = (
+"What value did this stamp map too?
+
+            A. '<%values.largelossvalue%>'
+            B. '<%values.smalllossvalue%>'
+            C. '<%values.smallgainvalue%>'
+            D. '<%values.largegainvalue%>'"
+)
+/txcolor =black
+/position = (50, 20)
+/fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
+</text>
+
+// Since what the large gain picture maps to is already randomized at the start,
+// we just pick it by default.
+<picture attentionQuizStamp>
+/ items = ("<%values.largegainpic%>")
+/ position = (50, 50)
+/ size = (30%, 30%)
+</picture>
+
+<openended attentionQuiz>
+/ stimulusframes = [1=text.attentionQuiz, picture.attentionQuizStamp]
+/ position = (50, 80)
+/ validresponse = (
+	values.largelossvalue,
+	values.smalllossvalue,
+	values.smallgainvalue,
+	values.largegainvalue
+)
+</openended>
+
+<block attentionQuiz>
+/ trials = [1=openended.attentionQuiz]
+</block>
+
+
+********************************************************************************
 // THANK YOU + PAYMENT
 ********************************************************************************
 
@@ -1139,7 +1182,8 @@ Press the spacebar when you are ready to continue."
 	2=pre_single_instructions;
 	3=pre_twomachine_instructions;
 	4=testblock;
-	5=block.thankYouAndPaymentBlock
+	5=block.attentionQuiz;
+	6=block.thankYouAndPaymentBlock
 ]
 /onexptend = [values.complete=1]
 </expt>
