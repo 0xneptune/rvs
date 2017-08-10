@@ -265,6 +265,26 @@
 ********************************************************************************
 
 
+<trial instructions_main>
+/ stimulusframes = [1=instructionslides]
+/ validresponse = (57)
+</trial>
+
+<trial instructions_dists>
+/ stimulusframes = [1=instructions_dist_text, instructions_dist_pix]
+/ validresponse = (57)
+</trial>
+
+<trial instructionslides_selectright>
+/ stimulusframes = [1=instructionslides_selectright]
+/ validresponse = ("j")
+</trial>
+
+<trial instructionslides_selectleft>
+/ stimulusframes = [1=instructionslides_selectleft]
+/ validresponse = ("f")
+</trial>
+
 <picture instructionslides>
 /items =("<%values.imagespath%>slide01.jpg",
          "<%values.imagespath%>slide02.jpg",
@@ -276,31 +296,23 @@
 / size = (80%, 80%)
 </picture>
 
-<trial instructions_main>
-/ stimulusframes = [1=instructionslides]
-/ validresponse = (57)
-</trial>
+<picture instructions_dist_pix>
+/ items = ("<%values.imagespath%>group-redSafe-blueRisky.jpg",
+           "<%values.imagespath%>group-redRisky-blueSafe.jpg")
+/ position= (50%, 70%)
+/ size = (40%, 35%)
+/ select = values.grouped_machine_image_index
+</picture>
 
 <picture instructionslides_selectright>
 /items =("<%values.imagespath%>slide09.jpg")
 / size = (80%, 80%)
 </picture>
 
-<trial instructionslides_selectright>
-/ stimulusframes = [1=instructionslides_selectright]
-/ validresponse = ("j")
-</trial>
-
 <picture instructionslides_selectleft>
 /items =("<%values.imagespath%>slide10.jpg")
 / size = (80%, 80%)
 </picture>
-
-<trial instructionslides_selectleft>
-/ stimulusframes = [1=instructionslides_selectleft]
-/ validresponse = ("f")
-</trial>
-
 
 <text instructions_dist_text>
 /items =(
@@ -326,18 +338,6 @@ To remind you of this while playing, you will see numbers above each machine. Th
 / hjustify = center
 </text>
 ^^While playing, you will have to figure out which machines are more likely to give you which types of stamps.
-
-<picture instructions_dist_pix>
-/ items = ("<%values.imagespath%>group-redSafe-blueRisky.jpg", "<%values.imagespath%>group-redRisky-blueSafe.jpg")
-/ position= (50%, 70%)
-/ size = (40%, 35%)
-/ select = values.grouped_machine_image_index
-</picture>
-
-<trial instructions_dists>
-/ stimulusframes = [1=instructions_dist_text, instructions_dist_pix]
-/ validresponse = (57)
-</trial>
 
 <page post>
 ^^^^You have completed the first part of the study. 
