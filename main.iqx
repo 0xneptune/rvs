@@ -285,13 +285,17 @@
 / validresponse = ("f")
 </trial>
 
+<trial instructionSlidesLastSection>
+/ stimulusframes = [1=instructionSlidesLastSection]
+/ validresponse = (57)
+</trial>
+
 <picture instructionslides>
 /items =("<%values.imagespath%>slide01.jpg",
          "<%values.imagespath%>slide02.jpg",
 		 "<%values.imagespath%>slide03.jpg",
 		 "<%values.imagespath%>slide06.jpg",
-		 "<%values.imagespath%>slide07.jpg",
-		 "<%values.imagespath%>slide13.jpg")
+		 "<%values.imagespath%>slide07.jpg")
 / select = sequence
 / size = (80%, 80%)
 </picture>
@@ -311,6 +315,14 @@
 
 <picture instructionslides_selectleft>
 /items =("<%values.imagespath%>slide10.jpg")
+/ size = (80%, 80%)
+</picture>
+
+<picture instructionSlidesLastSection>
+/items =("<%values.imagespath%>slide14.jpg",
+		 "<%values.imagespath%>slide15.jpg",
+		 "<%values.imagespath%>slide16.jpg")
+/ select = sequence
 / size = (80%, 80%)
 </picture>
 
@@ -1036,10 +1048,11 @@ Press the spacebar when you are ready to continue."
 
 <block initial_instructions>
 / trials = [
-	1-6=instructions_main;
-	7-8=instructions_dists;
-	9=instructionslides_selectright;
-	10=instructionslides_selectleft;
+	1-5=instructions_main;
+	6-7=instructions_dists;
+	8=instructionslides_selectright;
+	9=instructionslides_selectleft;
+	10-12=instructionSlidesLastSection;
 ]
 </block>
 
