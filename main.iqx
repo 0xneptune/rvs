@@ -339,42 +339,6 @@ To remind you of this while playing, you will see numbers above each machine. Th
 / validresponse = (57)
 </trial>
 
-Each machine can give you any of the 4 types of stamps. However, some of the machines are more likely to give you stamps with houses (+5 points) and faces (-4 points) - for example, the purple machine shown here .Other machines are more likely to give you stamps with tools (+2 points) and houses (-1 point) – for example, the orange machine shown here. While playing, you will have to figure out which machines are more likely to give you which types of stamps. Note that, over the long run all the machines will give you the same amount of points. The only difference is in which types of stamps are more likely .
-
-page preTrainingPhase1>
-^^^There are four different types of machines that can give you
-stamps. They can be identified by the colour and shape on each machine. 
-
-^^When you select a machine, it will give you a stamp. 
-^You will not know what stamp you'll get until you select a machine.
-</page>
-
-page preTrainingPhase2>
-^^Each machine can give you any of the 4 types of stamps.
-
-^^However, some of the machines are more likely to give you stamps with <%values.largegainpic_category%> (<%values.largegainvalue%> points)
-and <%values.largelosspic_category%> (<%values.largelossvalue%> points).
-
-^Other machines are more likely to give you stamps with <%values.smallgainpic_category%> (<%values.smallgainvalue%> points)
-and <%values.smalllosspic_category%> (<%values.smalllossvalue%> points).
-
-^^While playing, you will have to figure out which machines are more likely to give you which types of stamps.
-</page>
-
-page preTrainingPhase3>
-^^To play the game: on each turn, you will see 2 machines. 
-^You will have to choose which one you would like to receive a stamp from; 
-the machine on the left or the right side of the screen. 
-^After you select one, the stamp you received will appear. 
-</page>
-
-page preTrainingPhase4>
-^^^Press the "F" key to select the left machine, and the "J" key to select the right machine.
-</page>
-
-page preTrainingPhase5>
-^^^^Now you may begin playing. 
-</page>
 <page post>
 ^^^^You have completed the first part of the study. 
 ^^Please return to the qualtrics survey and complete the second part of the study,
