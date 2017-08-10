@@ -17,7 +17,7 @@
 
 // For posting online, change 'imagespath' to an empty string
 <values>
-/feedbackdur=0
+/feedbackdur=2500
 /valuetaskcorr = 0
 /imagespath="images/"
 
@@ -304,19 +304,19 @@
 
 <text instructions_dist_text>
 /items =(
-"Each machine can give you any of the 4 types of stamps.
+"
 
-However, the <%values.riskycolour%> machines are more likely to give you stamps that let you gain MANY points (<%values.largegainpic_category%>, +<%values.largegainvalue%> points) but also stamps where you lose MANY points (<%values.largelosspic_category%>, <%values.largelossvalue%> points).
+Each machine can give you any of the 4 types of stamps. However, the <%values.riskycolour%> machines are more likely to give you stamps that let you gain MANY points (<%values.largegainpic_category%>, +<%values.largegainvalue%> points) but also stamps where you lose MANY points (<%values.largelosspic_category%>, <%values.largelossvalue%> points).
 
 On the other hand, the <%values.safecolour%> machines are more likely to give you stamps where you gain LESS points (<%values.smallgainpic_category%>, +<%values.smallgainvalue%> points) but also stamps where you lose LESS points (<%values.smalllosspic_category%>, <%values.smalllossvalue%> points).
 
-ADD STUFFF.
+To remind you of this while playing, you will see numbers above each machine. The numbers in BOLD tell you the amount of points that machine is more likely to give you...
 
-~n~n~n~n~n~n~n~n~nPress Spacebar to continue",
+~n~n~n~n~n~n~n~n~n~n~nPress Spacebar to continue",
 
-"~n~nNote that, over the long run all the machines will give you the SAME amount of points. The only difference is in which types of stamps are more likely, ones that give you large gains and losses, vs smaller gains and losses.
+"~n~n~n~n~nNote that, over the long run all the machines will give you the SAME amount of points. The only difference is in which types of stamps are more likely, ones that give you large gains and losses, vs smaller gains and losses.
 
-~n~n~n~n~n~n~n~n~n~n~n~nPress Spacebar to continue")
+~n~n~n~n~n~n~n~n~n~n~n~n~n~n~n~nPress Spacebar to continue")
 / fontstyle = ("Arial", 3%, false, false, false, false, 5, 1)
 / size = (70%, 80%)
 / select = sequence
@@ -415,10 +415,6 @@ which consists of some questionnaires.
 /position = (50%,20%)
 </text>
 
-<block initial_instructions>
-/ trials = [1-6=instructions_main]
-</block>
-
 
 ********************************************************************************
 // CHOICE/QUESTION SCREEN
@@ -430,12 +426,12 @@ which consists of some questionnaires.
 
 
 
-"Why did you choose this machine?
+"Why did you choose this machine? Press:
 
-            '1' = 'To avoid <%values.largelossvalue%>'
-            '2' = 'To avoid <%values.smalllossvalue%>'
-            '3' = 'To gain  <%values.smallgainvalue%>'
-            '4' = 'To gain  <%values.largegainvalue%>'")
+            1 = 'To avoid <%values.largelossvalue%>'
+            2 = 'To avoid <%values.smalllossvalue%>'
+            3 = 'To gain  <%values.smallgainvalue%>'
+            4 = 'To gain  <%values.largegainvalue%>'")
 
 /txcolor =black
 /position = (50, 20)
@@ -476,7 +472,7 @@ Press the spacebar when you are ready to continue."
 
 <text attentionQuiz>
 /items = (
-"What value did this stamp map too?
+"What value did this stamp map too? Please type in the value. 
 
             A. '<%values.largelossvalue%>'
             B. '<%values.smalllossvalue%>'
@@ -1074,15 +1070,12 @@ Press the spacebar when you are ready to continue."
 // BLOCKS
 ********************************************************************************
 
-
-<block pre_single_instructions> 
-/ trials = [1-2=instructions_dists;]
-</block>
-
-<block pre_twomachine_instructions> 
+<block initial_instructions>
 / trials = [
-	1=instructionslides_selectright;
-	2=instructionslides_selectleft;
+	1-6=instructions_main;
+	7-8=instructions_dists;
+	9=instructionslides_selectright;
+	10=instructionslides_selectleft;
 ]
 </block>
 
@@ -1178,12 +1171,10 @@ Press the spacebar when you are ready to continue."
 ]
 /postinstructions = (page.post)
 /blocks = [
-	1=initial_instructions;
-	2=pre_single_instructions;
-	3=pre_twomachine_instructions;
-	4=testblock;
-	5=block.attentionQuiz;
-	6=block.thankYouAndPaymentBlock
+	1=block.initial_instructions;
+	2=block.testblock;
+	3=block.attentionQuiz;
+	4=block.thankYouAndPaymentBlock
 ]
 /onexptend = [values.complete=1]
 </expt>
