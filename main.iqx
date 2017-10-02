@@ -422,7 +422,7 @@ which consists of some questionnaires.
 
 <text attention_check_text>
 / items = (
-"This is an Attention Check. You are halfway through the task.
+"This is halfway through the task.
 
 Press the spacebar when you are ready to continue."
 )
