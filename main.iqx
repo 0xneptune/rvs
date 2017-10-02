@@ -18,7 +18,7 @@
 // `imagespath` - For posting online, change to an empty string
 // `isOnline`   - For posting online, make sure this is set to `true` 
 <values>
-/feedbackdur=0
+/feedbackdur=2500
 /valuetaskcorr = 0
 /imagespath="images/"
 /isOnline=true
@@ -464,16 +464,65 @@ Press the spacebar when you are ready to continue."
 /fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
 </text>
 
-// Since what the large gain picture maps to is already randomized at the start,
-// we just pick it by default.
-<picture attentionQuizStamp>
+<picture attentionQuizStampLargeGainPic>
 / items = ("<%values.largegainpic%>")
 / position = (50, 50)
 / size = (30%, 30%)
 </picture>
 
-<openended attentionQuiz>
-/ stimulusframes = [1=text.attentionQuiz, picture.attentionQuizStamp]
+<picture attentionQuizStampSmallGainPic>
+/ items = ("<%values.smallgainpic%>")
+/ position = (50, 50)
+/ size = (30%, 30%)
+</picture>
+
+<picture attentionQuizStampLargeLossPic>
+/ items = ("<%values.largelosspic%>")
+/ position = (50, 50)
+/ size = (30%, 30%)
+</picture>
+
+<picture attentionQuizStampSmallLossPic>
+/ items = ("<%values.smalllosspic%>")
+/ position = (50, 50)
+/ size = (30%, 30%)
+</picture>
+
+<openended attentionQuizLargeGain>
+/ stimulusframes = [1=text.attentionQuiz, picture.attentionQuizStampLargeGainPic]
+/ position = (50, 80)
+/ validresponse = (
+	values.largelossvalue,
+	values.smalllossvalue,
+	values.smallgainvalue,
+	values.largegainvalue
+)
+</openended>
+
+<openended attentionQuizSmallGain>
+/ stimulusframes = [1=text.attentionQuiz, picture.attentionQuizStampSmallGainPic]
+/ position = (50, 80)
+/ validresponse = (
+	values.largelossvalue,
+	values.smalllossvalue,
+	values.smallgainvalue,
+	values.largegainvalue
+)
+</openended>
+
+<openended attentionQuizLargeLoss>
+/ stimulusframes = [1=text.attentionQuiz, picture.attentionQuizStampLargeLossPic]
+/ position = (50, 80)
+/ validresponse = (
+	values.largelossvalue,
+	values.smalllossvalue,
+	values.smallgainvalue,
+	values.largegainvalue
+)
+</openended>
+
+<openended attentionQuizSmallLoss>
+/ stimulusframes = [1=text.attentionQuiz, picture.attentionQuizStampSmallLossPic]
 / position = (50, 80)
 / validresponse = (
 	values.largelossvalue,
@@ -484,7 +533,10 @@ Press the spacebar when you are ready to continue."
 </openended>
 
 <block attentionQuiz>
-/ trials = [1=openended.attentionQuiz]
+/ trials = [1=openended.attentionQuizLargeGain,
+			openended.attentionQuizSmallGain,
+			openended.attentionQuizLargeLoss,
+			openended.attentionQuizSmallLoss]
 </block>
 
 
