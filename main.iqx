@@ -451,14 +451,7 @@ Press the spacebar when you are ready to continue."
 
 
 <text attentionQuiz>
-/items = (
-"What value did this stamp map too? Please type in the value. 
-
-            A. '<%values.largelossvalue%>'
-            B. '<%values.smalllossvalue%>'
-            C. '<%values.smallgainvalue%>'
-            D. '<%values.largegainvalue%>'"
-)
+/items = ("What value did this stamp map too? Please type in the number.")
 /txcolor =black
 /position = (50, 20)
 /fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
@@ -491,45 +484,21 @@ Press the spacebar when you are ready to continue."
 <openended attentionQuizLargeGain>
 / stimulusframes = [1=text.attentionQuiz, picture.attentionQuizStampLargeGainPic]
 / position = (50, 80)
-/ validresponse = (
-	values.largelossvalue,
-	values.smalllossvalue,
-	values.smallgainvalue,
-	values.largegainvalue
-)
 </openended>
 
 <openended attentionQuizSmallGain>
 / stimulusframes = [1=text.attentionQuiz, picture.attentionQuizStampSmallGainPic]
 / position = (50, 80)
-/ validresponse = (
-	values.largelossvalue,
-	values.smalllossvalue,
-	values.smallgainvalue,
-	values.largegainvalue
-)
 </openended>
 
 <openended attentionQuizLargeLoss>
 / stimulusframes = [1=text.attentionQuiz, picture.attentionQuizStampLargeLossPic]
 / position = (50, 80)
-/ validresponse = (
-	values.largelossvalue,
-	values.smalllossvalue,
-	values.smallgainvalue,
-	values.largegainvalue
-)
 </openended>
 
 <openended attentionQuizSmallLoss>
 / stimulusframes = [1=text.attentionQuiz, picture.attentionQuizStampSmallLossPic]
 / position = (50, 80)
-/ validresponse = (
-	values.largelossvalue,
-	values.smalllossvalue,
-	values.smallgainvalue,
-	values.largegainvalue
-)
 </openended>
 
 <block attentionQuiz>
