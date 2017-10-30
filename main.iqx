@@ -15,13 +15,14 @@
 ********************************************************************************
 
 
-// `imagespath` - For posting online, change to an empty string
-// `isOnline`   - For posting online, make sure this is set to `true` 
+// `imagespath` - For posting using Millisecond, rather than locally from your
+//                own computer, change to an empty string
+// `isInLab`    - For posting in the lab, make sure this is set to `true` 
 <values>
 /feedbackdur=2500
 /valuetaskcorr = 0
 /imagespath="images/"
-/isOnline=true
+/isInLab=true 
 /randomnum = "NA"
 /newtotalscore = 0
 /bonusPayment = 0
@@ -520,10 +521,10 @@ Press the spacebar when you are ready to continue."
 / position = (50%, 20%)
 / fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
 / onprepare = [
-	if (values.isOnline) {
-		values.thankYouAndPaymentCopyPlaceholder = "<%values.thankYouAndPaymentBaseCopy%> You have earned <%values.bonusPayment%> cents bonus pay."
-	} else {
+	if (values.isInLab) {
 		values.thankYouAndPaymentCopyPlaceholder = values.thankYouAndPaymentBaseCopy
+	} else {
+		values.thankYouAndPaymentCopyPlaceholder = "<%values.thankYouAndPaymentBaseCopy%> You have earned <%values.bonusPayment%> cents bonus pay."
 	}
 ]
 </text>
