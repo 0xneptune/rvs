@@ -333,17 +333,16 @@
 
 <text instructions_dist_text>
 /items =(
-"
+" 
+Each machine can give you ANY OF THE 4 STAMPS with their corresponding points. However, the <%values.riskycolour%> machines are MORE LIKLEY to give you stamps that let you GAIN MANY points (<%values.largegainpic_category%>, +<%values.largegainvalue%> points) but may also give you stamps where you LOSE MANY points (<%values.largelosspic_category%>, <%values.largelossvalue%> points).
 
-Each machine can give you any of the 4 types of stamps. However, the <%values.riskycolour%> machines are more likely to give you stamps that let you gain MANY points (<%values.largegainpic_category%>, +<%values.largegainvalue%> points) but also stamps where you lose MANY points (<%values.largelosspic_category%>, <%values.largelossvalue%> points).
+On the other hand, the <%values.safecolour%> machines are MORE LIKELY to give you stamps where you GAIN LESS points (<%values.smallgainpic_category%>, +<%values.smallgainvalue%> points) but also stamps where you LOSE LESS points (<%values.smalllosspic_category%>, <%values.smalllossvalue%> points).
 
-On the other hand, the <%values.safecolour%> machines are more likely to give you stamps where you gain LESS points (<%values.smallgainpic_category%>, +<%values.smallgainvalue%> points) but also stamps where you lose LESS points (<%values.smalllosspic_category%>, <%values.smalllossvalue%> points).
-
-To remind you of this while playing, you will see numbers above each machine. The numbers in BOLD tell you the amount of points that machine is more likely to give you...
+To remind you of this while playing, you will see numbers above each machine. The numbers in BOLD tell you the amount of points that machine is MORE LIKELY to give you...
 
 ~n~n~n~n~n~n~n~n~n~n~nPress Spacebar to continue",
 
-"~n~n~n~n~nNote that, over the long run all the machines will give you the SAME amount of points. The only difference is in which types of stamps are more likely, ones that give you large gains and losses, vs smaller gains and losses.
+"~n~n~n~n~nNote that, over the long run all of the machines will give you the SAME amount of points. The only difference is in which types of stamps are more likely to appear, ones that give you large gains and losses, vs smaller gains and losses. Don't forget that each machine can give you ALL 4 types of stamps! 
 
 ~n~n~n~n~n~n~n~n~n~n~n~n~n~n~n~nPress Spacebar to continue")
 / fontstyle = ("Arial", 3%, false, false, false, false, 5, 1)
