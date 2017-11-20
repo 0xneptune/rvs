@@ -49,8 +49,12 @@ workingDirectoryPath = getwd()
 csvDirectoryPath = paste(workingDirectoryPath, "data", sep = "/")
 rawDataInquisitPath = paste(csvDirectoryPath, "rvs_v4_rawdata_inquisit.csv",
                             sep = "/")
+qualtricsDataPath = paste(csvDirectoryPath,
+                          "rvs_v4_qualitativedata_qualtrics.csv",
+                          sep = "/")
 
 rawDataInquisit = read.csv(rawDataInquisitPath, stringsAsFactors = FALSE)
+qualtricsData   = read.csv(qualtricsDataPath, stringsAsFactors = FALSE)
 
 # Data
 subjectIds       = rawDataInquisit["subject"]
@@ -95,6 +99,37 @@ memoryTestAnswers = transform(
 str(memoryTestAnswers)
 mean(memoryTestAnswers$correctAnswerPercentage)
 
+
 # Task 2
+# Compute the risky answers percentage for each participant.
 
+percentageRiskySafeAnswers = data.frame("subjectIds" = subjectIdsUnique,
+                                        percentageRisky = NA,
+                                        percentageSafe  = NA,
+                                        selfAnswer = NA)
 
+for (subjectId in subjectIdsUnique) {
+  dataOfSubject = rawDataInquisit[rawDataInquisit$subject == subjectId,]
+  
+  riskyCount = nrow(dataOfSubject[dataOfSubject$values.selectedoption == 'risky1' | dataOfSubject$values.selectedoption == 'risky2',])
+  safeCount  = nrow(dataOfSubject[dataOfSubject$values.selectedoption == 'safe1'  | dataOfSubject$values.selectedoption == 'safe2',])
+  
+  riskyPercentage = (riskyCount / (riskyCount + safeCount)) * 100
+  safePercentage  = (safeCount / (riskyCount + safeCount)) * 100
+  
+  percentageRiskySafeAnswers[percentageRiskySafeAnswers$subjectIds == subjectId, 'percentageRisky'] = riskyPercentage
+  percentageRiskySafeAnswers[percentageRiskySafeAnswers$subjectIds == subjectId, 'percentageSafe']  = safePercentage
+}
+
+str(percentageRiskySafeAnswers)
+
+for (subjectId in subjectIdsUnique) {
+  selfAnswer = qualtricsData[qualtricsData$subject == subjectId, "Q207_1"]
+  if (is.null(selfAnswer) | length(selfAnswer) <= 0) {
+    next
+  }
+  
+  percentageRiskySafeAnswers[percentageRiskySafeAnswers$subjectIds == subjectId, 'selfAnswer'] = selfAnswer
+}
+
+str(percentageRiskySafeAnswers)
