@@ -11,7 +11,7 @@
 ###############################################################################
 
 
-# TODO: These should be read in from the CVS as were assuming these are the
+# TODO: These should be read in from the CVS as we are assuming these are the
 #       values the Inquisit program was using.
 largeGainValue = 10
 smallGainValue = 2
