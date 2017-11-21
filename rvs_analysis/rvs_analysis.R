@@ -133,3 +133,55 @@ for (subjectId in subjectIdsUnique) {
 }
 
 str(percentageRiskySafeAnswers)
+
+
+# Task 4
+# Reason for safe vs risky choice.
+
+riskySafeChoiceReasonPercentages = data.frame("subjectIds" = subjectIdsUnique,
+                                              safeAvoidLargeLoss = NA,
+                                              safeAvoidSmallLoss = NA,
+                                              safeAvoidSmallGain = NA,
+                                              safeAvoidLargeGain = NA,
+                                              riskyAvoidLargeLoss = NA,
+                                              riskyAvoidSmallLoss = NA,
+                                              riskyAvoidSmallGain = NA,
+                                              riskyAvoidLargeGain = NA)
+
+for (subjectId in subjectIdsUnique) {
+  # Get the data for the user
+  
+  dataOfSubject = rawDataInquisit[rawDataInquisit$subject == subjectId,]
+  
+  safeAnswerRows  = dataOfSubject[dataOfSubject$trialcode == 'safe1question' | dataOfSubject$trialcode == 'safe2question',]
+  riskyAnswerRows = dataOfSubject[dataOfSubject$trialcode == 'risky1question' | dataOfSubject$trialcode == 'risky2question',]
+  
+  # Compute the percentages
+  
+  totalAnswers = nrow(safeAnswerRows) + nrow(riskyAnswerRows)
+  
+  safeAvoidLargeLossPercentage = (nrow(safeAnswerRows[safeAnswerRows$response == 2,]) / totalAnswers) * 100
+  safeAvoidSmallLossPercentage = (nrow(safeAnswerRows[safeAnswerRows$response == 3,]) / totalAnswers) * 100
+  safeAvoidSmallGainPercentage = (nrow(safeAnswerRows[safeAnswerRows$response == 4,]) / totalAnswers) * 100
+  safeAvoidLargeGainPercentage = (nrow(safeAnswerRows[safeAnswerRows$response == 5,]) / totalAnswers) * 100
+  
+  riskyAvoidLargeLossPercentage = (nrow(riskyAnswerRows[riskyAnswerRows$response == 2,]) / totalAnswers) * 100
+  riskyAvoidSmallLossPercentage = (nrow(riskyAnswerRows[riskyAnswerRows$response == 3,]) / totalAnswers) * 100
+  riskyAvoidSmallGainPercentage = (nrow(riskyAnswerRows[riskyAnswerRows$response == 4,]) / totalAnswers) * 100
+  riskyAvoidLargeGainPercentage = (nrow(riskyAnswerRows[riskyAnswerRows$response == 5,]) / totalAnswers) * 100
+  
+  # Update the data frame
+  
+  riskySafeChoiceReasonPercentages[riskySafeChoiceReasonPercentages$subjectIds == subjectId, 'safeAvoidLargeLoss'] = safeAvoidLargeLossPercentage
+  riskySafeChoiceReasonPercentages[riskySafeChoiceReasonPercentages$subjectIds == subjectId, 'safeAvoidSmallLoss'] = safeAvoidSmallLossPercentage
+  riskySafeChoiceReasonPercentages[riskySafeChoiceReasonPercentages$subjectIds == subjectId, 'safeAvoidSmallGain'] = safeAvoidSmallGainPercentage
+  riskySafeChoiceReasonPercentages[riskySafeChoiceReasonPercentages$subjectIds == subjectId, 'safeAvoidLargeGain'] = safeAvoidLargeGainPercentage
+  
+  riskySafeChoiceReasonPercentages[riskySafeChoiceReasonPercentages$subjectIds == subjectId, 'riskyAvoidLargeLoss'] = riskyAvoidLargeLossPercentage
+  riskySafeChoiceReasonPercentages[riskySafeChoiceReasonPercentages$subjectIds == subjectId, 'riskyAvoidSmallLoss'] = riskyAvoidSmallLossPercentage
+  riskySafeChoiceReasonPercentages[riskySafeChoiceReasonPercentages$subjectIds == subjectId, 'riskyAvoidSmallGain'] = riskyAvoidSmallGainPercentage
+  riskySafeChoiceReasonPercentages[riskySafeChoiceReasonPercentages$subjectIds == subjectId, 'riskyAvoidLargeGain'] = riskyAvoidLargeGainPercentage
+}
+
+str(riskySafeChoiceReasonPercentages)
+
