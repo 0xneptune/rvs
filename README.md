@@ -1,7 +1,8 @@
 # rvs
 
-Risky vs Safe Decision Making Game for the [Computational Affective Neuroscience (CAN) Lab](https://canlabuoft.wordpress.com)
-at U of T.
+Risky vs Safe (**RVS**) decision making game for the [Computational Affective Neuroscience (CAN) Lab](https://canlabuoft.wordpress.com)
+at U of T. In addition, some data analysis for **MES** (**Moral Evaluation
+Study**).
 
 ### Requirements
 
