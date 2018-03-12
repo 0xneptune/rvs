@@ -71,8 +71,9 @@ summaryData$script.subjectid[duplicatedSubjectIds] =
 # Task 3
 # Merge raw and summary data.
 
-# mergedSummaryAndRawData = merge(
-#   summaryData,
-#   rawData,
-#   by=intersect("script.subjectid", "subject")
-# )
+mergedSummaryAndRawData = merge(
+  summaryData,
+  rawData,
+  by=intersect("script.subjectid", "subject")
+)
+
