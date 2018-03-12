@@ -21,6 +21,7 @@
 
 
 # Load and read the CSV
+
 workingDirectoryPath = getwd()
 
 csvDirectoryPath = paste(workingDirectoryPath, "data", sep = "/")
@@ -43,6 +44,35 @@ summaryDataPath = paste(
   sep = "/"
 )
 
+# Data
+
 qualtricsData = read.csv(qualtricsDataPath, stringsAsFactors = FALSE)
 rawData       = read.csv(rawDataPath, stringsAsFactors = FALSE)
 summaryData   = read.csv(summaryDataPath, stringsAsFactors = FALSE)
+
+# Task 1
+# Filter out incomplete data.
+
+summaryData = summaryData[summaryData$values.completed == '1',]
+
+# Task 2
+# Distinguish duplicate IDs.
+
+duplicatedSubjectIds = duplicated(summaryData$script.subjectid)
+
+distinguishedSummarySubjectIds = paste0(
+  summaryData$script.subjectid[duplicatedSubjectIds],
+  letters
+)
+
+summaryData$script.subjectid[duplicatedSubjectIds] =
+  distinguishedSummarySubjectIds
+
+# Task 3
+# Merge raw and summary data.
+
+# mergedSummaryAndRawData = merge(
+#   summaryData,
+#   rawData,
+#   by=intersect("script.subjectid", "subject")
+# )
