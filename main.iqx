@@ -27,6 +27,9 @@
 /newtotalscore = 0
 /bonusPayment = 0
 
+/rf_total_promotion_score = 0 
+/rf_total_prevention_score = 0 
+
 /pointsthisturn=0
 
 /largegainvalue=10
@@ -266,6 +269,107 @@
 
 
 ********************************************************************************
+// SELF REGULATORY FOCUS SCALES 
+********************************************************************************
+
+TODO: Make background grey on the scale. Make instructions for RF scale.
+
+<picture welcome_slide_image>
+/items =("<%values.imagespath%>slide01.jpg")
+/ select = sequence
+/ size = (80%, 80%)
+</picture>
+
+<trial welcome_slide>
+/ stimulusframes = [1=welcome_slide_image]
+/ validresponse = (57)
+</trial>
+
+<text rf_promotion_q1_instructions>
+/ items = ("1. I focus on opportunities that will enhance my life.")
+/ txcolor = black
+/ position = (50%, 20%)
+/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
+</text>
+
+<likert rf_promotion_q1_scale>
+/stimulusframes = [1=rf_promotion_q1_instructions] 
+/position = (50%, 50%)
+/anchors = [1="Strongly Disagree"; 2=""; 3=""; 4=""; 5=""; 6="Strongly Agree"]
+/numpoints = 6
+/fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
+/ontrialend = [
+	values.rf_total_promotion_score = values.rf_total_promotion_score + likert.rf_promotion_q1_scale.response
+]
+</likert>
+
+
+
+<text rf_prevention_q2_instructions>
+/ items = ("2. I focus on ensuring that I will avoid potential mishaps or negative events.")
+/ txcolor = black
+/ position = (50%, 20%)
+/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
+</text>
+
+<likert rf_prevention_q2_scale>
+/stimulusframes = [1=rf_prevention_q2_instructions] 
+/position = (50%, 50%)
+/anchors = [1="Strongly Disagree"; 2=""; 3=""; 4=""; 5=""; 6="Strongly Agree"]
+/numpoints = 6
+/fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
+/ontrialend = [
+	values.rf_total_prevention_score = values.rf_total_prevention_score + likert.rf_prevention_q2_scale.response
+]
+</likert>
+
+
+
+<text rf_promotion_q3_instructions>
+/ items = ("3. I am primarily motivated by seeking potential successes.")
+/ txcolor = black
+/ position = (50%, 20%)
+/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
+</text>
+
+<likert rf_promotion_q3_scale>
+/stimulusframes = [1=rf_promotion_q3_instructions] 
+/position = (50%, 50%)
+/anchors = [1="Strongly Disagree"; 2=""; 3=""; 4=""; 5=""; 6="Strongly Agree"]
+/numpoints = 6
+/fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
+/ontrialend = [
+	values.rf_total_promotion_score = values.rf_total_promotion_score + likert.rf_promotion_q3_scale.response
+]
+</likert>
+
+
+<text rf_prevention_q4_instructions>
+/ items = ("4. I am primarily motivated by avoiding failure.")
+/ txcolor = black
+/ position = (50%, 20%)
+/ fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
+</text>
+
+<likert rf_prevention_q4_scale>
+/stimulusframes = [1=rf_prevention_q4_instructions] 
+/position = (50%, 50%)
+/anchors = [1="Strongly Disagree"; 2=""; 3=""; 4=""; 5=""; 6="Strongly Agree"]
+/numpoints = 6
+/fontstyle = ("MS Shell Dlg 2", 3%, false, false, false, false, 5, 1)
+/ontrialend = [
+	values.rf_total_prevention_score = values.rf_total_prevention_score + likert.rf_prevention_q4_scale.response
+]
+</likert>
+
+
+
+<block rf_questionnaire_scales>
+/trials = [1=welcome_slide; 2=rf_promotion_q1_scale; 3=rf_prevention_q2_scale; 4=rf_promotion_q3_scale; 5=rf_prevention_q4_scale]
+</block>
+
+
+********************************************************************************
 // INSTRUCTION PAGES
 ********************************************************************************
 
@@ -296,8 +400,7 @@
 </trial>
 
 <picture instructionslides>
-/items =("<%values.imagespath%>slide01.jpg",
-         "<%values.imagespath%>slide02.jpg",
+/items =("<%values.imagespath%>slide02.jpg",
 		 "<%values.imagespath%>slide03.jpg",
 		 "<%values.imagespath%>slide06.jpg",
 		 "<%values.imagespath%>slide07.jpg")
@@ -1180,10 +1283,11 @@ Press the spacebar when you are ready to continue."
 ]
 /postinstructions = (page.post)
 /blocks = [
-	1=block.initial_instructions;
-	2=block.testblock;
-	3=block.attentionQuiz;
-	4=block.thankYouAndPaymentBlock
+	1=block.rf_questionnaire_scales;
+	2=block.initial_instructions;
+	3=block.testblock;
+	4=block.attentionQuiz;
+	5=block.thankYouAndPaymentBlock
 ]
 /onexptend = [values.complete=1]
 </expt>
