@@ -272,7 +272,7 @@
 // SELF REGULATORY FOCUS SCALES 
 ********************************************************************************
 
-TODO: Make background grey on the scale. Make instructions for RF scale.
+// Welcome
 
 <picture welcome_slide_image>
 /items =("<%values.imagespath%>slide01.jpg")
@@ -284,6 +284,11 @@ TODO: Make background grey on the scale. Make instructions for RF scale.
 / stimulusframes = [1=welcome_slide_image]
 / validresponse = (57)
 </trial>
+
+
+// Likert Scales
+// TODO: Make instructions for RF scale
+// TODO: Make background grey on the scale
 
 <text rf_promotion_q1_instructions>
 / items = ("1. I focus on opportunities that will enhance my life.")
@@ -324,7 +329,6 @@ TODO: Make background grey on the scale. Make instructions for RF scale.
 </likert>
 
 
-
 <text rf_promotion_q3_instructions>
 / items = ("3. I am primarily motivated by seeking potential successes.")
 / txcolor = black
@@ -360,12 +364,64 @@ TODO: Make background grey on the scale. Make instructions for RF scale.
 /ontrialend = [
 	values.rf_total_prevention_score = values.rf_total_prevention_score + likert.rf_prevention_q4_scale.response
 ]
+
+/ branch = [
+	if (values.rf_total_promotion_score - values.rf_total_prevention_score > 0) {
+		trial.rf_paragraphs_questions_promotion
+	} else {
+		trial.rf_paragraphs_questions_prevention
+	}	
+]
 </likert>
 
 
+// Paragraph
+
+
+<text rf_paragraphs_questions_promotion_text>
+/items =("PROMOTION")
+/ fontstyle = ("Arial", 3%, false, false, false, false, 5, 1)
+/ size = (70%, 80%)
+/ select = sequence
+/ valign = top
+/ halign = center
+/ position = (50%, 5%)
+/ hjustify = center
+</text>
+
+<text rf_paragraphs_questions_prevention_text>
+/items =("PREVENTION")
+/ fontstyle = ("Arial", 3%, false, false, false, false, 5, 1)
+/ size = (70%, 80%)
+/ select = sequence
+/ valign = top
+/ halign = center
+/ position = (50%, 5%)
+/ hjustify = center
+</text>
+
+<trial rf_paragraphs_questions_promotion>
+/ stimulusframes = [1=rf_paragraphs_questions_promotion_text]
+/ validresponse = (57)
+</trial>
+
+<trial rf_paragraphs_questions_prevention>
+/ stimulusframes = [1=rf_paragraphs_questions_prevention_text]
+/ validresponse = (57)
+</trial>
+
+
+// Complete Block
+
 
 <block rf_questionnaire_scales>
-/trials = [1=welcome_slide; 2=rf_promotion_q1_scale; 3=rf_prevention_q2_scale; 4=rf_promotion_q3_scale; 5=rf_prevention_q4_scale]
+/trials = [
+	1=welcome_slide;
+	2=rf_promotion_q1_scale;
+	3=rf_prevention_q2_scale;
+	4=rf_promotion_q3_scale;
+	5=rf_prevention_q4_scale
+]
 </block>
 
 
