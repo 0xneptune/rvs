@@ -386,9 +386,9 @@
 
 / branch = [
 	if (values.rf_total_promotion_score - values.rf_total_prevention_score > 0) {
-		trial.rf_paragraphs_questions_promotion
+		openended.rf_paragraphs_response_promotion
 	} else {
-		trial.rf_paragraphs_questions_prevention
+		openended.rf_paragraphs_response_prevention
 	}	
 ]
 </likert>
@@ -419,24 +419,21 @@
 / hjustify = center
 </text>
 
-<openended rf_paragraphs_response>
+<openended rf_paragraphs_response_promotion>
+/ stimulusframes = [1=rf_paragraphs_questions_promotion_text]
 / numlines = 7
 / linelength = 80
 / charlimit = 1000
 / multiline = true
 </openended>
 
-
-
-<trial rf_paragraphs_questions_promotion>
-/ stimulusframes = [1=rf_paragraphs_questions_promotion_text]
-/ validresponse = (57)
-</trial>
-
-<trial rf_paragraphs_questions_prevention>
+<openended rf_paragraphs_response_prevention>
 / stimulusframes = [1=rf_paragraphs_questions_prevention_text]
-/ validresponse = (57)
-</trial>
+/ numlines = 7
+/ linelength = 80
+/ charlimit = 1000
+/ multiline = true
+</openended>
 
 
 // Complete Block
