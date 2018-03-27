@@ -286,6 +286,25 @@
 </trial>
 
 
+// Instructions
+
+<text rf_instructions_text>
+/items =("HOW TO")
+/ fontstyle = ("Arial", 3%, false, false, false, false, 5, 1)
+/ size = (70%, 80%)
+/ select = sequence
+/ valign = top
+/ halign = center
+/ position = (50%, 5%)
+/ hjustify = center
+</text>
+
+<trial rf_instructions>
+/ stimulusframes = [1=rf_instructions_text]
+/ validresponse = (57)
+</trial>
+
+
 // Likert Scales
 // TODO: Make instructions for RF scale
 // TODO: Make background grey on the scale
@@ -400,6 +419,15 @@
 / hjustify = center
 </text>
 
+<openended rf_paragraphs_response>
+/ numlines = 7
+/ linelength = 80
+/ charlimit = 1000
+/ multiline = true
+</openended>
+
+
+
 <trial rf_paragraphs_questions_promotion>
 / stimulusframes = [1=rf_paragraphs_questions_promotion_text]
 / validresponse = (57)
@@ -417,10 +445,11 @@
 <block rf_questionnaire_scales>
 /trials = [
 	1=welcome_slide;
-	2=rf_promotion_q1_scale;
-	3=rf_prevention_q2_scale;
-	4=rf_promotion_q3_scale;
-	5=rf_prevention_q4_scale
+	2=rf_instructions;
+	3=rf_promotion_q1_scale;
+	4=rf_prevention_q2_scale;
+	5=rf_promotion_q3_scale;
+	6=rf_prevention_q4_scale
 ]
 </block>
 
